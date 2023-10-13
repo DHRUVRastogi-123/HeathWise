@@ -80,6 +80,9 @@ intents:
   - tell_me_symptom_Stomachache:
       use_entities:
         - Stomachache
+  - tell_me_symptom_BackPain:
+      use_entities:
+        - BackPain
   - only_one_symptom:
       ignore_entities:
           - Breath
@@ -106,6 +109,7 @@ intents:
           - Sensitivity_to_Light
           - Headache
           - Stomachache
+          - BackPain
 
 entities:
   - Breath
@@ -132,6 +136,7 @@ entities:
   - Sensitivity_to_Light
   - Headache
   - Stomachache
+  - BackPain
 
 responses:
   namaste:
@@ -731,7 +736,30 @@ responses:
       **Disclaimer:**
       The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
 
+  utter_cure_back_pain:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
 
+      **Which Doctor to Consult for Back Pain:**
+      If you have persistent or severe back pain, consult with an orthopedic specialist or a primary care physician.
+
+      *Home Remedies for Back Pain:**
+      - Rest and avoid activities that worsen the pain
+      - Apply a cold pack to the affected area in the first 48 hours, followed by a warm compress
+      - Over-the-Counter Meds (if recommended)
+      - Gentle stretching exercises
+      - Maintain good posture and ergonomics
+
+      **Common Medications for Back Pain:**
+      - Medications may include pain relievers, muscle relaxants, or anti-inflammatory drugs (if prescribed).
+
+      **Additional Tips:**
+      - Seek medical evaluation for severe or persistent back pain, especially if it is accompanied by other concerning symptoms.
+      - Follow your healthcare provider's recommendations for back health.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
 
   utter_tell_more:
   - text: "Are you feeling any other symptoms?"
