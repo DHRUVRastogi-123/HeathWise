@@ -1,0 +1,517 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: tell_me_symptom_Headache
+  examples: |
+    - I am having an [headache]{"entity":"Headache"}.
+    - My day started with a terrible [headache]{"entity":"Headache"}.
+    - I've got this pounding [nausea]{"entity":"Headache"}.
+    - Lately, I've been experiencing a constant [head discomfort]{"entity":"Headache"}.
+    - Can you help me with my [headache]{"entity":"Headache"}?
+    - My [headache]{"entity":"Headache"} is really bothering me.
+    - I need advice on dealing with this persistent [headache]{"entity":"Headache"}.
+    - I can't concentrate because of this [headache]{"entity":"Headache"}.
+    - How can I relieve my [dizziness]{"entity":"Headache"}?
+    - It feels like I've had this [stress in head]{"entity":"Headache"} for days.
+    - My head is pounding, and I suspect it's a [migraine]{"entity":"Headache"}.
+    - I'm looking for a remedy for my [headache]{"entity":"Headache"}.
+    - Do you have any suggestions for dealing with a sudden [headache]{"entity":"Headache"}?
+    - This [throbbing head]{"entity":"Headache"} is unbearable.
+    - I woke up with a splitting [headache]{"entity":"Headache"}.
+    - My [headache]{"entity":"Headache"} just won't go away.
+    - How do I get rid of this persistent [ache in head]{"entity":"Headache"}?
+    - I've tried everything to relieve my [tension]{"entity":"Headache"}.
+    - What can I do about my severe [pain in head]{"entity":"Headache"}?
+    - This [headpain]{"entity":"Headache"} is affecting my daily life.
+
+- intent: tell_me_symptom_Stomachache
+  examples: |
+    - I am having a [stomachache]{"entity":"Stomachache"}.
+    - My day started with a terrible [abdominal pain]{"entity":"Stomachache"}.
+    - I've got this pounding [nausea]{"entity":"Stomachache"} in my stomach.
+    - Lately, I've been experiencing a constant [stomach discomfort]{"entity":"Stomachache"}.
+    - Can you help me with my [upset stomach]{"entity":"Stomachache"}?
+    - My [stomachache]{"entity":"Stomachache"} is really bothering me.
+    - I need advice on dealing with this persistent [tummy ache]{"entity":"Stomachache"}.
+    - I can't concentrate because of this [stomach pain]{"entity":"Stomachache"}.
+    - How can I relieve my [stomach cramps]{"entity":"Stomachache"}?
+    - It feels like I've had this [stomach discomfort]{"entity":"Stomachache"} for days.
+    - My stomach is churning, and I suspect it's a [digestive issue]{"entity":"Stomachache"}.
+    - I'm looking for a remedy for my [bellyache]{"entity":"Stomachache"}.
+    - Do you have any suggestions for dealing with a sudden [stomachache]{"entity":"Stomachache"}?
+    - This [abdominal pain]{"entity":"Stomachache"} is unbearable.
+    - I woke up with a splitting [stomachache]{"entity":"Stomachache"}.
+    - My [stomachache]{"entity":"Stomachache"} just won't go away.
+    - How do I get rid of this persistent [ache in my stomach]{"entity":"Stomachache"}?
+    - I've tried everything to relieve my [tummy troubles]{"entity":"Stomachache"}.
+    - What can I do about my severe [pain in my stomach]{"entity":"Stomachache"}?
+    - This [belly pain]{"entity":"Stomachache"} is affecting my daily life.
+
+- intent: tell_me_symptom_Fever
+  examples: |
+    - I'm experiencing [fever]{"entity":"Fever"}.
+    - My body temperature is elevated, and I suspect I have [a fever]{"entity":"Fever"}.
+    - I feel really [feverish]{"entity":"Fever"}.
+    - Lately, I've been having [fever symptoms]{"entity":"Fever"}.
+    - Can you help me with my [high body temperature]{"entity":"Fever"}?
+    - I'm running [a fever]{"entity":"Fever"}, and it's making me uncomfortable.
+    - I need advice on dealing with this persistent [fever]{"entity":"Fever"}.
+    - My [fever]{"entity":"Fever"} is causing me distress.
+    - I have [fever signs]{"entity":"Fever"}.
+    - How can I relieve my [feverish state]{"entity":"Fever"}?
+    - It feels like I've had this [raised body temperature]{"entity":"Fever"} for days.
+    - I'm looking for remedies for my [feverish condition]{"entity":"Fever"}.
+    - Do you have any suggestions for dealing with a sudden [fever]{"entity":"Fever"}?
+    - This [feverish state]{"entity":"Fever"} is unbearable.
+    - My body temperature is high, and I suspect it's [a fever]{"entity":"Fever"}.
+    - My [fever]{"entity":"Fever"} just won't go away.
+    - How do I get rid of this persistent [feverish state]{"entity":"Fever"}?
+    - I've tried everything to relieve my [fever symptoms]{"entity":"Fever"}.
+    - What can I do about my [running a fever]{"entity":"Fever"}?
+
+- intent: tell_me_symptom_sore_throat
+  examples: |
+    - I have a [sore throat]{"entity":"sore throat"}.
+    - My [throat]{"entity":"sore throat"} is really sore.
+    - Can you help with my [sore throat]{"entity":"sore throat"}?
+    - The [sore throat]{"entity":"sore throat"} is causing me discomfort.
+    - Is a [sore throat]{"entity":"sore throat"} a sign of illness?
+    - What can I do about my scratchy [throat]{"entity":"sore throat"}?
+    - The [throat]{"entity":"sore throat"} pain is making it hard to eat.
+    - How to soothe a [sore throat]{"entity":"sore throat"}
+    - I need advice for my [sore throat]{"entity":"sore throat"}.
+
+- intent: tell_me_symptom_WateryStools
+  examples: |
+    - I'm experiencing [watery stools]{"entity":"WateryStools"}.
+    - My bowel movements are loose, and I suspect it's [diarrhea]{"entity":"WateryStools"}.
+    - I have [loose stools]{"entity":"WateryStools"}, and it's making me uncomfortable.
+    - Lately, I've been having [diarrhea symptoms]{"entity":"WateryStools"}.
+    - Can you help me with my [frequent watery bowel movements]{"entity":"WateryStools"}?
+    - I'm having [diarrhea]{"entity":"WateryStools"}, and it's causing distress.
+    - I need advice on dealing with these persistent [watery stools]{"entity":"WateryStools"}.
+    - My [stomach upset]{"entity":"WateryStools"} is causing loose bowel movements.
+    - I have [loose bowel movements]{"entity":"WateryStools"}.
+    - How can I relieve my [diarrheal condition]{"entity":"WateryStools"}?
+    - It feels like I've had [watery stools]{"entity":"WateryStools"} for days.
+    - I'm looking for remedies for my [diarrheal state]{"entity":"WateryStools"}.
+    - Do you have any suggestions for dealing with [frequent loose stools]{"entity":"WateryStools"}?
+    - These [watery stools]{"entity":"WateryStools"} are unbearable.
+    - My bowel movements are frequent, and I suspect it's [diarrhea]{"entity":"WateryStools"}.
+    - My [diarrhea]{"entity":"WateryStools"} just won't go away.
+    - How do I get rid of this persistent [diarrheal condition]{"entity":"WateryStools"}?
+    - I've tried everything to relieve my [diarrhea symptoms]{"entity":"WateryStools"}.
+    - What can I do about [frequent watery stools]{"entity":"WateryStools"}?
+
+- intent: tell_me_symptom_BodyAche
+  examples: |
+    - I'm experiencing [body ache]{"entity":"BodyAche"}.
+    - My body is in pain, and I suspect I have [body ache]{"entity":"BodyAche"}.
+    - I feel really [sore all over]{"entity":"BodyAche"}.
+    - Lately, I've been having [body ache symptoms]{"entity":"BodyAche"}.
+    - Can you help me with my [aching body]{"entity":"BodyAche"}?
+    - I'm suffering from [body pain]{"entity":"BodyAche"}, and it's making me uncomfortable.
+    - I need advice on dealing with this persistent [body ache]{"entity":"BodyAche"}.
+    - My [body ache]{"entity":"BodyAche"} is causing me distress.
+    - I have [sore body signs]{"entity":"BodyAche"}.
+    - How can I relieve my [painful body]{"entity":"BodyAche"}?
+    - It feels like I've had this [body discomfort]{"entity":"BodyAche"} for days.
+    - I'm looking for remedies for my [sore body condition]{"entity":"BodyAche"}.
+    - Do you have any suggestions for dealing with a sudden [body ache]{"entity":"BodyAche"}?
+    - This [body pain]{"entity":"BodyAche"} is unbearable.
+    - My body is in pain, and I suspect it's [body ache]{"entity":"BodyAche"}.
+    - My [body ache]{"entity":"BodyAche"} just won't go away.
+    - How do I get rid of this persistent [painful body]{"entity":"BodyAche"}?
+    - I've tried everything to relieve my [body ache symptoms]{"entity":"BodyAche"}.
+    - What can I do about my [aching all over]{"entity":"BodyAche"}?
+
+- intent: tell_me_symptom_Cough
+  examples: |
+    - I'm experiencing a [cough]{"entity":"Cough"}.
+    - I can't stop [coughing]{"entity":"Cough"}.
+    - Lately, I've been coughing a lot, and I'm worried it might be a [cough]{"entity":"Cough"}.
+    - Can you help me with my persistent [cough]{"entity":"Cough"}?
+    - I'm suffering from a [cough]{"entity":"Cough"}, and it's causing me discomfort.
+    - I need advice on dealing with this [cough]{"entity":"Cough"}.
+    - My [cough]{"entity":"Cough"} is causing me distress.
+    - I have signs of a [cough]{"entity":"Cough"}.
+    - How can I relieve my [cough]{"entity":"Cough"}?
+    - It feels like I've had this [cough]{"entity":"Cough"} for days.
+    - I'm looking for remedies for my [persistent cough]{"entity":"Cough"}.
+    - Do you have any suggestions for dealing with a sudden [cough]{"entity":"Cough"}?
+    - This [cough]{"entity":"Cough"} is unbearable.
+    - I can't stop coughing, and I suspect it's a [cough]{"entity":"Cough"}.
+    - My [cough]{"entity":"Cough"} just won't go away.
+    - How do I get rid of this [persistent cough]{"entity":"Cough"}?
+    - I've tried everything to relieve my [cough]{"entity":"Cough"}.
+    - What can I do about my [incessant cough]{"entity":"Cough"}?
+
+- intent: tell_me_symptom_Frequent_Urination
+  examples: |
+    - I'm experiencing [frequent urination]{"entity":"Frequent_Urination"}.
+    - I have to [urinate often]{"entity":"Frequent_Urination"}, and it's concerning me.
+    - Lately, I've been [peeing a lot]{"entity":"Frequent_Urination"}, and I'm worried about it.
+    - Can you help me with my [frequent urination]{"entity":"Frequent_Urination"}?
+    - I'm suffering from [urinating frequently]{"entity":"Frequent_Urination"}, and it's causing me discomfort.
+    - I need advice on dealing with this [frequent urination]{"entity":"Frequent_Urination"}.
+    - My [urination frequency]{"entity":"Frequent_Urination"} is causing me distress.
+    - I have signs of [frequent urination]{"entity":"Frequent_Urination"}.
+    - How can I relieve my [frequent urination]{"entity":"Frequent_Urination"}?
+    - It feels like I've had this [peeing often]{"entity":"Frequent_Urination"} for days.
+    - I'm looking for remedies for my [persistent frequent urination]{"entity":"Frequent_Urination"}.
+    - Do you have any suggestions for dealing with [sudden frequent urination]{"entity":"Frequent_Urination"}?
+    - This [frequent urination]{"entity":"Frequent_Urination"} is unbearable.
+    - I have to [urinate frequently]{"entity":"Frequent_Urination"}, and I suspect it's [frequent urination]{"entity":"Frequent_Urination"}.
+    - My [frequent urination]{"entity":"Frequent_Urination"} just won't go away.
+    - How do I get rid of this [persistent urination frequency]{"entity":"Frequent_Urination"}?
+    - I've tried everything to reduce my [frequent urination]{"entity":"Frequent_Urination"}.
+    - What can I do about my [incessant urination]{"entity":"Frequent_Urination"}?
+
+- intent: tell_me_symptom_Excessive_Thirst
+  examples: |
+    - I'm experiencing [excessive thirst]{"entity":"Excessive_Thirst"}.
+    - I can't seem to quench my [thirst]{"entity":"Excessive_Thirst"}.
+    - Lately, I've been feeling [extremely thirsty]{"entity":"Excessive_Thirst"} all the time.
+    - Can you help me with my persistent [excessive thirst]{"entity":"Excessive_Thirst"}?
+    - I'm suffering from [constant thirst]{"entity":"Excessive_Thirst"}, and it's causing me discomfort.
+    - I need advice on dealing with this [excessive thirst]{"entity":"Excessive_Thirst"}.
+    - My [thirst levels]{"entity":"Excessive_Thirst"} are causing me distress.
+    - I have signs of [excessive thirst]{"entity":"Excessive_Thirst"}.
+    - How can I relieve my [excessive thirst]{"entity":"Excessive_Thirst"}?
+    - It feels like I've had this [unquenchable thirst]{"entity":"Excessive_Thirst"} for days.
+    - I'm looking for remedies for my [persistent excessive thirst]{"entity":"Excessive_Thirst"}.
+    - Do you have any suggestions for dealing with [sudden excessive thirst]{"entity":"Excessive_Thirst"}?
+    - This [excessive thirst]{"entity":"Excessive_Thirst"} is unbearable.
+    - I can't seem to stop feeling [excessively thirsty]{"entity":"Excessive_Thirst"}, and I suspect it's [excessive thirst]{"entity":"Excessive_Thirst"}.
+    - My [excessive thirst]{"entity":"Excessive_Thirst"} just won't go away.
+    - How do I get rid of this [persistent excessive thirst]{"entity":"Excessive_Thirst"}?
+    - I've tried everything to alleviate my [excessive thirst]{"entity":"Excessive_Thirst"}.
+    - What can I do about my [incessant thirst]{"entity":"Excessive_Thirst"}?
+
+- intent: only_one_symptom
+  examples: |
+    - I have only this problem.
+    - No
+    - no
+    - I need advice only for this.
+    - Just this issue.
+    - This is my only concern.
+    - I'm focusing on this one.
+    - Only one symptom to discuss.
+    - Let's talk about this alone.
+    - Singular issue.
+    - I'm here for just this.
+    - I'm only interested in this.
+    - Sole problem.
+    - It's just about this.
+    - I want to address this issue only.
+    - No other concerns.
+    - This is my sole complaint.
+    - Just this one thing.
+    - I'm here for one reason.
+    - I have just this symptom.
+    - I need help with this specific issue.
+
+- intent: tell_me_symptom_Sensitivity_to_Light
+  examples: |
+    - I'm experiencing [sensitivity to light]{"entity":"Sensitivity_to_Light"}.
+    - Bright lights are bothering my [eyes]{"entity":"Sensitivity_to_Light"}.
+    - Lately, I've been having [light sensitivity]{"entity":"Sensitivity_to_Light"}, and it's affecting me.
+    - Can you help me with my persistent [sensitivity to light]{"entity":"Sensitivity_to_Light"}?
+    - I'm suffering from [photophobia]{"entity":"Sensitivity_to_Light"}, and it's causing me discomfort.
+    - I need advice on dealing with this [light sensitivity]{"entity":"Sensitivity_to_Light"}.
+    - My [eyes are sensitive to light]{"entity":"Sensitivity_to_Light"} are causing me distress.
+    - I have signs of [sensitivity to light]{"entity":"Sensitivity_to_Light"}.
+    - How can I relieve my [photophobia]{"entity":"Sensitivity_to_Light"}?
+    - It feels like I've had this [light sensitivity]{"entity":"Sensitivity_to_Light"} for days.
+    - I'm looking for remedies for my [persistent sensitivity to light]{"entity":"Sensitivity_to_Light"}.
+    - Do you have any suggestions for dealing with [sudden sensitivity to light]{"entity":"Sensitivity_to_Light"}?
+    - This [sensitivity to light]{"entity":"Sensitivity_to_Light"} is unbearable.
+    - I can't seem to escape [light sensitivity]{"entity":"Sensitivity_to_Light"}, and I suspect it's [sensitivity to light]{"entity":"Sensitivity_to_Light"}.
+    - My [sensitivity to light]{"entity":"Sensitivity_to_Light"} just won't go away.
+    - How do I get rid of this [persistent photophobia]{"entity":"Sensitivity_to_Light"}?
+    - I've tried everything to alleviate my [light sensitivity]{"entity":"Sensitivity_to_Light"}.
+    - What can I do about my [incessant sensitivity to light]{"entity":"Sensitivity_to_Light"}?
+
+- synonym: Headache
+  examples: |
+    - headache
+    - pain in head
+    - nausea
+    - dizziness
+    - tension
+    - ache in head
+    - headpain
+    - stress
+    - stress in head
+    - head pain
+    - migraine
+    - tension headache
+    - throbbing head
+    - headache symptoms
+    - head discomfort
+
+- synonym: Stomachache
+  examples: |
+    - stomachache
+    - abdominal pain
+    - stomach pain
+    - tummy ache
+    - bellyache
+    - upset stomach
+    - stomach discomfort
+    - stomach cramps
+    - digestive issue
+    - belly pain
+    - tummy troubles
+    - ache in my stomach
+
+- synonym: Fever
+  examples: |
+    - fever
+    - high temperature
+    - body temperature
+    - feverish
+    - fever symptoms
+    - feverish condition
+    - raised body temperature
+    - feverish state
+    - having a fever
+    - temperature is high
+    - fever signs
+    - fever indicators
+    - running a fever
+    - feverish symptoms
+    - feverish state
+
+- synonym: Sore Throat
+  examples: |
+    - sore throat
+    - throat pain
+    - throat discomfort
+    - painful throat
+    - scratchy throat
+    - hoarse throat
+    - throat ache
+    - throat soreness
+    - raw throat
+    - itchy throat
+    - difficulty swallowing
+    - throat infection
+    - throat inflammation
+    - throat irritation
+
+- synonym: WateryStools
+  examples: |
+    - watery stools
+    - loose stools
+    - diarrhea
+    - frequent watery bowel movements
+    - diarrhea symptoms
+    - stomach upset
+    - frequent loose stools
+    - loose bowel movements
+    - diarrheal condition
+    - diarrheal state
+    - loose bowel movements
+    - frequent bowel movements
+    - watery diarrhea
+    - loose motions
+    - liquid stool
+    - loose bowel
+    - runny stool
+    - diarrhea problem
+    - bowel troubles
+
+- synonym: BodyAche
+  examples: |
+    - body ache
+    - pain all over
+    - aching body
+    - sore all over
+    - body pain
+    - sore body
+    - body discomfort
+    - aching muscles
+    - discomfort in body
+    - muscle pain
+    - painful body
+    - sore muscles
+    - body soreness
+    - aching all over
+    - muscle discomfort
+    - whole-body pain
+    - discomfort in muscles
+    - entire body ache
+    - body sore
+    - constant pain in body
+
+- synonym: Cough
+  examples: |
+    - cough
+    - hacking cough
+    - persistent cough
+    - coughing
+    - dry cough
+    - wheezing
+    - chesty cough
+    - whooping cough
+    - barking cough
+    - frequent coughing
+    - nagging cough
+    - phlegm cough
+    - coughing fits
+
+- synonym: Frequent_Urination
+  examples: |
+    - frequent urination
+    - peeing often
+    - urinating frequently
+    - excessive urination
+    - frequent pee
+    - urination frequency
+    - constant need to urinate
+    - frequent trips to the bathroom
+    - frequent bladder emptying
+    - having to pee a lot
+    - frequent urination symptoms
+    - frequent urination condition
+    - repeated urination
+    - frequent bathroom visits
+
+- synonym: Excessive_Thirst
+  examples: |
+    - excessive thirst
+    - unquenchable thirst
+    - constant thirst
+    - extreme thirst
+    - insatiable thirst
+    - unrelenting thirst
+    - relentless thirst
+    - overwhelming thirst
+    - never-ending thirst
+    - excessive need for fluids
+    - always thirsty
+    - uncontrollable thirst
+    - persistent thirst
+    - unending thirst
+    - excessive desire for water
+
+- synonym: Sensitivity_to_Light
+  examples: |
+    - sensitivity to light
+    - photophobia
+    - light sensitivity
+    - bright light discomfort
+    - eye sensitivity to light
+    - intolerance to bright lights
+    - glare sensitivity
+    - painful response to light
+    - light aversion
+    - discomfort in bright light
+    - eye photophobia
+    - light-induced pain
+    - light-triggered discomfort
+    - photophobic symptoms
+    - sensitivity to bright light
+    - painful response to glare
+    - excessive light sensitivity
+    - discomfort in well-lit areas
+    - bright light intolerance
+    - aversion to strong light
+
+
+
+
+
+
+
