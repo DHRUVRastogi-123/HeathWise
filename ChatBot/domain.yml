@@ -8,6 +8,7 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - bot_fallback
   - tell_me_symptom_Breath:
       use_entities:
         - Breath
@@ -157,7 +158,8 @@ responses:
   namaste:
   - text: "Namaste Sir/Madam , how do you feel today?"  
 
-  utter_out_of_scope:
+  utter_fallback:
+  - text: "Not yet trained for this. Sorry for missing knowledge."
   - text: "I apologize, but I couldn't understand your question. Can you please provide more details?"
   - text: "I'm here to help with health-related questions. It seems I couldn't grasp your inquiry. Could you try rephrasing it."
   - text: "It appears there's some confusion. Please rephrase your question, or ask a health-related query, and I'll do my best to assist."
