@@ -1257,3 +1257,59 @@ nlu:
     - [Experiencing morning stiffness]{"entity":"MorningStiffness"} is what's happening.
     - I've included synonyms like "stiffness in the morning" and other phrases that convey the symptom of morning stiffness. Let me know if you need more examples or if there's anything else I can assist you with.
 
+- intent: bot_fallback
+  examples: |
+    - What is 2 + 2?
+    - I am having cold.
+    - what is the outside temperature?
+    - you should die.
+    - I am going to die.
+    - How you work?
+    - Can you tell me a joke?
+    - I want to order a pizza.
+    - Please tell me a story.
+    - What's your favorite color?
+    - What's the meaning of life?
+    - I'm feeling tired.
+    - What's the time?
+    - Tell me a fun fact.
+    - Do you like ice cream?
+    - How does a computer work?
+    - I need some help with my homework.
+    - Can you sing a song?
+    - What's the capital of France?
+    - I need some relationship advice.
+    - How do I bake a cake?
+    - I'm feeling hungry.
+    - Can you recommend a good book?
+    - What's the weather like today?
+    - Tell me about famous scientists.
+    - What's the largest planet in our solar system?
+    - Can you tell me a riddle?
+    - Can you explain quantum physics?
+    - What's your favorite movie?
+    - I can't sleep.
+    - Tell me a historical fact.
+    - What's the population of Tokyo?
+    - I'm feeling sad.
+    - Can you recommend a travel destination?
+    - Who won the World Series in 2020?
+    - Can you help me with my math homework?
+    - I'm in the mood for some Italian food.
+    - What's the latest news headlines?
+    - Tell me a joke, please.
+    - How does photosynthesis work?
+    - I'm looking for a good workout routine.
+    - Can you explain the concept of black holes?
+    - What's the best way to brew coffee?
+    - I'm curious about ancient civilizations.
+    - What's the meaning of the word "serendipity"?
+    - I need some fashion advice.
+    - Tell me a random fact about space.
+    - How do I make the perfect omelette?
+    - I have a question about climate change.
+    - Can you recommend a good documentary to watch?
+    - What's the tallest mountain in the world?
+    - I want to learn a new language. Where should I start?
+    - Tell me something interesting about marine life.
+    - How do I improve my time management skills?
