@@ -142,7 +142,7 @@ responses:
   namaste:
   - text: "Namaste Sir/Madam , how do you feel today?"  
   
-  utter_cure_Influenza:
+  utter_cure_influenza:
   - text: |
       **Disclaimer:**
       The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
