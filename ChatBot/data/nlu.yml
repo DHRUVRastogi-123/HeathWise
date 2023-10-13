@@ -1153,3 +1153,47 @@ nlu:
     - Spinal discomfort
     - Backache troubles
     - Pain in my upper back
+
+- intent: tell_me_symptom_Weakness
+  examples: |
+    - I am having [weakness]{"entity":"Weakness"}.
+    - I'm experiencing [lack of strength]{"entity":"Weakness"}.
+    - I have [fatigue]{"entity":"Weakness"}.
+    - It's hard for me to [stay energetic]{"entity":"Weakness"}.
+    - I can't [find my energy]{"entity":"Weakness"}.
+    - [Feeling weak]{"entity":"Weakness"} is a problem.
+    - I feel like I'm [drained]{"entity":"Weakness"}.
+    - I'm weary, and it's [difficult to keep going]{"entity":"Weakness"}.
+    - My [strength is depleted]{"entity":"Weakness"}.
+    - [Lack of energy]{"entity":"Weakness"} is bothering me.
+    - I can't [stay active]{"entity":"Weakness"}.
+    - [Low energy]{"entity":"Weakness"} is a problem.
+    - I'm [struggling to stay alert]{"entity":"Weakness"}.
+    - I have [lethargy]{"entity":"Weakness"}.
+    - It's like I'm [out of energy]{"entity":"Weakness"}.
+    - [Energy problems]{"entity":"Weakness"} are concerning me.
+    - I'm tired and [out of stamina]{"entity":"Weakness"}.
+    - I feel [physically drained]{"entity":"Weakness"}.
+    - [Experiencing weakness]{"entity":"Weakness"} is what's happening.
+    - I've included synonyms like "lack of strength" and other phrases that convey feelings of weakness. Let me know if you need more examples or if there's anything else I can assist you with.
+
+- synonym: Weakness
+  examples: |
+    - Lack of strength
+    - Fatigue
+    - Stay energetic
+    - Find my energy
+    - Feeling weak
+    - Drained
+    - Difficult to keep going
+    - Strength is depleted
+    - Lack of energy
+    - Stay active
+    - Low energy
+    - Struggling to stay alert
+    - Lethargy
+    - Out of energy
+    - Energy problems
+    - Out of stamina
+    - Physically drained
+    - Experiencing weakness
