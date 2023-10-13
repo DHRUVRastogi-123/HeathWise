@@ -86,6 +86,9 @@ intents:
   - tell_me_symptom_Weakness:
       use_entities:
         - Weakness
+  - tell_me_symptom_Wheezing:
+      use_entities:
+        - Wheezing
   - only_one_symptom:
       ignore_entities:
           - Breath
@@ -114,6 +117,7 @@ intents:
           - Stomachache
           - BackPain
           - Weakness
+          - Wheezing
 
 entities:
   - Breath
@@ -142,10 +146,38 @@ entities:
   - Stomachache
   - BackPain
   - Weakness
+  - Wheezing
 
 responses:
   namaste:
   - text: "Namaste Sir/Madam , how do you feel today?"  
+
+  utter_cure_wheezing:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Wheezing:**
+      Consult with a pulmonologist or a specialist in respiratory diseases for the diagnosis and management of wheezing.
+
+      *Home Remedies for Wheezing:**
+      - Use prescribed inhalers and medications
+      - Create a clean and allergen-free environment
+      - Use a humidifier to maintain optimal humidity levels
+      - Avoid exposure to asthma triggers
+      - Maintain a healthy lifestyle
+
+      **Common Medications for Wheezing:**
+      - Medications may include bronchodilators, corticosteroids, leukotriene modifiers, or other treatments (if prescribed).
+
+      **Additional Tips:**
+      - Follow your prescribed asthma or wheezing management plan
+      - Identify and avoid triggers that worsen wheezing
+      - Monitor your respiratory health and seek medical advice for any changes
+      - Consult a healthcare provider for personalized wheezing care
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
 
   utter_cure_weakness:
   - text: |
@@ -278,7 +310,7 @@ responses:
       **Disclaimer:**
       The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
 
-  utter_cure_Osteoporosis:
+  utter_cure_osteoporosis:
   - text: |
       **Disclaimer:**
       The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
@@ -358,7 +390,7 @@ responses:
       **Disclaimer:**
       The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
 
-  utter_cure_Type2Diabetes:
+  utter_cure_diabetes:
   - text: |
       **Disclaimer:**
       The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
