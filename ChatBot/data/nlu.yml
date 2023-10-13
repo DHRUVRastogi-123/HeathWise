@@ -1197,3 +1197,39 @@ nlu:
     - Out of stamina
     - Physically drained
     - Experiencing weakness
+
+- intent: tell_me_symptom_Wheezing
+  examples: |
+    - I am having [wheezing]{"entity":"Wheezing"}.
+    - I'm experiencing [whistling sound when breathing]{"entity":"Wheezing"}.
+    - I have [difficulty breathing with a high-pitched sound]{"entity":"Wheezing"}.
+    - It's hard for me to [breathe with a wheeze]{"entity":"Wheezing"}.
+    - I can't [breathe properly due to wheezing]{"entity":"Wheezing"}.
+    - [Wheezing is a problem]{"entity":"Wheezing"}.
+    - I feel like I'm [struggling to inhale with a wheeze]{"entity":"Wheezing"}.
+    - I'm wheezing, and it's [difficult to breathe]{"entity":"Wheezing"}.
+    - My [breath is labored with a wheeze]{"entity":"Wheezing"}.
+    - [Wheezing when breathing]{"entity":"Wheezing"} is bothering me.
+    - I can't [catch my breath due to wheezing]{"entity":"Wheezing"}.
+    - [High-pitched breath sounds]{"entity":"Wheezing"} are concerning me.
+    - I'm [struggling to exhale with a wheeze]{"entity":"Wheezing"}.
+    - I have [wheezing in the chest]{"entity":"Wheezing"}.
+    - It's like I'm [out of breath due to wheezing]{"entity":"Wheezing"}.
+    - [Wheezing problems]{"entity":"Wheezing"} are what's happening.
+    - I'm panting and [experiencing wheezing]{"entity":"Wheezing"}.
+    - I feel [breathless with a wheeze]{"entity":"Wheezing"}.
+    - [Experiencing wheezing]{"entity":"Wheezing"} is what's happening.
+    - I've included synonyms like "whistling sound when breathing" and other phrases that convey the symptom of wheezing. Let me know if you need more examples or if there's anything else I can assist you with.
+
+- synonym: Wheezing
+  examples: |
+    - Whistling sound when breathing
+    - Difficulty breathing with a high-pitched sound
+    - Breathe with a wheeze
+    - Breathe properly due to wheezing
+    - Struggling to inhale with a wheeze
+    - High-pitched breath sounds
+    - Struggling to exhale with a wheeze
+    - Wheezing in the chest
+    - Wheezing problems
+    - Experiencing wheezing
