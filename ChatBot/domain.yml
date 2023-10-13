@@ -80,6 +80,9 @@ intents:
   - tell_me_symptom_Stomachache:
       use_entities:
         - Stomachache
+  - tell_me_symptom_BackPain:
+      use_entities:
+        - BackPain
   - only_one_symptom:
       ignore_entities:
           - Breath
@@ -106,6 +109,7 @@ intents:
           - Sensitivity_to_Light
           - Headache
           - Stomachache
+          - BackPain
 
 entities:
   - Breath
@@ -132,6 +136,7 @@ entities:
   - Sensitivity_to_Light
   - Headache
   - Stomachache
+  - BackPain
 
 responses:
   namaste:
