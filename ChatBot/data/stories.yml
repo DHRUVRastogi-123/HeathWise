@@ -1,1 +1,273 @@
+version: "3.1"
 
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: I have only headache
+  steps:
+  - intent: tell_me_symptom_Headache
+    entities:
+    - Headache : "headache"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_headache
+
+- story: I have only stomachache
+  steps:
+  - intent: tell_me_symptom_Stomachache
+    entities:
+    - Stomachache : "stomachache"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_stomachache
+
+- story: I have only fever
+  steps:
+  - intent: tell_me_symptom_Fever
+    entities:
+    - Fever : "fever"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_fever
+
+- story: I have only difficulty in breathing
+  steps:
+  - intent: tell_me_symptom_Breath
+    entities:
+    - Breath : "difficulty in breathing"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_breathing_issue
+
+- story: I have only taste problem
+  steps:
+  - intent: tell_me_symptom_Taste
+    entities:
+    - Taste : "taste problem"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_taste_issue
+
+- story: I have only fever
+  steps:
+  - intent: tell_me_symptom_Fever
+    entities:
+    - Fever : "fever"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_fever
+
+- story: I have only chest pain
+  steps:
+  - intent: tell_me_symptom_ChestPain
+    entities:
+    - ChestPain : "chest pain"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_chest_pain
+
+- story: I have only joint pain or swelling
+  steps:
+  - intent: tell_me_symptom_JointPainSwelling
+    entities:
+    - JointPainSwelling : "joint pain or swelling"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_joint_pain_swelling
+
+- story: I have only vision problems
+  steps:
+  - intent: tell_me_symptom_VisionProblem
+    entities:
+    - VisionProblem : "vision problems"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_vision_problem
+
+- story: I have only nosebleeds
+  steps:
+  - intent: tell_me_symptom_Nosebleeds
+    entities:
+    - Nosebleeds : "nosebleeds"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_nosebleeds
+
+- story: I have only memory loss
+  steps:
+  - intent: tell_me_symptom_MemoryLoss
+    entities:
+    - MemoryLoss : "memory loss"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_memory_loss
+
+- story: I have only problem solving difficulties
+  steps:
+  - intent: tell_me_symptom_DifficultyProblemSolving
+    entities:
+    - ProblemSolving : "problem solving difficulties"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_problem_solving
+
+- story: I have only disorientation
+  steps:
+  - intent: tell_me_symptom_Disorientation
+    entities:
+    - Disorientation : "disorientation"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_disorientation
+
+- story: I have only loss in height
+  steps:
+  - intent: tell_me_symptom_LossInHeight
+    entities:
+    - LossInHeight : "loss in height"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_loss_in_height
+
+- story: I have only fragile bones prone to fractures
+  steps:
+  - intent: tell_me_symptom_FragileBones
+    entities:
+    - FragileBones : "fragile bones prone to fractures"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_fragile_bones
+
+- story: I have only skin color loss in patches
+  steps:
+  - intent: tell_me_symptom_SkinColorLoss
+    entities:
+    - SkinColorLoss : "skin color loss in patches"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_skin_color_loss
+
+- story: I have only premature graying of hair
+  steps:
+  - intent: tell_me_symptom_GrayingHair
+    entities:
+    - GrayingHair : "premature graying of hair"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_graying_hair
+
+- story: I have only sunburn easily
+  steps:
+  - intent: tell_me_symptom_Sunburn
+    entities:
+    - Sunburn : "sunburn easily"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_sunburn
+
+- story: I have only sore throat
+  steps:
+  - intent: tell_me_symptom_sore_throat
+    entities:
+    - sore throat : "sore throat"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_sore_throat
+
+- story: I have only watery stools
+  steps:
+  - intent: tell_me_symptom_WateryStools
+    entities:
+    - WateryStools : "watery stools"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_watery_stools
+
+- story: I have only body ache
+  steps:
+  - intent: tell_me_symptom_BodyAche
+    entities:
+    - BodyAche : "body ache"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_body_ache
+
+- story: I have only cough
+  steps:
+  - intent: tell_me_symptom_Cough
+    entities:
+    - Cough : "cough"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_cough
+
+- story: I have only frequent urination
+  steps:
+  - intent: tell_me_symptom_Frequent_Urination
+    entities:
+    - Frequent_Urination : "frequent urination"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_frequent_urination
+
+- story: I have only excessive thirst
+  steps:
+  - intent: tell_me_symptom_Excessive_Thirst
+    entities:
+    - Excessive_Thirst : "excessive thirst"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_excessive_thirst
+
+- story: I have only sensitivity to light
+  steps:
+  - intent: tell_me_symptom_Sensitivity_to_Light
+    entities:
+    - Sensitivity_to_Light : "sensitivity to light"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_sensitivity_to_light
+
+- story: I have only headache
+  steps:
+  - intent: tell_me_symptom_Headache
+    entities:
+    - Headache : "headache"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_headache
+
+- story: I have only stomachache
+  steps:
+  - intent: tell_me_symptom_Stomachache
+    entities:
+    - Stomachache : "stomachache"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_stomachache
