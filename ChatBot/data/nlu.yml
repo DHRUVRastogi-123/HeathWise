@@ -1,4 +1,3 @@
-
 version: "3.1"
 
 nlu:
@@ -915,7 +914,7 @@ nlu:
     - I can't concentrate because of this [headache]{"entity":"Headache"}.
     - How can I relieve my [dizziness]{"entity":"Headache"}?
     - It feels like I've had this [stress in head]{"entity":"Headache"} for days.
-    - My head is pounding, and I suspect it's a [migraine]{"entity":"Headache"}.
+    - My head is pounding, and I suspect it's a [headache]{"entity":"Headache"}.
     - I'm looking for a remedy for my [headache]{"entity":"Headache"}.
     - Do you have any suggestions for dealing with a sudden [headache]{"entity":"Headache"}?
     - This [throbbing head]{"entity":"Headache"} is unbearable.
@@ -961,7 +960,6 @@ nlu:
     - stress
     - stress in head
     - head pain
-    - migraine
     - tension headache
     - throbbing head
     - headache symptoms
@@ -1117,3 +1115,201 @@ nlu:
     - discomfort in well-lit areas
     - bright light intolerance
     - aversion to strong light
+
+- intent: tell_me_symptom_BackPain
+  examples: |
+    - I am experiencing [back pain]{"entity":"BackPain"}.
+    - My [spine hurts]{"entity":"BackPain"}.
+    - I have [pain in my back]{"entity":"BackPain"}.
+    - [My back is hurting]{"entity":"BackPain"}.
+    - I'm suffering from [spinal pain]{"entity":"BackPain"}.
+    - [Backache]{"entity":"BackPain"} is bothering me.
+    - [Pain in the spine]{"entity":"BackPain"} is a problem.
+    - I'm having [pain in my lower back]{"entity":"BackPain"}.
+    - [Lower back pain]{"entity":"BackPain"} is what I'm experiencing.
+    - [My spine is painful]{"entity":"BackPain"}.
+    - I'm in [discomfort due to back pain]{"entity":"BackPain"}.
+    - [Spinal discomfort]{"entity":"BackPain"} is an issue.
+    - [Backache troubles]{"entity":"BackPain"} me regularly.
+    - I have [pain in my upper back]{"entity":"BackPain"}.
+    - [Upper back pain]{"entity":"BackPain"} is affecting me.
+    - [Back pain in the morning]{"entity":"BackPain"} is a concern.
+    - I've included synonyms like "spinal pain," "backache," and "lower back pain." Let me know if you need more examples or if there's anything else I can assist you with.
+
+- synonym: BackPain
+  examples: |
+    - Spinal pain
+    - Lower back pain
+    - Backache
+    - Pain in the spine
+    - Upper back pain
+    - Back pain in the morning
+    - Spine hurts
+    - My back is hurting
+    - Suffering from back pain
+    - Pain in my lower back
+    - My spine is painful
+    - Discomfort due to back pain
+    - Spinal discomfort
+    - Backache troubles
+    - Pain in my upper back
+
+- intent: tell_me_symptom_Weakness
+  examples: |
+    - I am having [weakness]{"entity":"Weakness"}.
+    - I'm experiencing [lack of strength]{"entity":"Weakness"}.
+    - I have [fatigue]{"entity":"Weakness"}.
+    - It's hard for me to [stay energetic]{"entity":"Weakness"}.
+    - I can't [find my energy]{"entity":"Weakness"}.
+    - [Feeling weak]{"entity":"Weakness"} is a problem.
+    - I feel like I'm [drained]{"entity":"Weakness"}.
+    - I'm weary, and it's [difficult to keep going]{"entity":"Weakness"}.
+    - My [strength is depleted]{"entity":"Weakness"}.
+    - [Lack of energy]{"entity":"Weakness"} is bothering me.
+    - I can't [stay active]{"entity":"Weakness"}.
+    - [Low energy]{"entity":"Weakness"} is a problem.
+    - I'm [struggling to stay alert]{"entity":"Weakness"}.
+    - I have [lethargy]{"entity":"Weakness"}.
+    - It's like I'm [out of energy]{"entity":"Weakness"}.
+    - [Energy problems]{"entity":"Weakness"} are concerning me.
+    - I'm tired and [out of stamina]{"entity":"Weakness"}.
+    - I feel [physically drained]{"entity":"Weakness"}.
+    - [Experiencing weakness]{"entity":"Weakness"} is what's happening.
+    - I've included synonyms like "lack of strength" and other phrases that convey feelings of weakness. Let me know if you need more examples or if there's anything else I can assist you with.
+
+- synonym: Weakness
+  examples: |
+    - Lack of strength
+    - Fatigue
+    - Stay energetic
+    - Find my energy
+    - Feeling weak
+    - Drained
+    - Difficult to keep going
+    - Strength is depleted
+    - Lack of energy
+    - Stay active
+    - Low energy
+    - Struggling to stay alert
+    - Lethargy
+    - Out of energy
+    - Energy problems
+    - Out of stamina
+    - Physically drained
+    - Experiencing weakness
+
+- intent: tell_me_symptom_Wheezing
+  examples: |
+    - I am having [wheezing]{"entity":"Wheezing"}.
+    - I'm experiencing [whistling sound when breathing]{"entity":"Wheezing"}.
+    - I have [difficulty breathing with a high-pitched sound]{"entity":"Wheezing"}.
+    - It's hard for me to [breathe with a wheeze]{"entity":"Wheezing"}.
+    - I can't [breathe properly due to wheezing]{"entity":"Wheezing"}.
+    - [Wheezing is a problem]{"entity":"Wheezing"}.
+    - I feel like I'm [struggling to inhale with a wheeze]{"entity":"Wheezing"}.
+    - I'm wheezing, and it's [difficult to breathe]{"entity":"Wheezing"}.
+    - My [breath is labored with a wheeze]{"entity":"Wheezing"}.
+    - [Wheezing when breathing]{"entity":"Wheezing"} is bothering me.
+    - I can't [catch my breath due to wheezing]{"entity":"Wheezing"}.
+    - [High-pitched breath sounds]{"entity":"Wheezing"} are concerning me.
+    - I'm [struggling to exhale with a wheeze]{"entity":"Wheezing"}.
+    - I have [wheezing in the chest]{"entity":"Wheezing"}.
+    - It's like I'm [out of breath due to wheezing]{"entity":"Wheezing"}.
+    - [Wheezing problems]{"entity":"Wheezing"} are what's happening.
+    - I'm panting and [experiencing wheezing]{"entity":"Wheezing"}.
+    - I feel [breathless with a wheeze]{"entity":"Wheezing"}.
+    - [Experiencing wheezing]{"entity":"Wheezing"} is what's happening.
+    - I've included synonyms like "whistling sound when breathing" and other phrases that convey the symptom of wheezing. Let me know if you need more examples or if there's anything else I can assist you with.
+
+- synonym: Wheezing
+  examples: |
+    - Whistling sound when breathing
+    - Difficulty breathing with a high-pitched sound
+    - Breathe with a wheeze
+    - Breathe properly due to wheezing
+    - Struggling to inhale with a wheeze
+    - High-pitched breath sounds
+    - Struggling to exhale with a wheeze
+    - Wheezing in the chest
+    - Wheezing problems
+    - Experiencing wheezing
+
+- intent: tell_me_symptom_MorningStiffness
+  examples: |
+    - I am having [morning stiffness]{"entity":"MorningStiffness"}.
+    - I'm experiencing [stiffness in the morning]{"entity":"MorningStiffness"}.
+    - I have [difficulty moving my joints after waking up]{"entity":"MorningStiffness"}.
+    - It's hard for me to [get out of bed due to stiffness]{"entity":"MorningStiffness"}.
+    - I can't [move my body easily in the morning]{"entity":"MorningStiffness"}.
+    - [Morning stiffness is a problem]{"entity":"MorningStiffness"}.
+    - I feel like I'm [stiff when I wake up]{"entity":"MorningStiffness"}.
+    - I'm stiff, and it's [difficult to start the day]{"entity":"MorningStiffness"}.
+    - My [joints are stiff in the morning]{"entity":"MorningStiffness"}.
+    - [Morning joint stiffness]{"entity":"MorningStiffness"} is bothering me.
+    - I can't [bend or stretch in the morning]{"entity":"MorningStiffness"}.
+    - [Difficulty in morning movements]{"entity":"MorningStiffness"} is concerning me.
+    - I'm [struggling to get going in the morning]{"entity":"MorningStiffness"}.
+    - I have [morning muscle stiffness]{"entity":"MorningStiffness"}.
+    - It's like I'm [locked in the morning]{"entity":"MorningStiffness"}.
+    - [Morning stiffness problems]{"entity":"MorningStiffness"} are what's happening.
+    - I'm [slow to start in the morning]{"entity":"MorningStiffness"}.
+    - I feel [stiff when I wake up]{"entity":"MorningStiffness"}.
+    - [Experiencing morning stiffness]{"entity":"MorningStiffness"} is what's happening.
+    - I've included synonyms like "stiffness in the morning" and other phrases that convey the symptom of morning stiffness. Let me know if you need more examples or if there's anything else I can assist you with.
+
+- intent: bot_fallback
+  examples: |
+    - What is 2 + 2?
+    - I am having cold.
+    - what is the outside temperature?
+    - you should die.
+    - I am going to die.
+    - How you work?
+    - Can you tell me a joke?
+    - I want to order a pizza.
+    - Please tell me a story.
+    - What's your favorite color?
+    - What's the meaning of life?
+    - I'm feeling tired.
+    - What's the time?
+    - Tell me a fun fact.
+    - Do you like ice cream?
+    - How does a computer work?
+    - I need some help with my homework.
+    - Can you sing a song?
+    - What's the capital of France?
+    - I need some relationship advice.
+    - How do I bake a cake?
+    - I'm feeling hungry.
+    - Can you recommend a good book?
+    - What's the weather like today?
+    - Tell me about famous scientists.
+    - What's the largest planet in our solar system?
+    - Can you tell me a riddle?
+    - Can you explain quantum physics?
+    - What's your favorite movie?
+    - I can't sleep.
+    - Tell me a historical fact.
+    - What's the population of Tokyo?
+    - I'm feeling sad.
+    - Can you recommend a travel destination?
+    - Who won the World Series in 2020?
+    - Can you help me with my math homework?
+    - I'm in the mood for some Italian food.
+    - What's the latest news headlines?
+    - Tell me a joke, please.
+    - How does photosynthesis work?
+    - I'm looking for a good workout routine.
+    - Can you explain the concept of black holes?
+    - What's the best way to brew coffee?
+    - I'm curious about ancient civilizations.
+    - What's the meaning of the word "serendipity"?
+    - I need some fashion advice.
+    - Tell me a random fact about space.
+    - How do I make the perfect omelette?
+    - I have a question about climate change.
+    - Can you recommend a good documentary to watch?
+    - What's the tallest mountain in the world?
+    - I want to learn a new language. Where should I start?
+    - Tell me something interesting about marine life.
+    - How do I improve my time management skills?
