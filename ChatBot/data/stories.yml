@@ -271,3 +271,12 @@ stories:
   - action: utter_tell_more
   - intent: only_one_symptom
   - action: utter_cure_stomachache
+
+- story: I have only back pain
+  steps:
+  - intent: tell_me_symptom_BackPain
+    entities:
+    - BackPain : "back pain"
+  - action: utter_tell_more
+  - intent: only_one_symptom
+  - action: utter_cure_back_pain
