@@ -38,6 +38,9 @@ intents:
   - tell_me_symptom_Disorientation:
       use_entities:
         - Disorientation
+  - tell_me_symptom_MorningStiffness:
+      use_entities:
+        - MorningStiffness
   - tell_me_symptom_LossInHeight:
       use_entities:
         - LossInHeight
@@ -118,6 +121,7 @@ intents:
           - BackPain
           - Weakness
           - Wheezing
+          - MorningStiffness
 
 entities:
   - Breath
@@ -147,10 +151,38 @@ entities:
   - BackPain
   - Weakness
   - Wheezing
+  - MorningStiffness
 
 responses:
   namaste:
   - text: "Namaste Sir/Madam , how do you feel today?"  
+
+  utter_cure_morning_stiffness:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Morning Stiffness:**
+      Consult with a rheumatologist or a healthcare provider for the diagnosis and management of morning stiffness, especially if it's associated with joint pain.
+
+      *Home Remedies for Morning Stiffness:**
+      - Engage in gentle stretching exercises
+      - Apply warm compresses to affected areas
+      - Maintain a warm and comfortable sleep environment
+      - Stay physically active and exercise regularly
+      - Consider dietary changes and a balanced diet
+
+      **Common Medications for Morning Stiffness:**
+      - Medications may include nonsteroidal anti-inflammatory drugs (NSAIDs), disease-modifying antirheumatic drugs (DMARDs), or other treatments (if prescribed).
+
+      **Additional Tips:**
+      - Keep a journal to monitor the duration and severity of morning stiffness
+      - Follow a regular exercise routine to improve flexibility
+      - Discuss any changes in your condition with your healthcare provider
+      - Consult a healthcare provider for personalized guidance on managing morning stiffness
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
 
   utter_cure_wheezing:
   - text: |
