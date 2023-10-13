@@ -33,3 +33,96 @@ utter_cure_influenza:
       is not a substitute for professional medical advice. 
       The diagnosis of medical conditions should be done by a qualified healthcare provider. 
       If you have concerns about your health, please consult a healthcare professional.
+
+
+//format 2 for stories of diseases
+
+- story: Diagnose Flu 1
+  steps:
+  - intent: tell_me_symptom_Fever
+    entities:
+    - Fever: "fever"
+  - action: utter_tell_more
+  - intent: tell_me_symptom_Headache
+    entities:
+    - Headache: "headache"
+  - action: utter_tell_more_2
+  - intent: tell_me_symptom_sore_throat
+    entities:
+    - sore throat : "sore throat"
+  - action: utter_diagnose_flu
+
+- story: Diagnose Flu 2
+  steps:
+  - intent: tell_me_symptom_Headache
+    entities:
+    - Headache: "headache"
+  - action: utter_tell_more
+  - intent: tell_me_symptom_sore_throat
+    entities:
+    - sore throat : "sore throat"
+  - action: utter_tell_more_2
+  - intent: tell_me_symptom_Fever
+    entities:
+    - Fever: "fever"
+  - action: utter_diagnose_flu
+
+- story: Diagnose Flu 3
+  steps:
+  - intent: tell_me_symptom_sore_throat
+    entities:
+    - sore throat : "sore throat"
+  - action: utter_tell_more
+  - intent: tell_me_symptom_Fever
+    entities:
+    - Fever: "fever"
+  - action: utter_tell_more_2
+  - intent: tell_me_symptom_Headache
+    entities:
+    - Headache: "headache"
+  - action: utter_diagnose_flu
+
+- story: Diagnose Flu 4
+  steps:
+  - intent: tell_me_symptom_Fever
+    entities:
+    - Fever: "fever"
+  - action: utter_tell_more
+  - intent: tell_me_symptom_sore_throat
+    entities:
+    - sore throat : "sore throat"
+  - action: utter_tell_more_2
+  - intent: tell_me_symptom_Headache
+    entities:
+    - Headache: "headache"
+  - action: utter_diagnose_flu
+
+- story: Diagnose Flu 5
+  steps:
+  - intent: tell_me_symptom_Headache
+    entities:
+    - Headache: "headache"
+  - action: utter_tell_more
+  - intent: tell_me_symptom_Fever
+    entities:
+    - Fever: "fever"
+  - action: utter_tell_more_2
+  - intent: tell_me_symptom_sore_throat
+    entities:
+    - sore throat : "sore throat"
+  - action: utter_diagnose_flu
+
+- story: Diagnose Flu 6
+  steps:
+  - intent: tell_me_symptom_sore_throat
+    entities:
+    - sore throat : "sore throat"
+  - action: utter_tell_more
+  - intent: tell_me_symptom_Headache
+    entities:
+    - Headache: "headache"
+  - action: utter_tell_more_2
+  - intent: tell_me_symptom_Fever
+    entities:
+    - Fever: "fever"
+  - action: utter_diagnose_flu
