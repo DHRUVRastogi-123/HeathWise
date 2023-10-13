@@ -10,7 +10,7 @@ assistant_id: 20231013-111959-mild-poutine
 # https://rasa.com/docs/rasa/nlu/components/
 language: en
 
-pipeline: null
+pipeline:
   - name: WhitespaceTokenizer
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
@@ -35,7 +35,7 @@ pipeline: null
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
-policies: null
+policies:
   - name: MemoizationPolicy
   - name: RulePolicy
   - name: UnexpecTEDIntentPolicy
