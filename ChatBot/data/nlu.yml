@@ -1197,3 +1197,105 @@ nlu:
     - Out of stamina
     - Physically drained
     - Experiencing weakness
+
+- intent: tell_me_symptom_Wheezing
+  examples: |
+    - I am having [wheezing]{"entity":"Wheezing"}.
+    - I'm experiencing [whistling sound when breathing]{"entity":"Wheezing"}.
+    - I have [difficulty breathing with a high-pitched sound]{"entity":"Wheezing"}.
+    - It's hard for me to [breathe with a wheeze]{"entity":"Wheezing"}.
+    - I can't [breathe properly due to wheezing]{"entity":"Wheezing"}.
+    - [Wheezing is a problem]{"entity":"Wheezing"}.
+    - I feel like I'm [struggling to inhale with a wheeze]{"entity":"Wheezing"}.
+    - I'm wheezing, and it's [difficult to breathe]{"entity":"Wheezing"}.
+    - My [breath is labored with a wheeze]{"entity":"Wheezing"}.
+    - [Wheezing when breathing]{"entity":"Wheezing"} is bothering me.
+    - I can't [catch my breath due to wheezing]{"entity":"Wheezing"}.
+    - [High-pitched breath sounds]{"entity":"Wheezing"} are concerning me.
+    - I'm [struggling to exhale with a wheeze]{"entity":"Wheezing"}.
+    - I have [wheezing in the chest]{"entity":"Wheezing"}.
+    - It's like I'm [out of breath due to wheezing]{"entity":"Wheezing"}.
+    - [Wheezing problems]{"entity":"Wheezing"} are what's happening.
+    - I'm panting and [experiencing wheezing]{"entity":"Wheezing"}.
+    - I feel [breathless with a wheeze]{"entity":"Wheezing"}.
+    - [Experiencing wheezing]{"entity":"Wheezing"} is what's happening.
+    - I've included synonyms like "whistling sound when breathing" and other phrases that convey the symptom of wheezing. Let me know if you need more examples or if there's anything else I can assist you with.
+
+- synonym: Wheezing
+  examples: |
+    - Whistling sound when breathing
+    - Difficulty breathing with a high-pitched sound
+    - Breathe with a wheeze
+    - Breathe properly due to wheezing
+    - Struggling to inhale with a wheeze
+    - High-pitched breath sounds
+    - Struggling to exhale with a wheeze
+    - Wheezing in the chest
+    - Wheezing problems
+    - Experiencing wheezing
+
+- intent: tell_me_symptom_MorningStiffness
+  examples: |
+    - I am having [morning stiffness]{"entity":"MorningStiffness"}.
+    - I'm experiencing [stiffness in the morning]{"entity":"MorningStiffness"}.
+    - I have [difficulty moving my joints after waking up]{"entity":"MorningStiffness"}.
+    - It's hard for me to [get out of bed due to stiffness]{"entity":"MorningStiffness"}.
+    - I can't [move my body easily in the morning]{"entity":"MorningStiffness"}.
+    - [Morning stiffness is a problem]{"entity":"MorningStiffness"}.
+    - I feel like I'm [stiff when I wake up]{"entity":"MorningStiffness"}.
+    - I'm stiff, and it's [difficult to start the day]{"entity":"MorningStiffness"}.
+    - My [joints are stiff in the morning]{"entity":"MorningStiffness"}.
+    - [Morning joint stiffness]{"entity":"MorningStiffness"} is bothering me.
+    - I can't [bend or stretch in the morning]{"entity":"MorningStiffness"}.
+    - [Difficulty in morning movements]{"entity":"MorningStiffness"} is concerning me.
+    - I'm [struggling to get going in the morning]{"entity":"MorningStiffness"}.
+    - I have [morning muscle stiffness]{"entity":"MorningStiffness"}.
+    - It's like I'm [locked in the morning]{"entity":"MorningStiffness"}.
+    - [Morning stiffness problems]{"entity":"MorningStiffness"} are what's happening.
+    - I'm [slow to start in the morning]{"entity":"MorningStiffness"}.
+    - I feel [stiff when I wake up]{"entity":"MorningStiffness"}.
+    - [Experiencing morning stiffness]{"entity":"MorningStiffness"} is what's happening.
+    - I've included synonyms like "stiffness in the morning" and other phrases that convey the symptom of morning stiffness. Let me know if you need more examples or if there's anything else I can assist you with.
+
+- intent: out_of_scope
+  examples: |
+    - What are the symptoms of Inflammatory Bowel Disease?
+    - Can you tell me the common symptoms of Lupus?
+    - I'm curious about the symptoms of Multiple Sclerosis.
+    - What should I look for in terms of symptoms for Crohn's Disease?
+    - Tell me about the symptoms of Parkinson's Disease
+    - Are you aware of the symptoms of Endometriosis?
+    - What are the symptoms of Ovarian Cancer?
+    - I'd like to know the symptoms of Psoriasis.
+    - Can you explain the symptoms of Lupus in detail?
+    - Tell me about the symptoms of Fibromyalgia.
+    - What is Gout and how is it diagnosed?
+    - Explain the causes and risk factors of Lyme Disease.
+    - I'm interested in learning about Rheumatoid Arthritis.
+    - Can you provide information about Lupus?
+    - Tell me more about Amyotrophic Lateral Sclerosis (ALS).
+    - What are the treatment options for Celiac Disease?
+    - I'd like to know about the diagnosis process for Polycystic Ovary Syndrome (PCOS).
+    - Explain the stages and prognosis of Pancreatic Cancer.
+    - How is Osteoarthritis typically managed?
+    - What should I know about Inflammatory Bowel Disease (IBD)?
+    - What can I do to improve my posture?
+    - Are there exercises to strengthen my back muscles?
+    - How can I maintain healthy skin?
+    - Tell me about maintaining good dental hygiene.
+    - Any tips for better sleep and reducing fatigue?
+    - What are the benefits of regular physical activity?
+    - Can you provide advice on a balanced diet?
+    - How can I manage stress and anxiety effectively?
+    - What's the best way to stay hydrated during the day?
+    - Explain the importance of regular eye check-ups.
+    - Tell me about maintaining a healthy weight.
+    - I'm curious about maintaining overall well-being.
+    - Can you suggest ways to improve my hair's health?
+    - What are the key factors in staying mentally sharp?
+    - How can I prevent skin damage from the sun?
+    - Are there methods to boost my immune system?
+    - Tell me about promoting heart health.
+    - Any advice for maintaining strong bones and joints?
+    - What should I know about maintaining reproductive health?
+    - Can you share tips for reducing the risk of cancer?
