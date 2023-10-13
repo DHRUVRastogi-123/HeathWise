@@ -1,0 +1,1182 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - bot_fallback
+  - tell_me_symptom_Breath:
+      use_entities:
+        - Breath
+  - tell_me_symptom_Taste:
+      use_entities:
+        - Taste
+  - tell_me_symptom_Fever:
+      use_entities:
+        - Fever
+  - tell_me_symptom_ChestPain:
+      use_entities:
+        - ChestPain
+  - tell_me_symptom_JointPainSwelling:
+      use_entities:
+        - JointPainSwelling
+  - tell_me_symptom_VisionProblem:
+      use_entities:
+        - VisionProblem
+  - tell_me_symptom_Nosebleeds:
+      use_entities:
+        - Nosebleeds
+  - tell_me_symptom_MemoryLoss:
+      use_entities:
+        - MemoryLoss
+  - tell_me_symptom_DifficultyProblemSolving:
+      use_entities:
+        - ProblemSolving
+  - tell_me_symptom_Disorientation:
+      use_entities:
+        - Disorientation
+  - tell_me_symptom_MorningStiffness:
+      use_entities:
+        - MorningStiffness
+  - tell_me_symptom_LossInHeight:
+      use_entities:
+        - LossInHeight
+  - tell_me_symptom_FragileBones:
+      use_entities:
+        - FragileBones
+  - tell_me_symptom_SkinColorLoss:
+      use_entities:
+        - SkinColorLoss
+  - tell_me_symptom_GrayingHair:
+      use_entities:
+        - GrayingHair
+  - tell_me_symptom_Sunburn:
+      use_entities:
+        - Sunburn
+  - tell_me_symptom_sore_throat:
+      use_entities:
+        - sore throat
+  - tell_me_symptom_WateryStools:
+      use_entities:
+        - WateryStools
+  - tell_me_symptom_BodyAche:
+      use_entities:
+        - BodyAche
+  - tell_me_symptom_Cough:
+      use_entities:
+        - Cough
+  - tell_me_symptom_Frequent_Urination:
+      use_entities:
+        - Frequent_Urination
+  - tell_me_symptom_Excessive_Thirst:
+      use_entities:
+        - Excessive_Thirst
+  - tell_me_symptom_Sensitivity_to_Light:
+      use_entities:
+        - Sensitivity_to_Light
+  - tell_me_symptom_Headache:
+      use_entities:
+        - Headache
+  - tell_me_symptom_Stomachache:
+      use_entities:
+        - Stomachache
+  - tell_me_symptom_BackPain:
+      use_entities:
+        - BackPain
+  - tell_me_symptom_Weakness:
+      use_entities:
+        - Weakness
+  - tell_me_symptom_Wheezing:
+      use_entities:
+        - Wheezing
+  - only_one_symptom:
+      ignore_entities:
+          - Breath
+          - Taste
+          - Fever
+          - ChestPain
+          - JointPainSwelling
+          - VisionProblem
+          - Nosebleeds
+          - MemoryLoss
+          - ProblemSolving
+          - Disorientation
+          - LossInHeight
+          - FragileBones
+          - SkinColorLoss
+          - GrayingHair
+          - Sunburn
+          - sore throat
+          - WateryStools
+          - BodyAche
+          - Cough
+          - Frequent_Urination
+          - Excessive_Thirst
+          - Sensitivity_to_Light
+          - Headache
+          - Stomachache
+          - BackPain
+          - Weakness
+          - Wheezing
+          - MorningStiffness
+
+entities:
+  - Breath
+  - Taste
+  - Fever
+  - ChestPain
+  - JointPainSwelling
+  - VisionProblem
+  - Nosebleeds
+  - MemoryLoss
+  - ProblemSolving
+  - Disorientation
+  - LossInHeight
+  - FragileBones
+  - SkinColorLoss
+  - GrayingHair
+  - Sunburn
+  - sore throat
+  - WateryStools
+  - BodyAche
+  - Cough
+  - Frequent_Urination
+  - Excessive_Thirst
+  - Sensitivity_to_Light
+  - Headache
+  - Stomachache
+  - BackPain
+  - Weakness
+  - Wheezing
+  - MorningStiffness
+
+responses:
+  namaste:
+  - text: "Namaste Sir/Madam , how do you feel today?"  
+
+  utter_cure_morning_stiffness:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Morning Stiffness:**
+      Consult with a rheumatologist or a healthcare provider for the diagnosis and management of morning stiffness, especially if it's associated with joint pain.
+
+      *Home Remedies for Morning Stiffness:**
+      - Engage in gentle stretching exercises
+      - Apply warm compresses to affected areas
+      - Maintain a warm and comfortable sleep environment
+      - Stay physically active and exercise regularly
+      - Consider dietary changes and a balanced diet
+
+      **Common Medications for Morning Stiffness:**
+      - Medications may include nonsteroidal anti-inflammatory drugs (NSAIDs), disease-modifying antirheumatic drugs (DMARDs), or other treatments (if prescribed).
+
+      **Additional Tips:**
+      - Keep a journal to monitor the duration and severity of morning stiffness
+      - Follow a regular exercise routine to improve flexibility
+      - Discuss any changes in your condition with your healthcare provider
+      - Consult a healthcare provider for personalized guidance on managing morning stiffness
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_wheezing:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Wheezing:**
+      Consult with a pulmonologist or a specialist in respiratory diseases for the diagnosis and management of wheezing.
+
+      *Home Remedies for Wheezing:**
+      - Use prescribed inhalers and medications
+      - Create a clean and allergen-free environment
+      - Use a humidifier to maintain optimal humidity levels
+      - Avoid exposure to asthma triggers
+      - Maintain a healthy lifestyle
+
+      **Common Medications for Wheezing:**
+      - Medications may include bronchodilators, corticosteroids, leukotriene modifiers, or other treatments (if prescribed).
+
+      **Additional Tips:**
+      - Follow your prescribed asthma or wheezing management plan
+      - Identify and avoid triggers that worsen wheezing
+      - Monitor your respiratory health and seek medical advice for any changes
+      - Consult a healthcare provider for personalized wheezing care
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_weakness:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Weakness:**
+      Consult with a primary care physician or an internist to identify and address the underlying causes of weakness.
+
+      *Home Remedies for Weakness:**
+      - Get plenty of rest and sleep
+      - Maintain a balanced and nutritious diet
+      - Stay hydrated
+      - Engage in regular physical activity
+      - Manage stress and practice relaxation techniques
+
+      **Common Medications for Weakness:**
+      - Medications may vary based on the underlying causes and may include vitamins, minerals, or other treatments (if prescribed).
+
+      **Additional Tips:**
+      - Identify and address the underlying causes of weakness
+      - Follow a healthy lifestyle with a focus on nutrition and exercise
+      - Consider medical evaluation for chronic or unexplained weakness
+      - Consult a healthcare provider for personalized guidance
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_asthma:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Asthma:**
+      Consult with an allergist, pulmonologist, or asthma specialist for the diagnosis and management of asthma.
+
+      *Home Remedies for Asthma:**
+      - Use prescribed inhalers and medications
+      - Avoid asthma triggers
+      - Create an asthma action plan
+      - Monitor your peak flow
+      - Maintain a clean and allergen-free home
+
+      **Common Medications for Asthma:**
+      - Medications may include bronchodilators, corticosteroids, leukotriene modifiers, or other treatments (if prescribed).
+
+      **Additional Tips:**
+      - Follow your asthma action plan
+      - Keep rescue inhalers handy
+      - Identify and manage asthma triggers
+      - Consult a healthcare provider for personalized asthma care
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_migraine:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Migraine:**
+      Consult with a neurologist or a headache specialist for the diagnosis and management of migraines.
+
+      *Home Remedies for Migraine:**
+      - Rest in a dark and quiet room
+      - Apply a cold compress to the head
+      - Stay hydrated
+      - Identify and avoid migraine triggers
+      - Consider over-the-counter pain relievers (if recommended)
+
+      **Common Medications for Migraine:**
+      - Medications may include triptans, pain relievers, anti-nausea drugs, or other treatments (if prescribed).
+
+      **Additional Tips:**
+      - Keep a migraine diary
+      - Identify and manage migraine triggers
+      - Follow your prescribed migraine management plan
+      - Consult a healthcare provider for personalized migraine care
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_rheumatoidarthritis:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Rheumatoid Arthritis:**
+      Consult with a rheumatologist for the diagnosis and management of rheumatoid arthritis.
+
+      *Home Remedies for Rheumatoid Arthritis:**
+      - Follow prescribed medications and treatment plan
+      - Get regular exercise
+      - Apply hot or cold packs to ease joint pain
+      - Manage stress and maintain a healthy lifestyle
+
+      **Common Medications for Rheumatoid Arthritis:**
+      - Medications may include disease-modifying antirheumatic drugs (DMARDs), biologics, nonsteroidal anti-inflammatory drugs (NSAIDs), or other treatments (if prescribed).
+
+      **Additional Tips:**
+      - Attend physical or occupational therapy
+      - Follow your prescribed treatment plan
+      - Monitor your condition and report changes to your healthcare provider
+      - Consult a healthcare provider for personalized rheumatoid arthritis care
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_alzheimerdisease:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Alzheimer's Disease:**
+      Consult with a neurologist or a geriatric specialist for the diagnosis and management of Alzheimer's disease.
+
+      *Home Remedies for Alzheimer's Disease:**
+      - Alzheimer's is a progressive condition, and there are no home remedies to reverse its effects.
+      - Focus on providing a safe and supportive environment for individuals with Alzheimer's.
+
+      **Common Medications for Alzheimer's Disease:**
+      - Medications may include cholinesterase inhibitors, memantine, or other treatments (if prescribed).
+
+      **Additional Tips:**
+      - Establish a routine and a structured environment
+      - Provide emotional support and engage in cognitive exercises
+      - Seek guidance and resources from Alzheimer's support organizations
+      - Consult a healthcare provider for personalized Alzheimer's disease care
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_osteoporosis:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Osteoporosis:**
+      Consult with an endocrinologist or a specialist in bone health for the diagnosis and management of osteoporosis.
+
+      *Home Remedies for Osteoporosis:**
+      - Consume a diet rich in calcium and vitamin D
+      - Engage in weight-bearing exercises
+      - Avoid smoking and limit alcohol intake
+      - Use fall prevention strategies
+      - Take prescribed medications, such as bisphosphonates or other treatments (if recommended)
+
+      **Common Medications for Osteoporosis:**
+      - Medications may include bisphosphonates, hormone-related therapy, or other treatments (if prescribed).
+
+      **Additional Tips:**
+      - Get regular bone density screenings
+      - Follow your prescribed osteoporosis management plan
+      - Adopt a bone-healthy lifestyle
+      - Consult a healthcare provider for personalized osteoporosis care
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_vitiligo:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Vitiligo:**
+      Consult with a dermatologist or a specialist in skin disorders for the diagnosis and management of vitiligo.
+
+      *Home Remedies for Vitiligo:**
+      - Use sunscreen to protect depigmented skin
+      - Camouflage creams or makeup may help conceal affected areas
+      - Phototherapy may be prescribed by a healthcare provider
+      - Psychological support and counseling can be beneficial
+
+      **Common Medications for Vitiligo:**
+      - Medications may include topical corticosteroids, calcineurin inhibitors, psoralen plus ultraviolet A (PUVA) therapy, or other treatments (if prescribed).
+
+      **Additional Tips:**
+      - Monitor your skin for any changes
+      - Consult with a healthcare provider for a personalized vitiligo management plan
+      - Explore available treatments and interventions
+      - Seek psychological support if needed
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_pneumonia:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Pneumonia:**
+      Consult with a pulmonologist or an infectious disease specialist for the diagnosis and management of pneumonia.
+
+      *Home Remedies for Pneumonia:**
+      - Rest and stay hydrated
+      - Take prescribed antibiotics and medications
+      - Use a humidifier to ease breathing
+      - Follow your treatment plan diligently
+
+      **Common Medications for Pneumonia:**
+      - Antibiotics
+      - Cough medicine (if recommended)
+
+      **Additional Tips:**
+      - Complete the full course of prescribed antibiotics
+      - Get plenty of rest
+      - Stay well-hydrated
+      - Seek medical advice for personalized pneumonia care
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_diabetes:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Type 2 Diabetes:**
+      Consult with an endocrinologist or a diabetologist for the diagnosis and management of type 2 diabetes.
+
+      *Home Remedies for Type 2 Diabetes:**
+      - Maintain a balanced diet
+      - Engage in regular physical activity
+      - Monitor blood sugar levels
+      - Take prescribed medications as directed
+
+      **Common Medications for Type 2 Diabetes:**
+      - Medications may include oral antidiabetic drugs, insulin, or other treatments (if prescribed).
+
+      **Additional Tips:**
+      - Follow a diabetes management plan
+      - Monitor blood sugar levels regularly
+      - Maintain a healthy lifestyle
+      - Consult a healthcare provider for personalized diabetes care
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_hypertension:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Hypertension (High Blood Pressure):**
+      Consult with a cardiologist or a specialist in hypertension for the diagnosis and management of high blood pressure.
+
+      *Home Remedies for Hypertension:**
+      - Maintain a healthy diet (low in salt and saturated fats)
+      - Engage in regular physical activity
+      - Manage stress and practice relaxation techniques
+      - Take prescribed antihypertensive medications
+
+      **Common Medications for Hypertension:**
+      - Medications may include antihypertensive drugs like ACE inhibitors, beta-blockers, diuretics, or other treatments (if prescribed).
+
+      **Additional Tips:**
+      - Monitor your blood pressure regularly
+      - Follow your healthcare provider's recommendations for hypertension management
+      - Make lifestyle changes to control high blood pressure
+      - Consult a healthcare provider for personalized hypertension care
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_covid:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for COVID-19:**
+      If you suspect you have COVID-19 or have been in close contact with someone with COVID-19, seek guidance from a healthcare provider or local health department.
+
+      *Home Remedies for COVID-19:**
+      - Isolate yourself to prevent the spread of the virus
+      - Stay well-hydrated
+      - Get plenty of rest
+      - Over-the-Counter Meds for symptom relief (if recommended)
+
+      **Common Medications for COVID-19:**
+      - Medications and treatments for COVID-19 are determined by healthcare providers and may include antiviral drugs, monoclonal antibodies, or other therapies.
+
+      **Additional Tips:**
+      - Follow guidance from your healthcare provider and local health authorities.
+      - Get vaccinated if you are eligible.
+      - Monitor your symptoms and seek medical attention if they worsen.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_influenza:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Influenza:**
+      Visit a primary care physician for influenza, or see a specialist for severe cases.
+
+      *Home Remedies for Influenza:**
+      - Rest
+      - Hydration
+      - Warm salt gargle
+      - Steam inhalation
+      - Honey and lemon
+      - Humidifier
+      - Over-the-Counter Meds (acetaminophen or ibuprofen)
+
+      **Common Medications for Influenza:**
+      - Acetaminophen
+      - Ibuprofen
+      - Antiviral meds (if prescribed)
+
+      **Additional Tips:**
+      - Isolate if you have influenza.
+      - Consider an annual flu vaccination.
+      - Consult a healthcare provider for personalized guidance.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_breathing_issue:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Breathing Problems:**
+      If you are experiencing breathing problems, it is essential to consult a pulmonologist or a respiratory specialist.
+
+      *Home Remedies for Breathing Problems:**
+      - Maintain good indoor air quality
+      - Avoid smoking and exposure to smoke
+      - Use air purifiers if necessary
+      - Stay well-hydrated
+      - Practice breathing exercises
+      - Consider a healthy diet
+
+      **Common Medications for Breathing Problems:**
+      - Bronchodilators
+      - Steroids (if prescribed)
+
+      **Additional Tips:**
+      - Avoid allergens or triggers
+      - Monitor your symptoms and follow your doctor's advice.
+      - Seek immediate medical help if breathing problems worsen.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_taste_issue:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Taste Changes:**
+      If you are experiencing changes in taste, you may consult with an otolaryngologist or a specialist in ear, nose, and throat (ENT) disorders.
+
+      *Home Remedies for Taste Changes:**
+      - Maintain oral hygiene
+      - Stay well-hydrated
+      - Try different foods with strong flavors
+      - Avoid foods that worsen the issue
+      - Consider a zinc supplement (if advised)
+
+      **Common Medications for Taste Changes:**
+      - There may not be specific medications for taste changes, but treating the underlying cause can help.
+
+      **Additional Tips:**
+      - Consult a healthcare provider for a proper evaluation and diagnosis.
+      - Address any underlying medical conditions.
+      - Be patient, as taste changes may improve with time.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_fever:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Fever:**
+      If you have a fever, you can consult with a primary care physician.
+
+      *Home Remedies for Fever:**
+      - Rest
+      - Hydration
+      - Use a cool compress
+      - Over-the-counter medications (acetaminophen or ibuprofen)
+
+      **Common Medications for Fever:**
+      - Acetaminophen
+      - Ibuprofen
+
+      **Additional Tips:**
+      - Seek medical attention for persistent or high fever.
+      - Isolate if you have a fever to prevent the spread of infection.
+      - Follow your doctor's advice.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_chest_pain:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Chest Pain:**
+      If you are experiencing chest pain, seek immediate medical attention by calling 911 or going to the nearest emergency room.
+
+      *Home Remedies for Chest Pain:**
+      - While waiting for medical help, sit up and take slow, deep breaths.
+      - Chew and swallow aspirin if advised by a healthcare provider.
+
+      **Common Medications for Chest Pain:**
+      - Nitroglycerin (if prescribed)
+
+      **Additional Tips:**
+      - Do not ignore chest pain. It may indicate a serious medical condition.
+      - Follow medical advice for the treatment of chest pain.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_joint_pain_swelling:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Joint Pain and Swelling:**
+      For joint pain and swelling, you can consult with a rheumatologist or an orthopedic specialist.
+
+      *Home Remedies for Joint Pain and Swelling:**
+      - Rest and elevate the affected area
+      - Apply ice packs
+      - Over-the-counter pain relievers (ibuprofen or acetaminophen)
+      - Gentle exercises to maintain joint flexibility
+
+      **Common Medications for Joint Pain and Swelling:**
+      - Nonsteroidal anti-inflammatory drugs (NSAIDs)
+      - Disease-modifying antirheumatic drugs (DMARDs) (if prescribed)
+
+      **Additional Tips:**
+      - Seek a medical evaluation for persistent or severe joint pain and swelling.
+      - Follow the treatment plan recommended by your healthcare provider.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_vision_problem:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Vision Problems:**
+      For vision problems, consult with an ophthalmologist or an eye specialist.
+
+      *Home Remedies for Vision Problems:**
+      - If experiencing irritation, use a sterile saline solution
+      - Maintain proper eye hygiene
+      - Ensure good lighting when reading or using screens
+      - Use lubricating eye drops (if recommended)
+
+      **Common Medications for Vision Problems:**
+      - Eye drops (if prescribed)
+
+      **Additional Tips:**
+      - Seek immediate medical attention for sudden vision loss or severe eye pain.
+      - Follow your eye specialist's recommendations.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_nosebleeds:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Nosebleeds:**
+      For recurring or severe nosebleeds, consult with an ear, nose, and throat (ENT) specialist or an otolaryngologist.
+
+      *Home Remedies for Nosebleeds:**
+      - Pinch your nostrils together and lean forward slightly
+      - Apply a cold compress to the back of your neck
+      - Avoid inserting anything into your nose
+      - Use a humidifier to add moisture to the air
+
+      **Common Medications for Nosebleeds:**
+      - There may not be specific medications for nosebleeds, but treatments focus on stopping the bleeding.
+
+      **Additional Tips:**
+      - Seek medical attention if nosebleeds are frequent, last for an extended period, or are the result of an injury.
+      - Follow your healthcare provider's recommendations.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_memory_loss:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Memory Loss:**
+      If you or a loved one is experiencing memory loss, it's advisable to consult a neurologist, geriatrician, or a healthcare provider experienced in cognitive health.
+
+      *Home Remedies for Memory Loss:**
+      - Stay mentally and socially active
+      - Get regular exercise
+      - Maintain a balanced diet
+      - Manage stress
+      - Get adequate sleep
+      - Consider cognitive training exercises
+      - Medications for cognitive decline (if prescribed)
+
+      **Common Medications for Memory Loss:**
+      - Medications such as cholinesterase inhibitors (if prescribed)
+
+      **Additional Tips:**
+      - Seek medical evaluation for any significant or sudden memory loss.
+      - Caregivers should consider support groups and resources for dementia and memory-related conditions.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_problem_solving:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Problem Solving Difficulties:**
+      If you are experiencing difficulties with problem-solving or cognitive function, it's advisable to consult a neurologist, psychiatrist, or a healthcare provider experienced in cognitive health.
+
+      *Home Remedies for Problem Solving Difficulties:**
+      - Maintain mental and social activity
+      - Get regular exercise
+      - Eat a balanced diet
+      - Manage stress
+      - Get adequate sleep
+      - Consider cognitive training exercises
+      - Medications for cognitive function (if prescribed)
+
+      **Common Medications for Problem Solving Difficulties:**
+      - Medications such as cholinesterase inhibitors (if prescribed)
+
+      **Additional Tips:**
+      - Seek medical evaluation for any significant or sudden cognitive difficulties.
+      - Family and caregivers should provide support and engage in care planning.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_disorientation:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Disorientation:**
+      If you or someone you know is experiencing disorientation, it's crucial to consult a healthcare provider, psychiatrist, or neurologist for a comprehensive evaluation.
+
+      *Home Remedies for Disorientation:**
+      - Ensure a safe environment
+      - Provide reassurance and comfort
+      - Stay hydrated
+      - Maintain a regular routine
+      - Medications for underlying causes (if prescribed)
+
+      **Common Medications for Disorientation:**
+      - Medications may vary based on the underlying cause.
+
+      **Additional Tips:**
+      - Seek immediate medical attention if disorientation is severe or sudden.
+      - Provide a supportive and calm environment for individuals experiencing disorientation.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+
+  utter_cure_watery_stools:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Watery Stools:**
+      If you are experiencing persistent watery stools or diarrhea, consult with a gastroenterologist or a healthcare provider experienced in digestive health.
+
+      *Home Remedies for Watery Stools:**
+      - Stay hydrated to prevent dehydration
+      - Eat a bland diet (BRAT diet: bananas, rice, applesauce, toast)
+      - Over-the-counter anti-diarrheal medications (if recommended)
+
+      **Common Medications for Watery Stools:**
+      - Medications may include anti-diarrheal drugs or antibiotics (if prescribed for bacterial infections).
+
+      **Additional Tips:**
+      - Seek medical evaluation for persistent or severe watery stools.
+      - Follow your healthcare provider's recommendations for digestive health.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_body_ache:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Body Ache:**
+      If you have persistent or severe body aches, consult with a primary care physician or a rheumatologist.
+
+      *Home Remedies for Body Ache:**
+      - Rest and get plenty of sleep
+      - Over-the-counter pain relievers like ibuprofen or acetaminophen may help
+      - Apply a warm compress to the sore areas
+      - Keep yourself well-hydrated with clear fluids
+      - Avoid excessive physical strain or exercise
+
+      **Common Medications for Body Ache:**
+      - Medications may include pain relievers and anti-inflammatory drugs (if prescribed).
+
+      **Additional Tips:**
+      - Seek medical evaluation if the body ache persists for longer than a week or worsens.
+      - Consult with a healthcare provider for personalized guidance.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_cough:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Cough:**
+      If you have a persistent or severe cough, consult with a primary care physician or a pulmonologist.
+
+      *Home Remedies for Cough:**
+      - Stay hydrated
+      - Use cough drops or lozenges
+      - Honey and lemon
+      - Steam inhalation
+      - Over-the-counter cough suppressants (if needed)
+
+      **Common Medications for Cough:**
+      - Medications may include cough suppressants or expectorants (if recommended).
+
+      **Additional Tips:**
+      - Seek medical evaluation for persistent or severe cough, especially if accompanied by other symptoms.
+      - Follow your healthcare provider's recommendations for respiratory health.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_frequent_urination:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Frequent Urination:**
+      If you are experiencing frequent urination, it's advisable to consult with a urologist or a healthcare provider experienced in urinary health.
+
+      *Home Remedies for Frequent Urination:**
+      - Limit caffeine and alcohol intake
+      - Stay hydrated with water
+      - Pelvic floor exercises (Kegel exercises)
+      - Over-the-counter bladder control products (if recommended)
+
+      **Common Medications for Frequent Urination:**
+      - Medications may include anticholinergics or alpha-blockers (if prescribed).
+
+      **Additional Tips:**
+      - Seek medical evaluation for persistent or bothersome frequent urination.
+      - Follow your healthcare provider's recommendations for urinary health.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_excessive_thirst:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Excessive Thirst:**
+      If you are experiencing persistent excessive thirst, consult with a primary care physician or an endocrinologist.
+
+      *Home Remedies for Excessive Thirst:**
+      - Stay well-hydrated
+      - Avoid excessive caffeine or salty foods
+      - Monitor your blood sugar levels (if diabetes-related)
+      - Address underlying causes or conditions
+
+      **Common Medications for Excessive Thirst:**
+      - Medications may vary based on the underlying cause.
+
+      **Additional Tips:**
+      - Seek medical evaluation for persistent or unusual excessive thirst.
+      - Follow your healthcare provider's recommendations for managing excessive thirst.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_sensitivity_to_light:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Sensitivity to Light:**
+      If you have persistent sensitivity to light, consult with an ophthalmologist or a healthcare provider experienced in eye health.
+
+      *Home Remedies for Sensitivity to Light:**
+      - Wear sunglasses with UV protection
+      - Stay indoors during peak sunlight hours
+      - Use artificial tears (if recommended)
+      - Avoid bright screens or lights in dark environments
+
+      **Common Medications for Sensitivity to Light:**
+      - Medications may include eye drops or medications for underlying eye conditions.
+
+      **Additional Tips:**
+      - Seek medical evaluation for persistent or worsening sensitivity to light.
+      - Follow your healthcare provider's recommendations for eye health.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_loss_in_height:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Loss in Height:**
+      If you have concerns about loss in height, consult with an endocrinologist or a healthcare provider experienced in bone health.
+
+      *Home Remedies for Loss in Height:**
+      - Maintain a balanced diet rich in calcium and vitamin D
+      - Engage in weight-bearing exercises
+      - Follow your healthcare provider's recommendations for bone health.
+
+      **Common Medications for Loss in Height:**
+      - Medications may vary based on underlying bone conditions (if present).
+
+      **Additional Tips:**
+      - Seek medical evaluation if you have significant concerns about loss in height.
+      - Follow your healthcare provider's recommendations for bone health.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_fragile_bones:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Fragile Bones:**
+      If you have concerns about fragile bones, consult with an orthopedic specialist or a healthcare provider experienced in bone health.
+
+      *Home Remedies for Fragile Bones:**
+      - Ensure a diet rich in calcium and vitamin D
+      - Engage in weight-bearing exercises
+      - Consider bone-strengthening supplements (if recommended)
+      - Follow your healthcare provider's recommendations for bone health.
+
+      **Common Medications for Fragile Bones:**
+      - Medications may include bisphosphonates or other medications for bone health (if prescribed).
+
+      **Additional Tips:**
+      - Seek medical evaluation if you have concerns about fragile bones.
+      - Follow your healthcare provider's recommendations for bone health.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_skin_color_loss:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Skin Color Loss:**
+      If you have concerns about skin color loss, consult with a dermatologist or a healthcare provider experienced in skin health.
+
+      *Home Remedies for Skin Color Loss:**
+      - Use sunscreen to prevent further skin damage
+      - Keep the skin well-moisturized
+      - Apply makeup or self-tanners (if desired)
+      - Follow your healthcare provider's recommendations for skin health.
+
+      **Common Medications for Skin Color Loss:**
+      - Medications may include topical corticosteroids or other dermatological treatments (if prescribed).
+
+      **Additional Tips:**
+      - Seek medical evaluation if you have concerns about skin color loss.
+      - Follow your healthcare provider's recommendations for skin health.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_graying_hair:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Graying Hair:**
+      If you have concerns about graying hair, consult with a dermatologist or a healthcare provider experienced in hair and scalp health.
+
+      *Home Remedies for Graying Hair:**
+      - Maintain a balanced diet with essential nutrients
+      - Consider haircare products that promote hair health
+      - Hair dyes or coloring (if desired)
+      - Follow your healthcare provider's recommendations for hair and scalp health.
+
+      **Common Medications for Graying Hair:**
+      - Medications are typically not prescribed for graying hair, but treatments may be available for underlying conditions.
+
+      **Additional Tips:**
+      - Seek medical evaluation if you have significant concerns about graying hair.
+      - Follow your healthcare provider's recommendations for hair and scalp health.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_sunburn:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Sunburn:**
+      If you have severe sunburn or concerns about your skin, consult with a dermatologist or a healthcare provider experienced in skin health.
+
+      *Home Remedies for Sunburn:**
+      - Cool compresses or cold baths
+      - Moisturizing creams or aloe vera gel
+      - Over-the-counter pain relievers (if needed)
+      - Stay hydrated
+
+      **Common Medications for Sunburn:**
+      - Medications may include pain relievers and creams to soothe the skin (if recommended).
+
+      **Additional Tips:**
+      - Seek medical evaluation for severe or blistering sunburn.
+      - Follow your healthcare provider's recommendations for skin health.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_sore_throat:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Sore Throat:**
+      If you have a persistent or severe sore throat, consult with a primary care physician or an ear, nose, and throat (ENT) specialist.
+
+      *Home Remedies for Sore Throat:**
+      - Gargle with warm salt water
+      - Use throat lozenges
+      - Stay hydrated
+      - Rest and get plenty of sleep
+      - Avoid irritants like smoking or exposure to allergens
+
+      **Common Medications for Sore Throat:**
+      - Medications may include over-the-counter pain relievers or antibiotics (if prescribed for a bacterial infection).
+
+      **Additional Tips:**
+      - Seek medical evaluation for severe or persistent sore throat.
+      - Follow your healthcare provider's recommendations for throat health.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_headache:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Headache:**
+      If you have persistent or severe headaches, consult with a neurologist or a primary care physician.
+
+      *Home Remedies for Headache:**
+      - Rest in a quiet, dark room
+      - Stay well-hydrated with clear fluids
+      - Apply a warm or cold compress to the forehead
+      - Over-the-Counter Meds (if recommended)
+      - Manage stress through relaxation techniques
+
+      **Common Medications for Headache:**
+      - Medications may include pain relievers, triptans, or preventive medications for chronic headaches (if prescribed).
+
+      **Additional Tips:**
+      - Seek medical evaluation for severe or recurrent headaches, especially if they are accompanied by other concerning symptoms.
+      - Follow your healthcare provider's recommendations for headache management and prevention.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_stomachache:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Stomachache:**
+      If you have persistent or severe stomachaches, consult with a gastroenterologist or a primary care physician.
+
+      *Home Remedies for Stomachache:**
+      - Rest and avoid heavy meals
+      - Stay well-hydrated with clear fluids
+      - Over-the-Counter Meds for indigestion or upset stomach (if recommended)
+      - Apply a warm compress to the abdomen
+      - Avoid trigger foods or drinks
+
+      **Common Medications for Stomachache:**
+      - Medications may include antacids, acid reducers, or treatments for underlying gastrointestinal conditions (if prescribed).
+
+      **Additional Tips:**
+      - Seek medical evaluation for severe or persistent stomachaches, especially if they are accompanied by other concerning symptoms.
+      - Follow your healthcare provider's recommendations for stomach health.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_back_pain:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Which Doctor to Consult for Back Pain:**
+      If you have persistent or severe back pain, consult with an orthopedic specialist or a primary care physician.
+
+      *Home Remedies for Back Pain:**
+      - Rest and avoid activities that worsen the pain
+      - Apply a cold pack to the affected area in the first 48 hours, followed by a warm compress
+      - Over-the-Counter Meds (if recommended)
+      - Gentle stretching exercises
+      - Maintain good posture and ergonomics
+
+      **Common Medications for Back Pain:**
+      - Medications may include pain relievers, muscle relaxants, or anti-inflammatory drugs (if prescribed).
+
+      **Additional Tips:**
+      - Seek medical evaluation for severe or persistent back pain, especially if it is accompanied by other concerning symptoms.
+      - Follow your healthcare provider's recommendations for back health.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_tell_more:
+  - text: "Are you feeling any other symptoms?"
+
+  utter_tell_more_2:
+  - text: "Please include one more symptom for a diagnosis (you may include a mild one too !)"
+
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_fallback:
+  - text: "Not yet trained for this. Sorry for missing knowledge."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
