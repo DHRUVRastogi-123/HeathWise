@@ -8,6 +8,7 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - bot_fallback
   - tell_me_symptom_Breath:
       use_entities:
         - Breath
@@ -318,7 +319,7 @@ responses:
       **Disclaimer:**
       The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
 
-  utter_cure_alzheimersdisease:
+  utter_cure_alzheimerdisease:
   - text: |
       **Disclaimer:**
       The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
@@ -1172,6 +1173,9 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_fallback:
+  - text: "Not yet trained for this. Sorry for missing knowledge."
 
 session_config:
   session_expiration_time: 60
