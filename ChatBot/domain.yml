@@ -1,0 +1,258 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - tell_me_symptom_Headache:
+      use_entities:
+        - Headache
+  - tell_me_symptom_Stomachache:
+      use_entities:
+        - Stomachache
+  - tell_me_symptom_Fever:
+      use_entities:
+        - Fever
+  - tell_me_symptom_sore_throat:
+      use_entities:
+        - sore throat
+  - tell_me_symptom_WateryStools:
+      use_entities:
+        - WateryStools
+  - tell_me_symptom_BodyAche:
+      use_entities:
+        - BodyAche
+  - tell_me_symptom_Cough:
+      use_entities:
+        - Cough
+  - tell_me_symptom_Frequent_Urination:
+      use_entities:
+        - Frequent_Urination
+  - tell_me_symptom_Excessive_Thirst:
+      use_entities:
+        - Excessive_Thirst
+  - tell_me_symptom_Sensitivity_to_Light:
+      use_entities:
+        - Sensitivity_to_Light
+  - only_one_symptom:
+      ignore_entities:
+        - Headache
+        - Stomachache 
+        - Fever
+        - sore throat
+        - WateryStools
+        - BodyAche
+        - Frequent_Urination
+        - Excessive_Thirst
+        - Sensitivity_to_Light
+
+entities:
+  - Headache
+  - Stomachache
+  - Fever
+  - sore throat
+  - WateryStools
+  - BodyAche
+  - Cough
+  - Frequent_Urination
+  - Excessive_Thirst
+  - Sensitivity_to_Light
+
+
+responses:
+  namaste:
+  - text: "Namaste Sir/Madam , how do you feel today?"  
+
+  utter_ask_fever_severity:
+  - text: "Is it a high fever or a low fever?"
+  - text: "Can you tell me the severity of the fever?"
+  - text: "How severe is your fever?"
+
+  utter_high_fever_story:
+  - text: "I see that you have a high fever. Let's discuss how to manage high fever symptoms."
+  
+  utter_low_fever_story:
+  - text: "I understand you have a low fever. We can talk about remedies for low-grade fevers."
+
+  utter_cure_BodyAche:
+  - text: |
+      Self-treatment: Self-care steps that may be helpful in some less-serious cases:
+      - Rest and get plenty of sleep
+      - Over-the-counter pain relievers like ibuprofen or acetaminophen may help
+      - Apply a warm compress to the sore areas
+      - Keep yourself well-hydrated with clear fluids
+      - Avoid excessive physical strain or exercise
+
+      See a doctor if you notice:
+      - The body ache persists for longer than a week
+      - The pain worsens or spreads to new areas
+      - You experience additional severe symptoms
+
+      It's crucial to consult with a healthcare professional if your symptoms worsen or if you have any concerns about your condition.
+
+  utter_cure_WateryStools:
+  - text: |
+      Self-treatment: Self-care steps that may be helpful in some less-serious cases:
+      - Stay hydrated by drinking clear fluids
+      - Avoid spicy or greasy foods
+      - Rest and give your stomach time to recover
+      - Consider taking over-the-counter medications for diarrhea
+      - Use oral rehydration solutions
+
+      See a doctor if you notice:
+      - Persistent watery stools lasting longer than 48 hours
+      - Signs of dehydration such as dry mouth, dark urine, or dizziness
+      - Blood in the stool
+      - High fever
+
+      See a doctor immediately if you notice:
+      - Severe dehydration, including extreme thirst, sunken eyes, rapid breathing
+      - Confusion or disorientation
+      - Severe abdominal pain
+      - Continuous vomiting
+
+      It's important to seek medical attention if your condition worsens or if you have any severe symptoms.
+
+  utter_cure_sore_throat:
+  - text: |
+      Self-treatment: Self-care steps that may be helpful in some less-serious cases:
+      - Take warm liquids
+      - Gargle with saltwater
+      - Rest your voice
+      - Avoid dry air; use humidifiers
+      - Avoid irritants such as alcohol
+
+      See a doctor if you notice:
+      - The sore throat lasts longer than a week
+      - Difficulty breathing, swallowing, or opening your mouth
+      - Joint pain
+      - Earache, rash, fever
+      - Phlegm and (or) blood in phlegm
+      - Sore throat or hoarseness keeps recurring
+      - A lump in your neck
+
+      See a doctor immediately if you notice:
+      - Your child has difficulty breathing and swallowing associated with the sore throat
+      - Your child is drooling
+
+  utter_cure_fever:
+  - text: |
+        Self-treatment: Self-care steps that may be helpful in some less-serious cases:
+        - Large volume of fluid intake
+        - Tepid sponging
+        - Switching on a fan
+        - Applying a damp cloth on the forehead
+
+        See a doctor if you notice:
+        - The fever has lasted for longer than 2-3 days
+        - An infant has a fever
+        - Fever of 103°F or higher in adults
+        - Other mild to moderate symptoms
+
+        See a doctor immediately if you notice:
+        - Feelings of disorientation or confusion
+        - A rash has appeared and is spreading
+        - Chest pain or breathing difficulties
+        - Continuous vomiting
+
+  
+  utter_cure_headache:
+  - text: |
+        Self-treatment: Self-care steps that may be helpful in some less-serious cases:
+        - Resting in a dark, quiet room
+        - Over-the-counter medications such as ibuprofen, acetaminophen, or aspirin
+
+        See a doctor if you notice:
+        - That it recurs often
+        - Disturbance of sleep and routine activities
+        - That it does not improve with rest
+        - It lasts longer than 24 hours
+
+  utter_cure_stomachache:
+  - text: |
+        Self-treatment: Self-care steps that may be helpful in some less-serious cases:
+        - Avoid spicy or oily foods that worsen the cramping
+        - Avoid overeating
+        - Apply a heat pad to the stomach to ease the pain
+        - Stomach massage, especially in children
+        - Take medications (e.g., gas relievers, antacids, laxatives, antibiotics, anti-diarrheals)
+
+        See a doctor if you notice:
+        - Sudden pain
+        - Pain lasts longer than a day
+        - Bloody stool or vomit
+        - An inability to eat or drink
+        - Unintentional weight loss
+
+  utter_diagnose_flu:
+  - text: |
+      Based on the symptoms you mentioned, it's possible that you have the flu (influenza). 
+      Flu is characterized by symptoms such as fever, headache, fatigue, and muscle aches. Here are some self-care steps and when to see a doctor:
+
+      Self-treatment: Self-care steps that may be helpful in some less-serious cases:
+      - Get plenty of rest
+      - Drink fluids to stay hydrated
+      - Take over-the-counter pain relievers for fever and muscle aches 
+      - Avoid contact with others to prevent the spread of the flu
+
+      See a doctor if you notice:
+      - Severe symptoms or difficulty breathing
+      - Persistent high fever
+      - Chest pain
+      - Confusion
+      - Bluish lips or face
+
+      It's important to consult a healthcare professional for a proper diagnosis and treatment if your symptoms worsen or if you have any severe symptoms. 
+      Take care and get well soon!
+
+  utter_diagnose_diarrhea:
+  - text: |
+      Based on the symptoms you've mentioned, it's possible that you may have a gastrointestinal condition, possibly diarrhea. 
+      However, please note that I'm not a doctor, and it's important to consult with a healthcare professional for a proper diagnosis and treatment.
+
+      In the meantime, here are some general self-care tips for managing diarrhea:
+
+      - Stay hydrated by drinking clear fluids.
+      - Avoid spicy or greasy foods.
+      - Rest and give your stomach time to recover.
+      - Consider taking over-the-counter medications for diarrhea.
+      - Use oral rehydration solutions.
+
+      If your symptoms persist or worsen, or if you experience signs of severe dehydration, it's crucial to seek immediate medical attention. 
+      Your health is important, and a healthcare provider can provide you with personalized guidance and treatment.
+
+      Please consult a healthcare professional for a proper evaluation and diagnosis.
+
+
+  utter_tell_more:
+  - text: "Are you feeling any other symptoms?"
+
+  utter_tell_more_2:
+  - text: "Please include one more symptom for a diagnosis (you may include a mild one too !)"
+
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
