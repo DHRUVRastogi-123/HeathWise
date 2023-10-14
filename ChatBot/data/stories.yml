@@ -4,12 +4,12 @@ stories:
 - story: greeting
   steps:
   - intent: greet
-  - action: namaste
+  - action: utter_namaste
 
 - story: who_are_you
   steps:
   - intent: who_are_you
-  - action: i_am_bot
+  - action: utter_i_am_bot
 
 - story: Diagnose Influenza 1
   steps:
