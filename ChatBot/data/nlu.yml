@@ -3,92 +3,51 @@ version: "3.1"
 nlu:
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - Hello
+    - Namaste
+    - Vanakkam
+    - Salaam
+    - Sat Sri Akal
+    - Pranam
+    - Kem Cho
+    - Aap kaise hain?
+    - Aadab
+    - Salaam Alaikum
+    - Shubh Prabhat
+    - Subho Sokal
+    - Ninna hesaru enu?
+    - Kaisa hai tu?
+    - Swagatam
+    - Subho Sokal
+    - Swagatham
+    - Sasrikal
+    - Vannakam
+    - Cheruthiruthal
+    - Ram Ram Sa
+    - Jai Jinendra
 
-- intent: goodbye
+- intent: who_are_you
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
-
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - Who are you?
+    - What's your name?
+    - Are you a human or a machine?
+    - Give me some information about yourself.
+    - Could you tell me who you are?
+    - I'm curious, who are you?
+    - Please introduce yourself.
+    - What can you tell me about yourself?
+    - Who's on the other side?
+    - Tell me a bit about your background.
+    - Can you provide some details about yourself?
+    - What do you call yourself?
+    - Can you give me your identity?
+    - Who am I talking to?
+    - What should I know about you?
+    - Identify yourself, please.
+    - Share some info about yourself.
+    - Introduce yourself to me.
+    - Who's interacting with me?
+    - What's your identity?
 
 - intent: tell_me_symptom_Breath
   examples: |
@@ -1313,45 +1272,3 @@ nlu:
     - I want to learn a new language. Where should I start?
     - Tell me something interesting about marine life.
     - How do I improve my time management skills?
-    - What are the symptoms of Inflammatory Bowel Disease?
-    - I have cold
-    - What is 2+2?
-    - Can you tell me the common symptoms of Lupus?
-    - I'm curious about the symptoms of Multiple Sclerosis.
-    - What should I look for in terms of symptoms for Crohn's Disease?
-    - Tell me about the symptoms of Parkinson's Disease
-    - Are you aware of the symptoms of Endometriosis?
-    - What are the symptoms of Ovarian Cancer?
-    - I'd like to know the symptoms of Psoriasis.
-    - Can you explain the symptoms of Lupus in detail?
-    - Tell me about the symptoms of Fibromyalgia.
-    - What is Gout and how is it diagnosed?
-    - Explain the causes and risk factors of Lyme Disease.
-    - I'm interested in learning about Rheumatoid Arthritis.
-    - Can you provide information about Lupus?
-    - Tell me more about Amyotrophic Lateral Sclerosis (ALS).
-    - What are the treatment options for Celiac Disease?
-    - I'd like to know about the diagnosis process for Polycystic Ovary Syndrome (PCOS).
-    - Explain the stages and prognosis of Pancreatic Cancer.
-    - How is Osteoarthritis typically managed?
-    - What should I know about Inflammatory Bowel Disease (IBD)?
-    - What can I do to improve my posture?
-    - Are there exercises to strengthen my back muscles?
-    - How can I maintain healthy skin?
-    - Tell me about maintaining good dental hygiene.
-    - Any tips for better sleep and reducing fatigue?
-    - What are the benefits of regular physical activity?
-    - Can you provide advice on a balanced diet?
-    - How can I manage stress and anxiety effectively?
-    - What's the best way to stay hydrated during the day?
-    - Explain the importance of regular eye check-ups.
-    - Tell me about maintaining a healthy weight.
-    - I'm curious about maintaining overall well-being.
-    - Can you suggest ways to improve my hair's health?
-    - What are the key factors in staying mentally sharp?
-    - How can I prevent skin damage from the sun?
-    - Are there methods to boost my immune system?
-    - Tell me about promoting heart health.
-    - Any advice for maintaining strong bones and joints?
-    - What should I know about maintaining reproductive health?
-    - Can you share tips for reducing the risk of cancer?
