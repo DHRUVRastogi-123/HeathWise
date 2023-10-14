@@ -1,13 +1,6 @@
 version: "3.1"
 
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
   - bot_fallback
   - tell_me_symptom_Breath:
       use_entities:
@@ -156,19 +149,14 @@ entities:
 
 responses:
   namaste:
-  - text: "Namaste Sir/Madam , how do you feel today?"  
+  - text: "Namaste! 🙏 Welcome to our virtual space. How can I assist you today?"
+  - text: "Namaste! 🌞 It's wonderful to have you here. How may I be of service to you today?"
+  - text: "Warm greetings! 🌼 I'm here to help. How can I assist you today?" 
+  - test: "Sat Sri Akal! 🙏 Welcome to our platform. How can I assist you today?"
+  - text: "Wishing you a wonderful day! 🌼 How can I be of assistance to you today?"
 
   utter_fallback:
   - text: "Not yet trained for this. Sorry for missing knowledge."
-  - text: "I apologize, but I couldn't understand your question. Can you please provide more details?"
-  - text: "I'm here to help with health-related questions. It seems I couldn't grasp your inquiry. Could you try rephrasing it."
-  - text: "It appears there's some confusion. Please rephrase your question, or ask a health-related query, and I'll do my best to assist."
-  - text: "I'm here to provide health information. Your question seems unclear to me. Could you provide more information or ask a health-related question."
-  - text: "I'm sorry, I didn't quite understand. If you could clarify or ask a health-related question, I'd be happy to assist."
-  - text: "I'm here for health-related queries. Your input is a bit unclear. Please rephrase your question or ask about a health topic."
-  - text: "I strive to assist with health-related questions. It seems I couldn't grasp your query. Can you provide more context or rephrase it."
-  - text: "I'm here to provide health guidance. Your question is not quite clear. Please provide more information or ask a health-related question."
-  - text: "I'm sorry, your question is unclear. To better assist you, please rephrase or ask a question related to health and well-being."
 
   utter_cure_morning_stiffness:
   - text: |
@@ -1166,25 +1154,6 @@ responses:
 
   utter_tell_more_2:
   - text: "Please include one more symptom for a diagnosis (you may include a mild one too !)"
-
-  utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
 
 session_config:
   session_expiration_time: 60
