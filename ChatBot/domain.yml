@@ -154,7 +154,7 @@ responses:
   - text: "Namaste! 🙏 Welcome to our virtual space. How can I assist you today?"
   - text: "Namaste! 🌞 It's wonderful to have you here. How may I be of service to you today?"
   - text: "Warm greetings! 🌼 I'm here to help. How can I assist you today?" 
-  - test: "Sat Sri Akal! 🙏 Welcome to our platform. How can I assist you today?"
+  - text: "Sat Sri Akal! 🙏 Welcome to our platform. How can I assist you today?"
   - text: "Wishing you a wonderful day! 🌼 How can I be of assistance to you today?"
 
   utter_i_am_bot:
