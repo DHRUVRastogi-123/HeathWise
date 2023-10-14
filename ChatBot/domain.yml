@@ -1,14 +1,9 @@
 version: "3.1"
 
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
   - bot_fallback
+  - greet
+  - who_are_you
   - tell_me_symptom_Breath:
       use_entities:
         - Breath
@@ -156,7 +151,31 @@ entities:
 
 responses:
   namaste:
-  - text: "Namaste Sir/Madam , how do you feel today?"  
+  - text: "Namaste! 🙏 Welcome to our virtual space. How can I assist you today?"
+  - text: "Namaste! 🌞 It's wonderful to have you here. How may I be of service to you today?"
+  - text: "Warm greetings! 🌼 I'm here to help. How can I assist you today?" 
+  - test: "Sat Sri Akal! 🙏 Welcome to our platform. How can I assist you today?"
+  - text: "Wishing you a wonderful day! 🌼 How can I be of assistance to you today?"
+
+  utter_i_am_bot:
+  - text: |
+      **Greetings, I am HealthWise, your guardian of well-being.** 🏥💡 
+      I analyze your input using advanced AI technology to provide you with informed insights and personalized recommendations.
+  - text: |
+      **Welcome! I'm HealthWise, your companion in the realm of health.** 🌟🏥 
+      I'm powered by cutting-edge AI, and I'm here to share expert perspectives based on your information, helping you make informed decisions about your health and well-being.
+  - text: |
+      **Hello from HealthWise, your guide in the world of wellness.** 🏥🚀 
+      Your welfare is my foremost concern. I utilize state-of-the-art AI to assist you in navigating the complexities of health, offering data-driven advice tailored to your unique needs.
+  - text: |
+      **You're engaging with HealthWise, your counsel for health decisions.** 🏥🤖 
+      I'm dedicated to helping you navigate your health journey using the power of artificial intelligence. Whether you seek information or support, I'm here to provide you with reliable, AI-driven insights.
+  - text: |
+      **Salutations! I'm HealthWise, your partner in healthful living.** 🏥🌼 
+      Trust that your health is my top priority. With AI at my core, I offer personalized guidance and recommendations to empower you on your path to a healthier and happier life.
+
+  utter_fallback:
+  - text: "Not yet trained for this. Sorry for missing knowledge."
 
   utter_cure_morning_stiffness:
   - text: |
@@ -1154,28 +1173,6 @@ responses:
 
   utter_tell_more_2:
   - text: "Please include one more symptom for a diagnosis (you may include a mild one too !)"
-
-  utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
-  utter_fallback:
-  - text: "Not yet trained for this. Sorry for missing knowledge."
 
 session_config:
   session_expiration_time: 60
