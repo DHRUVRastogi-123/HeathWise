@@ -1,0 +1,1289 @@
+version: "3.1"
+
+intents:
+  - bot_fallback
+  - greet
+  - who_are_you
+  - tell_me_symptom_Breath:
+      use_entities:
+        - Breath
+  - tell_me_symptom_Taste:
+      use_entities:
+        - Taste
+  - tell_me_symptom_Fever:
+      use_entities:
+        - Fever
+  - tell_me_symptom_ChestPain:
+      use_entities:
+        - ChestPain
+  - tell_me_symptom_JointPainSwelling:
+      use_entities:
+        - JointPainSwelling
+  - tell_me_symptom_VisionProblem:
+      use_entities:
+        - VisionProblem
+  - tell_me_symptom_Nosebleeds:
+      use_entities:
+        - Nosebleeds
+  - tell_me_symptom_MemoryLoss:
+      use_entities:
+        - MemoryLoss
+  - tell_me_symptom_DifficultyProblemSolving:
+      use_entities:
+        - ProblemSolving
+  - tell_me_symptom_Disorientation:
+      use_entities:
+        - Disorientation
+  - tell_me_symptom_MorningStiffness:
+      use_entities:
+        - MorningStiffness
+  - tell_me_symptom_LossInHeight:
+      use_entities:
+        - LossInHeight
+  - tell_me_symptom_FragileBones:
+      use_entities:
+        - FragileBones
+  - tell_me_symptom_SkinColorLoss:
+      use_entities:
+        - SkinColorLoss
+  - tell_me_symptom_GrayingHair:
+      use_entities:
+        - GrayingHair
+  - tell_me_symptom_Sunburn:
+      use_entities:
+        - Sunburn
+  - tell_me_symptom_sore_throat:
+      use_entities:
+        - sore throat
+  - tell_me_symptom_WateryStools:
+      use_entities:
+        - WateryStools
+  - tell_me_symptom_BodyAche:
+      use_entities:
+        - BodyAche
+  - tell_me_symptom_Cough:
+      use_entities:
+        - Cough
+  - tell_me_symptom_Frequent_Urination:
+      use_entities:
+        - Frequent_Urination
+  - tell_me_symptom_Excessive_Thirst:
+      use_entities:
+        - Excessive_Thirst
+  - tell_me_symptom_Sensitivity_to_Light:
+      use_entities:
+        - Sensitivity_to_Light
+  - tell_me_symptom_Headache:
+      use_entities:
+        - Headache
+  - tell_me_symptom_Stomachache:
+      use_entities:
+        - Stomachache
+  - tell_me_symptom_BackPain:
+      use_entities:
+        - BackPain
+  - tell_me_symptom_Weakness:
+      use_entities:
+        - Weakness
+  - tell_me_symptom_Wheezing:
+      use_entities:
+        - Wheezing
+  - only_one_symptom:
+      ignore_entities:
+          - Breath
+          - Taste
+          - Fever
+          - ChestPain
+          - JointPainSwelling
+          - VisionProblem
+          - Nosebleeds
+          - MemoryLoss
+          - ProblemSolving
+          - Disorientation
+          - LossInHeight
+          - FragileBones
+          - SkinColorLoss
+          - GrayingHair
+          - Sunburn
+          - sore throat
+          - WateryStools
+          - BodyAche
+          - Cough
+          - Frequent_Urination
+          - Excessive_Thirst
+          - Sensitivity_to_Light
+          - Headache
+          - Stomachache
+          - BackPain
+          - Weakness
+          - Wheezing
+          - MorningStiffness
+
+entities:
+  - Breath
+  - Taste
+  - Fever
+  - ChestPain
+  - JointPainSwelling
+  - VisionProblem
+  - Nosebleeds
+  - MemoryLoss
+  - ProblemSolving
+  - Disorientation
+  - LossInHeight
+  - FragileBones
+  - SkinColorLoss
+  - GrayingHair
+  - Sunburn
+  - sore throat
+  - WateryStools
+  - BodyAche
+  - Cough
+  - Frequent_Urination
+  - Excessive_Thirst
+  - Sensitivity_to_Light
+  - Headache
+  - Stomachache
+  - BackPain
+  - Weakness
+  - Wheezing
+  - MorningStiffness
+
+responses:
+  utter_namaste:
+  - text: "Namaste! 🙏 Welcome to our virtual space. How can I assist you today?"
+  - text: "Namaste! 🌞 It's wonderful to have you here. How may I be of service to you today?"
+  - text: "Warm greetings! 🌼 I'm here to help. How can I assist you today?" 
+  - text: "Sat Sri Akal! 🙏 Welcome to our platform. How can I assist you today?"
+  - text: "Wishing you a wonderful day! 🌼 How can I be of assistance to you today?"
+
+  utter_i_am_bot:
+  - text: |
+      **Greetings, I am HealthWise, your guardian of well-being.** 🏥💡 
+      I analyze your input using advanced AI technology to provide you with informed insights and personalized recommendations.
+  - text: |
+      **Welcome! I'm HealthWise, your companion in the realm of health.** 🌟🏥 
+      I'm powered by cutting-edge AI, and I'm here to share expert perspectives based on your information, helping you make informed decisions about your health and well-being.
+  - text: |
+      **Hello from HealthWise, your guide in the world of wellness.** 🏥🚀 
+      Your welfare is my foremost concern. I utilize state-of-the-art AI to assist you in navigating the complexities of health, offering data-driven advice tailored to your unique needs.
+  - text: |
+      **You're engaging with HealthWise, your counsel for health decisions.** 🏥🤖 
+      I'm dedicated to helping you navigate your health journey using the power of artificial intelligence. Whether you seek information or support, I'm here to provide you with reliable, AI-driven insights.
+  - text: |
+      **Salutations! I'm HealthWise, your partner in healthful living.** 🏥🌼 
+      Trust that your health is my top priority. With AI at my core, I offer personalized guidance and recommendations to empower you on your path to a healthier and happier life.
+
+  utter_fallback:
+  - text: "Not yet trained for this. Sorry for missing knowledge."
+
+  utter_cure_morning_stiffness:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Ayurvedic Advice for Morning Stiffness:**
+      According to Ayurveda, morning stiffness may be attributed to an imbalance in the Vata dosha. Here are some dietary recommendations:
+
+      **Foods to Include:**
+      - Warm, nourishing foods like soups and stews
+      - Spices such as turmeric, ginger, and cinnamon
+      - Herbal teas, especially ginger tea
+      - Cooked vegetables, particularly those that are easy to digest
+      - Ghee (clarified butter) for cooking
+      - Adequate hydration with warm water throughout the day
+
+      **Foods to Limit or Avoid:**
+      - Cold or raw foods
+      - Excessive intake of dairy products
+      - Heavy, oily, or deep-fried foods
+      - Caffeinated or carbonated beverages
+      - Excessively spicy foods
+
+      **Additional Tips:**
+      - Practice gentle yoga or stretching exercises to improve flexibility
+      - Follow a daily routine that includes self-care practices
+      - Maintain a regular sleep schedule
+      - Consider Ayurvedic herbal supplements after consulting an Ayurvedic practitioner
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_wheezing:
+  - text: |
+      **Ayurvedic Tips for Wheezing:**
+      Wheezing is often associated with respiratory issues, and Ayurveda provides guidance on dietary choices that may help alleviate symptoms and promote overall respiratory health.
+
+      **Foods to Include:**
+      - Incorporate warm and easily digestible foods into your diet, such as soups and stews.
+      - Consume foods that have natural anti-inflammatory properties, like ginger and turmeric.
+      - Include honey in your diet as it can help soothe the throat and reduce coughing.
+
+      **Foods to Avoid:**
+      - Stay away from cold and heavy foods, as they can aggravate wheezing.
+      - Minimize or eliminate dairy products, as they can increase mucus production.
+      - Avoid fried and oily foods that can lead to congestion and worsen wheezing symptoms.
+
+      **Lifestyle Tips:**
+      - Practice deep breathing exercises and pranayama to improve lung function.
+      - Stay well-hydrated by drinking warm herbal teas or room-temperature water.
+      - Get regular exercise, but avoid strenuous workouts during wheezing episodes.
+
+      **Consult a Qualified Ayurvedic Practitioner:**
+      Ayurvedic recommendations can vary based on an individual's constitution and specific health condition. It's advisable to consult a qualified Ayurvedic practitioner for personalized advice and treatment.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. If you have concerns about your health, please consult a healthcare professional or an Ayurvedic practitioner.
+
+  utter_cure_weakness:
+  - text: |
+      **Ayurvedic Tips for Addressing Weakness:**
+      In Ayurveda, addressing weakness involves balancing your doshas (Vata, Pitta, and Kapha). Here are some dietary recommendations to help with weakness:
+
+      **Foods to Include:**
+      - Consume warm and nourishing foods, such as soups and stews.
+      - Incorporate whole grains like rice and oats.
+      - Add ghee (clarified butter) to your diet for energy.
+      - Include sweet, sour, and salty tastes for balancing Vata dosha.
+      - Eat cooked vegetables, especially root vegetables.
+
+      **Foods to Avoid:**
+      - Limit cold and raw foods, as they can aggravate Vata.
+      - Reduce or avoid caffeine and spicy foods.
+      - Minimize processed and junk foods.
+      - Avoid excessive intake of dry and light foods.
+      - Stay away from heavy, fried, and greasy foods.
+
+      **Herbal Remedies:**
+      - Ashwagandha and Shatavari are herbs known for their rejuvenating properties.
+      - Triphala can help with digestion and overall vitality.
+
+      **Lifestyle Tips:**
+      - Get adequate sleep and rest to recharge your energy.
+      - Practice gentle exercises like yoga and pranayama to improve stamina.
+      - Manage stress through meditation and relaxation techniques.
+
+      **Consult an Ayurvedic Practitioner:**
+      Ayurvedic recommendations can vary based on your unique constitution (Prakriti) and the underlying imbalance (Vikriti). It's advisable to consult an Ayurvedic practitioner for personalized guidance.
+
+      **Note:**
+      The information provided here is based on Ayurvedic principles and is intended for informational purposes. Consult with a qualified Ayurvedic practitioner for personalized advice.
+
+  utter_cure_asthma:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Ayurvedic Diet Recommendations for Asthma:**
+      Ayurveda suggests a diet that balances your doshas, especially Vata and Kapha, which are often associated with asthma. Here are some dietary guidelines:
+
+      **Foods to Include:**
+      - Warm, nourishing foods like soups and stews.
+      - Spices such as ginger, turmeric, and black pepper, which have anti-inflammatory properties.
+      - Honey, especially raw honey, can help soothe the respiratory tract.
+      - Green leafy vegetables, which are high in antioxidants.
+      - Omega-3 fatty acids found in flaxseeds and walnuts can reduce inflammation.
+
+      **Foods to Avoid:**
+      - Cold and processed foods that can aggravate Vata.
+      - Dairy products, as they can increase mucus production in some individuals.
+      - Heavy, fried, and oily foods that can worsen Kapha imbalance.
+      - Excessive intake of sweets and sugary foods.
+      - Avoid overeating, which can burden the digestive system.
+
+      **Additional Tips:**
+      - Stay hydrated with warm herbal teas or room-temperature water.
+      - Practice deep breathing exercises to improve lung function.
+      - Consult with an Ayurvedic practitioner for personalized dietary recommendations.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_migraine:
+  - text: |
+      **Ayurvedic Recommendations for Migraine:**
+      Ayurveda suggests a holistic approach to manage migraines. Please consult an Ayurvedic practitioner for personalized guidance.
+
+      *Dietary Recommendations:**
+      - Consume cooling foods like cucumber, coconut, and melons.
+      - Incorporate ginger and mint into your diet to alleviate symptoms.
+      - Avoid hot, spicy, and processed foods.
+      - Reduce the intake of caffeine and alcohol.
+      - Stay well-hydrated by drinking plenty of water throughout the day.
+
+      **Herbal Remedies:**
+      - Consider herbal supplements like Brahmi, Shankhpushpi, and Ashwagandha.
+      - Use essential oils such as lavender and peppermint for aromatherapy.
+
+      **Lifestyle Tips:**
+      - Practice regular yoga and meditation to manage stress.
+      - Get enough sleep and maintain a consistent sleep schedule.
+      - Avoid exposure to bright lights and loud noises.
+
+      **Disclaimer:**
+      Ayurvedic recommendations are for informational purposes and should be followed under the guidance of a qualified Ayurvedic practitioner. Please consult a healthcare professional for a comprehensive migraine management plan.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_rheumatoidarthritis:
+  - text: |
+      **Ayurvedic Advice for Rheumatoid Arthritis:**
+      Rheumatoid arthritis in Ayurveda is considered a Vata disorder. Here are some dietary recommendations to help manage it:
+
+      *Foods to Include:*
+      - Ghee (clarified butter): It lubricates the joints and reduces inflammation.
+      - Ginger: Its anti-inflammatory properties can be beneficial.
+      - Turmeric: Known for its anti-inflammatory effects.
+      - Fruits: Include cherries, oranges, and grapes, which have antioxidants.
+      - Vegetables: Consume leafy greens, spinach, and broccoli for their anti-inflammatory properties.
+      - Spices: Use cumin, coriander, and fennel to aid digestion.
+      - Warm Water: Drink warm water throughout the day to detoxify your body.
+
+      *Foods to Avoid:*
+      - Nightshades: Avoid tomatoes, potatoes, and eggplants, which can worsen inflammation.
+      - Fried and Processed Foods: These can increase inflammation.
+      - Caffeine: Limit or avoid coffee and caffeinated beverages.
+      - Alcohol: It can worsen symptoms.
+      - Excess Dairy: Reduce dairy consumption, especially yogurt.
+      - Red Meat: Cut down on red meat, which can increase inflammation.
+
+      **Note:** Always consult with an Ayurvedic practitioner for personalized advice and consider individual Ayurvedic body types (doshas) in your dietary choices.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. Consult with a qualified healthcare provider or Ayurvedic practitioner for a holistic approach to rheumatoid arthritis.
+
+  utter_cure_alzheimerdisease:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Ayurvedic Diet Recommendations for Alzheimer's Disease:**
+      Ayurveda suggests a holistic approach to support brain health and memory. While Ayurveda doesn't claim to cure Alzheimer's disease, it promotes a diet and lifestyle that may help maintain cognitive health.
+
+      *Foods to Include:**
+      - Consume brain-boosting foods such as almonds, walnuts, and flaxseeds, which are rich in omega-3 fatty acids.
+      - Incorporate antioxidant-rich berries, like blueberries and strawberries, into your diet.
+      - Turmeric, known for its anti-inflammatory properties, is a valuable spice.
+      - Eat dark, leafy greens such as spinach and kale for their nutrient content.
+      - Include ghee (clarified butter) in your meals for its potential cognitive benefits.
+
+      **Foods to Avoid:**
+      - Reduce processed and refined foods as they may contribute to inflammation.
+      - Minimize sugar and high glycemic index foods, as they can affect blood sugar levels.
+      - Limit trans fats and saturated fats found in fried and unhealthy foods.
+      - Cut back on excess salt and processed foods.
+
+      **Additional Tips:**
+      - Stay hydrated by drinking plenty of water throughout the day.
+      - Engage in stress-reduction practices like yoga and meditation.
+      - Ensure a good night's sleep for proper brain function.
+      - Consult with an Ayurvedic practitioner for personalized dietary and lifestyle guidance.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_osteoporosis:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Ayurvedic Tips for Managing Osteoporosis:**
+      In Ayurveda, managing osteoporosis involves balancing your body's doshas and maintaining a bone-healthy diet. Here are some Ayurvedic recommendations:
+
+      *Foods to Include:**
+      - Consume dairy products like milk, ghee, and yogurt for their calcium content.
+      - Incorporate green leafy vegetables, such as spinach and kale, into your diet.
+      - Eat sesame seeds and almonds, which are rich in calcium and magnesium.
+      - Herbs like Ashwagandha and Shatavari may support bone health.
+
+      *Foods to Limit:**
+      - Minimize the intake of caffeine and carbonated beverages, as they can leach calcium from bones.
+      - Reduce your salt intake, as excess salt can lead to calcium loss.
+      - Avoid processed and junk foods, which are often devoid of nutrients.
+
+      **Lifestyle Practices:**
+      - Practice regular yoga and meditation to reduce stress and promote overall well-being.
+      - Stay physically active with gentle exercises like walking and swimming.
+      - Ensure you get enough Vitamin D from sunlight exposure, or consult your Ayurvedic practitioner for supplements.
+
+      **Additional Tips:**
+      - Ayurvedic treatments like Panchakarma may be recommended for detoxification and rejuvenation.
+      - Consult with an Ayurvedic practitioner for personalized Ayurvedic care.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult an Ayurvedic practitioner or healthcare professional.
+
+  utter_cure_vitiligo:
+  - text: |
+      **Ayurvedic Advice for Vitiligo:**
+      In Ayurveda, vitiligo is considered a pitta imbalance. Here are some dietary recommendations:
+
+      **Foods to Include:**
+      - Bitter vegetables such as bitter gourd and neem
+      - Aloe vera gel, both internally and topically
+      - Turmeric, which has anti-inflammatory properties
+      - Foods rich in antioxidants, like fresh fruits and vegetables
+      - Copper-rich foods like sesame seeds, sunflower seeds, and mushrooms
+      - Drinking water from a copper vessel may be beneficial
+
+      **Foods to Avoid:**
+      - Sour or acidic foods like citrus fruits and tomatoes
+      - Dairy products, especially yogurt
+      - Excessive consumption of non-vegetarian food
+      - Caffeinated and alcoholic beverages
+      - Foods that are hard to digest
+      - Overeating and irregular eating habits
+
+      **Additional Tips:**
+      - Maintain a balanced and stress-free lifestyle
+      - Protect your skin from harsh sunlight and use natural sunscreens
+      - Consider Ayurvedic treatments like Panchakarma for detoxification
+      - Consult with an Ayurvedic practitioner for personalized advice
+
+      **Disclaimer:**
+      This Ayurvedic advice is provided for informational purposes only. It is not a substitute for professional medical advice. Consult with a qualified Ayurvedic practitioner for personalized guidance and treatment.
+
+      **Note:**
+      Ayurveda is a holistic approach to health, and its effectiveness may vary from person to person. It's important to consult with a qualified Ayurvedic practitioner for a comprehensive treatment plan.
+
+  utter_cure_pneumonia:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Ayurvedic Advice for Pneumonia:**
+      In Ayurveda, it is recommended to follow a diet that can help boost your immune system and aid in recovery from pneumonia.
+
+      *Foods to Include:**
+      - Warm, easily digestible foods
+      - Herbal teas with ginger and honey
+      - Turmeric milk
+      - Soups made with lentils, vegetables, and mild spices
+      - Fresh fruits, especially those high in vitamin C
+      - Ghee (clarified butter)
+      - Herbal supplements recommended by an Ayurvedic practitioner
+
+      **Foods to Avoid:**
+      - Cold and raw foods
+      - Heavy, oily, or fried foods
+      - Dairy products, except for ghee
+      - Excessive sweets
+      - Processed and canned foods
+      - Carbonated beverages
+
+      **Additional Tips:**
+      - Stay hydrated with warm water and herbal teas
+      - Get plenty of rest and sleep
+      - Practice deep breathing exercises
+      - Consult an Ayurvedic practitioner for personalized Ayurvedic care
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_diabetes:
+  - text: |
+      **Ayurvedic Advice for Managing Type 2 Diabetes:**
+
+      Ayurveda suggests natural and holistic ways to manage type 2 diabetes. Keep in mind that these are general guidelines, and it's essential to consult with an Ayurvedic practitioner for personalized recommendations.
+
+      **Dietary Recommendations:**
+      - Include bitter gourd (karela), fenugreek seeds, and Indian gooseberry (amla) in your diet. These are known to help regulate blood sugar levels.
+      - Consume whole grains like barley, oats, and brown rice instead of refined grains.
+      - Opt for foods rich in fiber, such as vegetables, legumes, and whole fruits, which can help stabilize blood sugar.
+      - Stay hydrated with warm water or herbal teas like cinnamon tea, ginger tea, or turmeric tea.
+
+      **Foods to Avoid:**
+      - Limit or avoid sugary and high-carbohydrate foods, including sweets, white bread, and sugary drinks.
+      - Reduce the intake of processed and deep-fried foods as they may lead to inflammation and insulin resistance.
+      - Cut down on excessive dairy and fatty foods.
+      - Minimize the consumption of red meat.
+
+      **Lifestyle Recommendations:**
+      - Engage in regular physical activity, like walking or yoga, to improve insulin sensitivity.
+      - Practice stress-reduction techniques like meditation and deep breathing exercises.
+      - Get adequate sleep, as insufficient sleep can affect blood sugar control.
+
+      **Consultation:**
+      - It's essential to consult with a qualified Ayurvedic practitioner for a personalized treatment plan.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only. Ayurvedic remedies are a complementary approach and should not replace professional medical advice. Consult with a healthcare provider for comprehensive diabetes management.
+
+      **Ayurvedic treatments are individualized, and it's recommended to seek guidance from an Ayurvedic practitioner for specific dietary and lifestyle recommendations.**
+
+  utter_cure_hypertension:
+  - text: |
+      **Ayurvedic Advice for Hypertension:**
+      Ayurveda recommends natural remedies and dietary changes to help manage hypertension. Please note that consulting a healthcare professional is essential, and these suggestions can be complementary but not a substitute for medical advice.
+
+      *Foods to Include:*
+      - Increase your intake of fresh fruits, especially watermelon, oranges, and pomegranates.
+      - Consume leafy greens like spinach and kale, as they are rich in potassium.
+      - Opt for whole grains such as brown rice and quinoa.
+      - Incorporate garlic and onion into your meals as they are known for their heart-healthy properties.
+      - Include herbs and spices like basil, cumin, and turmeric, which can help regulate blood pressure.
+
+      *Foods to Limit or Avoid:*
+      - Reduce your salt intake, as excessive salt can lead to high blood pressure.
+      - Minimize the consumption of processed and fried foods.
+      - Limit caffeine and alcohol intake.
+      - Avoid red meat and opt for lean protein sources.
+      - Cut down on sugary and sugary beverages.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes and Ayurvedic recommendations. The diagnosis and management of medical conditions should be done by a qualified healthcare provider. Consult with a healthcare professional for personalized advice regarding hypertension.
+
+  utter_cure_covid:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Ayurvedic Recommendations for COVID-19:**
+      Ayurveda, the traditional Indian system of medicine, offers some dietary advice for managing COVID-19 symptoms.
+
+      *Foods to Include:**
+      - Consume warm, homemade meals.
+      - Incorporate ginger, turmeric, and garlic into your diet, as they have immune-boosting properties.
+      - Drink herbal teas, such as tulsi (holy basil) or ginger tea.
+      - Stay hydrated with warm water.
+
+      *Foods to Avoid:**
+      - Avoid cold and processed foods.
+      - Limit sugary and carbonated beverages.
+      - Reduce the intake of heavy and fried foods.
+
+      **Additional Tips:**
+      - Continue to follow safety guidelines from health authorities, including isolation and seeking medical advice.
+      - Consult an Ayurvedic practitioner for personalized recommendations.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_influenza:
+  - text: |
+      **Ayurvedic Tips for Influenza:**
+      In Ayurveda, the emphasis is on maintaining balance and supporting the body's natural healing processes. Here are some dietary recommendations for managing influenza:
+
+      **Foods to Include:**
+      - Warm, cooked meals are recommended.
+      - Fresh ginger tea with a touch of honey can help soothe your throat.
+      - Turmeric milk (warm milk with a pinch of turmeric) can reduce inflammation.
+      - Soups made from lentils and vegetables provide essential nutrients.
+      - Garlic is known for its immune-boosting properties.
+      - Herbal teas like holy basil (Tulsi) can provide relief from symptoms.
+
+      **Foods to Avoid:**
+      - Avoid cold and raw foods, as they can worsen symptoms.
+      - Limit dairy products, as they can increase mucus production.
+      - Reduce sugar and processed foods, as they can weaken the immune system.
+      - Stay away from heavy and difficult-to-digest foods.
+
+      **Hydration:**
+      Proper hydration is essential. Drink warm water, herbal teas, and clear broths to stay hydrated.
+
+      **Rest and Isolation:**
+      Get plenty of rest and isolate yourself to prevent spreading the illness to others.
+
+      **Consult an Ayurvedic Practitioner:**
+      For personalized Ayurvedic advice, consult a qualified Ayurvedic practitioner. They can recommend specific remedies and treatments based on your individual constitution.
+
+      **Disclaimer:**
+      This Ayurvedic information is for informational purposes and should not replace professional medical advice. Consult with a healthcare provider for a proper diagnosis and treatment plan.
+
+      **Stay Safe and Healthy!**
+
+  utter_cure_breathing_issue:
+  - text: |
+      **Ayurvedic Advice for Breathing Problems:**
+      Breathing problems can often be related to imbalances in your body's doshas. Here are some Ayurvedic recommendations to help improve your respiratory health.
+
+      **Dietary Guidelines:**
+      - Consume warm, easily digestible foods.
+      - Incorporate herbs like ginger, turmeric, and licorice into your diet, as they have anti-inflammatory properties.
+      - Avoid heavy, fried, and processed foods.
+      - Minimize dairy and dairy products, as they can increase mucus production.
+      - Stay hydrated with warm water or herbal teas.
+
+      **Lifestyle Recommendations:**
+      - Practice pranayama and deep breathing exercises daily to strengthen your respiratory system.
+      - Perform oil massages (abhyanga) to improve circulation and support lung function.
+      - Ensure proper rest and maintain a regular sleep schedule.
+      - Avoid exposure to cold, damp environments.
+
+      **Additional Ayurvedic Tips:**
+      - Consult with an Ayurvedic practitioner for personalized recommendations.
+      - Use essential oils like eucalyptus, peppermint, or basil for inhalation.
+
+      **Please note:** Ayurvedic advice is holistic in nature and aims to balance your doshas for overall well-being. If you have severe breathing issues, it is still essential to consult with a healthcare professional.
+
+      *Disclaimer:*
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_taste_issue:
+  - text: |
+      **Ayurvedic Tips for Taste Changes:**
+      Ayurveda suggests that changes in taste can be influenced by an imbalance in the body's doshas. To help restore your taste, consider the following:
+
+      **Favorable Foods:**
+      - Consume foods with natural sweetness, such as ripe fruits, sweet potatoes, and dairy products.
+      - Include freshly prepared, warm, and well-cooked meals in your diet.
+      - Opt for ghee (clarified butter) to enhance taste and digestion.
+      - Incorporate spices like ginger, cumin, and fennel to stimulate the taste buds.
+
+      **Foods to Avoid:**
+      - Reduce or avoid overly spicy, sour, and bitter foods.
+      - Minimize processed and packaged foods, as they can disrupt your taste.
+      - Stay away from excessively cold or iced beverages.
+      - Limit heavy and difficult-to-digest foods.
+
+      **Hydration:**
+      - Drink warm water throughout the day to maintain proper hydration.
+      - Avoid ice-cold water or beverages.
+
+      **Herbal Remedies:**
+      - Ayurvedic herbs like Brahmi, Amla, and Ashwagandha can help restore taste.
+
+      Remember that Ayurveda focuses on individual constitutions and imbalances, so it's advisable to consult an Ayurvedic practitioner for personalized guidance. Additionally, any persistent taste changes should be evaluated by a healthcare provider.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes and does not replace professional medical advice. Consult a qualified healthcare provider for concerns about your health.
+
+  utter_cure_fever:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Ayurvedic Advice for Fever:**
+      In Ayurveda, it's recommended to follow a specific diet during fever to support your body's natural healing processes. Here are some dietary guidelines:
+
+      **Foods to Consume:**
+      - Rice gruel (congee)
+      - Mung dal (green gram)
+      - Freshly prepared vegetable soups
+      - Herbal teas with ginger, tulsi (holy basil), and black pepper
+      - Fresh fruits like pomegranate, papaya, and banana
+      - Coconut water for hydration
+
+      **Foods to Avoid:**
+      - Heavy, oily, and fried foods
+      - Spicy and hot foods
+      - Red meat and heavy proteins
+      - Dairy products (except buttermilk)
+      - Excessive caffeine and alcohol
+
+      **Additional Tips:**
+      - Keep your diet light and easily digestible.
+      - Stay hydrated with pure water and herbal teas.
+      - Get plenty of rest and sleep.
+      - Avoid exposure to extreme cold or heat.
+      - Consult an Ayurvedic practitioner for personalized advice.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_chest_pain:
+  - text: |
+      **Ayurvedic Advice for Chest Pain:**
+      In Ayurveda, chest pain can be related to imbalances in the body's doshas. To alleviate chest pain, consider the following dietary recommendations:
+
+      *Foods to Eat:*
+      - Consume foods that are cooling and soothing to the body, such as cucumber, watermelon, and coconut water.
+      - Include foods with anti-inflammatory properties like turmeric, ginger, and garlic.
+      - Incorporate fruits like pomegranates and berries, which are rich in antioxidants.
+
+      *Foods to Avoid:*
+      - Avoid spicy, greasy, and fried foods as they can exacerbate inflammation and discomfort.
+      - Limit or eliminate caffeine and alcohol as they may stimulate the heart and worsen chest pain.
+      - Reduce the intake of heavy, processed, and sugary foods.
+
+      *Ayurvedic Remedies:*
+      - Boil a few basil leaves in water, strain, and drink this tea for its anti-inflammatory benefits.
+      - Massage warm sesame oil on the chest to soothe discomfort.
+
+      **Note:**
+      Ayurvedic advice is not a substitute for professional medical care. If you experience severe chest pain, consult a healthcare provider immediately.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_joint_pain_swelling:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Ayurvedic Remedies for Joint Pain and Swelling:**
+      Ayurveda recommends a holistic approach to address joint pain and swelling. Here are some Ayurvedic suggestions:
+
+      - **Diet:** Include anti-inflammatory foods in your diet, such as turmeric, ginger, and garlic. These can help reduce swelling and pain. Avoid processed and fried foods, which can exacerbate inflammation.
+
+      - **Herbal Supplements:** Herbs like Boswellia, Ashwagandha, and Guggul are known for their anti-inflammatory properties and can be beneficial in managing joint issues.
+
+      - **Oil Massage:** Regularly massage the affected joints with warm sesame or castor oil. This can help improve circulation and reduce stiffness.
+
+      - **Yoga and Gentle Exercises:** Practice yoga poses that promote joint flexibility and strength. Also, consider low-impact exercises like swimming and walking.
+
+      - **Stay Hydrated:** Drink plenty of water to keep your joints lubricated.
+
+      - **Rest:** Ensure you get enough rest and sleep for your body to heal.
+
+      **Please consult with an Ayurvedic practitioner or healthcare provider before starting any new remedies.**
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_vision_problem:
+  - text: |
+      **Ayurvedic Advice for Vision Problems:**
+      Ayurveda suggests that dietary and lifestyle choices can play a significant role in maintaining healthy vision. Here are some Ayurvedic recommendations:
+
+      **Foods to Consume:**
+      - Include fresh, green leafy vegetables like spinach, kale, and collard greens in your diet. These are rich in essential nutrients for eye health.
+      - Carrots are known to be beneficial for eye health. Consider consuming them regularly.
+      - Amla (Indian gooseberry) is a rich source of vitamin C, which supports eye health. You can eat it fresh or in the form of juice.
+      - Incorporate foods rich in omega-3 fatty acids, such as flaxseeds, walnuts, and fatty fish like salmon, into your diet.
+
+      **Herbal Remedies:**
+      - Triphala, a combination of three fruits, is often used in Ayurveda to support eye health. It can be consumed as a powder or in capsule form.
+      - Ghee (clarified butter) is considered good for the eyes. You can use it for cooking or consume a small amount daily.
+      - Rose water can be used as an eye rinse to soothe and refresh tired eyes.
+
+      **Foods to Avoid:**
+      - Reduce or avoid spicy, oily, and junk foods.
+      - Minimize the consumption of excessive caffeine and alcohol.
+      - Limit sugar intake as it can contribute to eye problems.
+
+      **Lifestyle Tips:**
+      - Practice eye exercises and blinking exercises regularly to relieve eye strain.
+      - Get adequate sleep as it's essential for eye health.
+      - Protect your eyes from excessive sun exposure with sunglasses and hats.
+
+      Remember that Ayurvedic advice is complementary and should not replace professional medical advice. If you have concerns about your vision, please consult a qualified healthcare provider or Ayurvedic specialist.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_nosebleeds:
+  - text: |
+      **Ayurvedic Advice for Nosebleeds:**
+      Ayurveda suggests a balanced diet and lifestyle to help manage nosebleeds. Here are some dietary recommendations:
+
+      **Foods to Include:**
+      - Consume foods rich in vitamin C, such as oranges, lemons, and strawberries, as they can help strengthen blood vessels.
+      - Include foods with natural antioxidants like berries, green leafy vegetables, and nuts in your diet.
+      - Drink plenty of water to stay well-hydrated, which can prevent dry nasal passages.
+
+      **Foods to Avoid:**
+      - Reduce or avoid spicy and hot foods, as they can lead to increased blood flow and contribute to nosebleeds.
+      - Minimize your intake of excessively salty or processed foods, as they can dehydrate your body and nasal passages.
+      - Limit the consumption of hot beverages like coffee and tea.
+
+      **Lifestyle Tips:**
+      - Practice pranayama (breathing exercises) to improve overall respiratory health.
+      - Apply a small amount of ghee (clarified butter) to the inside of your nostrils to keep them moist and prevent dryness.
+      - Stay away from excessive exposure to dry, dusty, or windy environments.
+
+      **Consult with an Ayurvedic Practitioner:**
+      For personalized Ayurvedic recommendations, it's advisable to consult with an Ayurvedic practitioner or healthcare provider who can assess your specific condition and provide tailored guidance.
+
+      **Disclaimer:**
+      The Ayurvedic advice provided here is for informational purposes and should not replace professional medical advice. If you have concerns about your health, please consult a healthcare professional or Ayurvedic practitioner.
+
+      **Remember:** Ayurveda focuses on holistic well-being and balancing the body's doshas. Individual dietary and lifestyle choices may vary based on your constitution (Prakriti) and current health status (Vikriti).
+
+  utter_cure_memory_loss:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes and is not a substitute for professional medical advice. Ayurvedic recommendations can complement conventional care but should be discussed with a qualified Ayurvedic practitioner or healthcare provider.
+
+      **Ayurvedic Dietary Recommendations for Memory Loss:**
+      In Ayurveda, memory loss is often associated with imbalances in the Vata dosha. To support memory and cognitive health, consider the following dietary guidelines:
+
+      *Foods to Include:*
+      - Ghee (clarified butter): Ghee is considered beneficial for memory and cognitive function.
+      - Ashwagandha: This adaptogenic herb is known for its memory-enhancing properties. You can consume it in powdered form or as a supplement.
+      - Brahmi (Bacopa monnieri): Brahmi is an Ayurvedic herb renowned for improving memory and concentration. It can be taken in various forms, including capsules or as a tea.
+      - Almonds: Soaked almonds are recommended in Ayurveda for their potential to boost brain health.
+      - Fresh fruits and vegetables: Emphasize a diet rich in colorful fruits and vegetables, as they provide essential nutrients for cognitive health.
+
+      *Foods to Avoid:*
+      - Processed foods: Limit or avoid processed foods, sugary snacks, and artificial additives, as they can contribute to imbalances in Vata dosha.
+      - Excessive caffeine: Reduce caffeine intake, as it can overstimulate the nervous system and affect memory negatively.
+      - Alcohol: Minimize alcohol consumption, as it can impair cognitive function and disturb the Vata dosha.
+
+      **Additional Tips:**
+      - Practice mindful eating and ensure meals are warm and freshly prepared.
+      - Stay hydrated by drinking warm water or herbal teas throughout the day.
+      - Consider Ayurvedic herbal supplements or tonics for memory support, but consult with an Ayurvedic practitioner for personalized recommendations.
+      - Engage in regular meditation and pranayama (breathing exercises) to calm the mind and improve memory.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes and is not a substitute for professional medical advice. Ayurvedic recommendations should be discussed with a qualified Ayurvedic practitioner or healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_problem_solving:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Ayurvedic Recommendations for Improving Problem Solving:**
+      In Ayurveda, enhancing cognitive function and problem-solving abilities involves maintaining a balance of your doshas, primarily Vata, and improving overall mental health.
+
+      *Dietary Guidelines:**
+      - Consume foods that pacify Vata dosha, such as warm and nourishing meals.
+      - Include foods rich in Omega-3 fatty acids like flaxseeds, walnuts, and ghee for brain health.
+      - Favor whole grains, fresh fruits, and vegetables for essential nutrients.
+      - Herbal teas like Brahmi or Ashwagandha can support cognitive function.
+
+      *Foods to Avoid:**
+      - Minimize processed and fast foods as they can disturb your dosha balance.
+      - Reduce excessive caffeine and alcohol consumption.
+      - Limit sugary and heavy foods that may lead to mental fog.
+
+      **Lifestyle Recommendations:**
+      - Practice daily meditation and yoga to improve mental clarity and reduce stress.
+      - Get adequate sleep and maintain a consistent sleep schedule.
+      - Stay mentally active by solving puzzles, reading, and engaging in creative activities.
+
+      **Additional Tips:**
+      - Ayurveda emphasizes holistic well-being, so consider consulting an Ayurvedic practitioner for personalized guidance.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_disorientation:
+  - text: |
+      **Ayurvedic Advice for Disorientation:**
+      In Ayurveda, maintaining a balanced diet is essential for overall well-being. If you're experiencing disorientation, consider incorporating these dietary guidelines to help improve your condition.
+
+      *Foods to Include:*
+      - Consume fresh fruits, especially those with calming properties, such as bananas and dates.
+      - Opt for whole grains like brown rice, oats, and quinoa, which provide sustained energy.
+      - Incorporate cooked vegetables, particularly root vegetables like sweet potatoes and carrots.
+      - Enjoy herbal teas like chamomile, which can have a soothing effect.
+
+      *Foods to Avoid:*
+      - Limit or avoid caffeine and stimulants, as they can exacerbate disorientation.
+      - Reduce intake of spicy and heavily processed foods.
+      - Minimize the consumption of alcohol and tobacco.
+
+      *Herbal Remedies:*
+      - Ayurveda suggests herbs like Brahmi and Ashwagandha, which are known for their calming and cognitive-enhancing properties. Consult an Ayurvedic practitioner for proper guidance.
+
+      Remember that individual constitution (Dosha) plays a significant role in Ayurvedic dietary recommendations. It's advisable to consult an Ayurvedic practitioner for personalized guidance.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and should not replace professional medical advice. If you have concerns about your health, please consult a qualified healthcare provider or Ayurvedic practitioner.
+
+
+  utter_cure_watery_stools:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes and is not a substitute for professional medical advice. Ayurvedic remedies can be considered complementary to conventional medical treatments. Please consult a qualified healthcare provider for proper diagnosis and treatment.
+
+      **Ayurvedic Tips for Watery Stools:**
+      In Ayurveda, digestive health is highly valued. Here are some Ayurvedic suggestions to help with watery stools:
+
+      - Stay Hydrated: Sip on room temperature water or herbal teas like cumin or coriander tea. Avoid cold drinks.
+      - Include Cumin and Coriander: Add cumin and coriander seeds to your diet. They are known to support digestion.
+      - Consume Rice Water: Rice water, the water left after cooking rice, is beneficial. It can help soothe the stomach.
+      - Opt for Banana: Ripe bananas are considered easy to digest and can help in regulating bowel movements.
+      - Avoid Dairy: In some cases, it's advisable to temporarily avoid dairy products, as they can worsen diarrhea.
+      - Ginger and Turmeric: These spices have anti-inflammatory properties. Try adding them to your meals.
+      - Ayurvedic Herbs: Herbs like Kutaj and Bilva are used in Ayurveda to manage digestive issues. Consult an Ayurvedic practitioner before using them.
+
+      **Caution:**
+      - It's essential to consult an Ayurvedic practitioner or healthcare provider before starting any Ayurvedic treatment.
+      - If watery stools persist or worsen, seek medical evaluation.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes and is not a substitute for professional medical advice. Ayurvedic remedies can be considered complementary to conventional medical treatments. Please consult a qualified healthcare provider for proper diagnosis and treatment.
+
+  utter_cure_body_ache:
+  - text: |
+      **Ayurvedic Advice for Body Ache:**
+      In Ayurveda, body aches are often associated with imbalances in the body's doshas. Here are some Ayurvedic recommendations for managing body ache:
+
+      **Foods to Include:**
+      - Consume warm, easily digestible foods.
+      - Incorporate anti-inflammatory spices like turmeric, ginger, and garlic into your meals.
+      - Drink herbal teas with ingredients like cinnamon, cardamom, and cloves.
+      - Include green leafy vegetables, fresh fruits, and whole grains in your diet.
+
+      **Foods to Avoid:**
+      - Limit or avoid cold, processed, and fried foods.
+      - Reduce intake of sugary and heavy foods.
+      - Minimize or eliminate dairy products, as they may aggravate body aches for some individuals.
+      - Avoid excessive caffeine and alcohol.
+
+      **Ayurvedic Remedies:**
+      - Try herbal remedies like ashwagandha, guggul, or Boswellia supplements, but consult an Ayurvedic practitioner for guidance.
+      - Abhyanga (self-massage) with warm sesame or coconut oil can help alleviate body aches.
+      - Consider Ayurvedic treatments like Panchakarma under the supervision of an Ayurvedic expert.
+
+      **Lifestyle Recommendations:**
+      - Maintain a regular sleep schedule and ensure you get sufficient rest.
+      - Practice gentle yoga or stretching exercises to alleviate tension.
+      - Stay hydrated by drinking warm water throughout the day.
+      - Manage stress through meditation and deep breathing exercises.
+
+      **Consultation:**
+      While Ayurvedic recommendations can be helpful, it's essential to consult with an Ayurvedic practitioner or healthcare provider for personalized guidance and treatment.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only. Ayurvedic remedies may not be suitable for everyone. If you have concerns about your health, please consult an Ayurvedic practitioner or a healthcare professional.
+
+  utter_cure_cough:
+  - text: |
+      **Ayurvedic Advice for Cough:**
+      Ayurveda recommends specific dietary guidelines for managing a cough. Keep in mind that these are general recommendations, and individual variations may apply. If your cough persists or worsens, it's essential to consult an Ayurvedic practitioner or healthcare provider.
+
+      *Foods to Include:*
+      - Honey: Honey is known for its soothing properties and can help ease throat irritation.
+      - Turmeric: Incorporating turmeric in your diet can help reduce inflammation.
+      - Ginger: Ginger is a natural cough suppressant and can provide relief.
+      - Warm Water: Staying hydrated with warm water is essential to soothe the throat.
+
+      *Foods to Avoid:*
+      - Cold and Icy Foods: Avoid foods and drinks that are too cold, as they can aggravate the cough.
+      - Dairy Products: Dairy can increase mucus production in some individuals, so limit dairy consumption.
+      - Sugary and Processed Foods: These can weaken the immune system and worsen cough symptoms.
+      - Spicy and Fried Foods: These may irritate the throat and exacerbate coughing.
+
+      **Additional Ayurvedic Tips:**
+      - Gargling with warm salt water can help alleviate throat discomfort.
+      - Getting adequate rest and maintaining a calm environment are crucial for recovery.
+      - Ayurvedic herbs like licorice (Yashtimadhu) or Vasaka may be recommended by a practitioner.
+
+      Remember that Ayurveda takes a holistic approach to health, so it's beneficial to consult with an Ayurvedic practitioner to receive personalized guidance based on your constitution and specific condition.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. If you have concerns about your health, please consult an Ayurvedic practitioner or healthcare professional.
+
+  utter_cure_frequent_urination:
+  - text: |
+      **Ayurvedic Advice for Frequent Urination:**
+      In Ayurveda, frequent urination can be attributed to an imbalance in the Vata dosha. To manage this condition, consider the following dietary and lifestyle recommendations:
+
+      **Foods to Eat:**
+      - Opt for warm and nourishing foods like soups, stews, and cooked vegetables.
+      - Include foods with sweet, astringent, and bitter tastes in your diet.
+      - Consume ripe fruits, especially bananas, as they help in balancing Vata.
+      - Drink herbal teas with ingredients like cumin, coriander, and fennel, which have soothing properties for the urinary system.
+      - Maintain proper hydration with warm water.
+
+      **Foods to Avoid:**
+      - Reduce or avoid cold, raw, and processed foods.
+      - Minimize caffeine and alcohol consumption.
+      - Limit spicy and salty foods, which can aggravate Vata.
+      - Stay away from carbonated beverages and artificial sweeteners.
+
+      **Lifestyle Tips:**
+      - Practice relaxation techniques such as meditation and deep breathing to reduce stress, which can contribute to Vata imbalance.
+      - Establish a regular daily routine to promote stability and balance.
+      - Get adequate rest and sleep to support your overall well-being.
+
+      It's essential to consult with an Ayurvedic practitioner for personalized guidance on managing frequent urination through Ayurveda.
+
+      **Disclaimer:**
+      The Ayurvedic advice provided here is for informational purposes and should not replace professional medical advice. Consult with an Ayurvedic practitioner or healthcare provider for personalized recommendations.
+
+  utter_cure_excessive_thirst:
+  - text: |
+      **Ayurvedic Recommendations for Excessive Thirst:**
+      Ayurveda suggests natural remedies and dietary changes to help manage excessive thirst. Please consult with a qualified Ayurvedic practitioner for personalized guidance.
+
+      *Dietary Suggestions:**
+      - Increase your intake of fresh, juicy fruits, such as watermelon, cucumber, and melons, to help quench your thirst naturally.
+      - Consume cooling herbs and spices like coriander, fennel, and mint to balance your body's temperature and reduce excessive thirst.
+      - Drink fresh coconut water, which is known for its hydrating and cooling properties.
+      - Avoid or limit spicy and salty foods, as they can increase thirst.
+
+      **Herbal Remedies:**
+      - Some Ayurvedic herbs like guduchi, amla, and shatavari may be beneficial for managing excessive thirst. Consult an Ayurvedic expert for proper usage.
+
+      **Lifestyle Tips:**
+      - Practice stress-reduction techniques such as meditation and yoga, as stress can exacerbate thirst.
+      - Ensure you are adequately hydrated throughout the day.
+
+      Remember that Ayurveda considers individual constitution (dosha) and the root cause of excessive thirst. It's advisable to consult with an Ayurvedic practitioner to determine the most suitable recommendations for your specific condition.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes and Ayurvedic guidance. Consult an Ayurvedic practitioner for personalized recommendations. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_sensitivity_to_light:
+  - text: |
+      **Ayurvedic Advice for Sensitivity to Light:**
+      Ayurveda suggests that sensitivity to light can be influenced by your diet and lifestyle. Here are some dietary recommendations:
+
+      **Foods to Include:**
+      - Consume cooling foods such as cucumber, watermelon, and coconut to reduce heat in the body.
+      - Incorporate ghee (clarified butter) into your diet to soothe the eyes and reduce sensitivity.
+      - Eat foods rich in Vitamin A, like carrots and spinach, which support eye health.
+
+      **Foods to Avoid:**
+      - Limit spicy and hot foods as they can increase sensitivity to light.
+      - Avoid excessive consumption of caffeine and alcohol, which can dehydrate the body.
+      - Minimize processed and fried foods that can lead to inflammation.
+
+      **Additional Tips:**
+      - Practice the 20-20-20 rule: Every 20 minutes, look at something 20 feet away for at least 20 seconds to reduce eye strain.
+      - Stay hydrated by drinking plenty of water to maintain eye moisture.
+      - Consider Ayurvedic herbs like Triphala for eye health, but consult with an Ayurvedic practitioner first.
+
+      Remember that Ayurvedic advice is holistic and may take time to show results. Consult an Ayurvedic expert for personalized recommendations.
+
+      **Disclaimer:**
+      The Ayurvedic advice provided here is for informational purposes only and is not a substitute for professional medical advice. If you have concerns about your health, please consult an Ayurvedic practitioner or healthcare professional.
+
+  utter_cure_loss_in_height:
+  - text: |
+      **Ayurvedic Advice for Loss in Height:**
+      According to Ayurveda, maintaining proper nutrition and lifestyle choices can help with concerns about loss in height.
+
+      *Dietary Recommendations:*
+      - Consume foods rich in calcium, such as dairy products, leafy greens, and sesame seeds.
+      - Incorporate foods high in vitamin D, like fortified cereals, fatty fish, and exposure to sunlight.
+      - Include fruits and vegetables in your diet to ensure you get essential vitamins and minerals.
+      - Avoid excessive consumption of caffeinated and carbonated beverages, as they may hinder calcium absorption.
+
+      *Herbal Remedies:*
+      - Consider Ayurvedic herbs like Ashwagandha and Shatavari, known for their bone-strengthening properties. Consult an Ayurvedic practitioner for proper dosage and usage.
+
+      *Lifestyle Tips:*
+      - Engage in regular physical activity, including yoga and stretching exercises, to promote bone health.
+      - Maintain a balanced and nutritious diet to support overall well-being.
+
+      **Consult an Ayurvedic Practitioner:**
+      For personalized guidance, it's recommended to consult with an Ayurvedic practitioner who can provide specific dietary and lifestyle recommendations based on your unique constitution and health needs.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. Please consult an Ayurvedic practitioner or healthcare provider for personalized guidance.
+
+  utter_cure_fragile_bones:
+  - text: |
+      **Ayurvedic Advice for Fragile Bones:**
+
+      Ayurveda offers natural remedies to promote bone health and prevent fragility. Please note that these recommendations are for general well-being and should not replace professional medical advice.
+
+      **Dietary Guidelines:**
+      - Consume dairy products such as milk, ghee, and yogurt, as they are rich in calcium.
+      - Incorporate leafy green vegetables like spinach, kale, and collard greens for added calcium and vitamin K.
+      - Include sesame seeds in your diet, as they are a good source of calcium.
+      - Consume almonds, figs, and other dried fruits for their calcium content.
+      - Opt for foods rich in magnesium, like pumpkin seeds and whole grains, to support bone health.
+
+      **Herbal Supplements:**
+      - Consider Ayurvedic herbs like Ashwagandha and Shatavari, known for their bone-strengthening properties. Consult an Ayurvedic practitioner for appropriate dosages.
+
+      **Lifestyle Tips:**
+      - Engage in regular physical activity, including yoga and weight-bearing exercises like walking.
+      - Maintain a healthy lifestyle with adequate sleep and stress management.
+      - Avoid excessive intake of caffeine, alcohol, and tobacco, as they can weaken bones.
+
+      **What to Avoid:**
+      - Limit the consumption of carbonated beverages, as they may leach calcium from bones.
+      - Reduce the intake of high-sodium processed foods, as excessive salt can affect bone health.
+
+      **Hydration:**
+      - Stay well-hydrated with pure water to support overall health.
+
+      Remember, Ayurvedic practices should be followed in consultation with an Ayurvedic practitioner or healthcare provider. It's important to combine these recommendations with professional guidance for the best results.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes and should not replace professional medical advice. Always consult a qualified healthcare provider for concerns about your health.
+
+  utter_cure_skin_color_loss:
+  - text: |
+      **Ayurvedic Advice for Skin Color Loss:**
+      Ayurveda recommends a holistic approach to maintain healthy skin and address concerns like skin color loss. Here are some dietary suggestions:
+
+      **Foods to Include:**
+      - Incorporate fresh fruits and vegetables, especially those rich in antioxidants, such as berries, citrus fruits, and leafy greens. These can help rejuvenate your skin.
+      - Consume foods high in vitamins C and E, like oranges, almonds, and sunflower seeds, to promote skin health.
+      - Include foods with beta-carotene, such as carrots and sweet potatoes, which may enhance skin color and texture.
+      - Opt for herbs like turmeric, a powerful anti-inflammatory spice that can benefit the skin.
+
+      **Foods to Avoid:**
+      - Limit the intake of processed and sugary foods as they can contribute to skin issues.
+      - Reduce or avoid alcohol and caffeine, which can dehydrate the skin.
+      - Stay away from excessive spicy and oily foods, as they might exacerbate skin conditions.
+
+      **Hydration:**
+      - Ensure you stay well-hydrated by drinking plenty of water throughout the day. Proper hydration is essential for healthy skin.
+
+      **Consultation:**
+      Ayurveda emphasizes individualized treatments. It's recommended to consult with an Ayurvedic practitioner for a tailored approach to address skin color loss based on your unique constitution.
+
+      Remember, Ayurveda considers the mind-body connection, so stress management and mental well-being are also crucial for healthy skin.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. It's essential to consult with a qualified healthcare provider or Ayurvedic practitioner for personalized guidance on skin health and Ayurvedic treatments.
+
+  utter_cure_graying_hair:
+  - text: |
+      **Ayurvedic Advice for Graying Hair:**
+      Graying hair can be managed through Ayurvedic principles. Here are some dietary recommendations:
+
+      **What to Eat:**
+      - Amla (Indian gooseberry): Amla is rich in vitamin C and antioxidants, which can help prevent premature graying of hair. You can consume fresh amla or amla juice regularly.
+      - Curry leaves: Curry leaves are known to contain nutrients that promote hair health and prevent premature graying. You can use them in your diet.
+      - Almonds and walnuts: These nuts are excellent sources of biotin, which is essential for healthy hair.
+      - Sesame seeds: Sesame seeds are rich in iron, calcium, and magnesium, which can help maintain hair color.
+      - Coconut oil: Massaging your scalp with warm coconut oil can improve blood circulation to the hair follicles, keeping your hair healthy and preventing graying.
+
+      **What to Avoid:**
+      - Excessive tea, coffee, and alcohol: These can deplete your body of essential nutrients.
+      - Spicy, oily, and fried foods: They can lead to imbalances in your body, affecting hair health.
+      - Highly processed and sugary foods: These can negatively impact hair health.
+
+      **Additional Tips:**
+      - Manage stress through techniques like yoga and meditation, as stress can contribute to premature graying.
+      - Stay hydrated and drink plenty of water.
+      - Avoid using harsh chemical hair products.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes and is not a substitute for professional medical advice. Consult with a healthcare provider or Ayurvedic practitioner for personalized guidance.
+
+  utter_cure_sunburn:
+  - text: |
+      **Ayurvedic Advice for Sunburn:**
+      In Ayurveda, sunburn is associated with an increase in the Pitta dosha. To alleviate sunburn and soothe your skin, consider the following dietary recommendations:
+
+      **What to Eat:**
+      - Consume cooling foods like cucumber, watermelon, and coconut water.
+      - Incorporate aloe vera juice into your diet, which has a soothing effect.
+      - Include foods rich in antioxidants, such as berries and green leafy vegetables.
+      - Ghee (clarified butter) can be beneficial in small quantities.
+      - Drink plenty of water to stay hydrated.
+
+      **What to Avoid:**
+      - Limit spicy, hot, and fried foods as they can aggravate the Pitta dosha.
+      - Avoid excessive caffeine and alcohol, which can dehydrate the body.
+      - Reduce the intake of sour and citrus foods like tomatoes, as they can worsen the condition.
+
+      **Additional Tips:**
+      - Apply aloe vera gel externally to the affected areas for relief.
+      - You can use sandalwood paste or rose water for a cooling effect on the skin.
+      - Consult an Ayurvedic practitioner for personalized guidance.
+
+      **Disclaimer:**
+      The information provided here is for Ayurvedic purposes only and is not a substitute for professional medical advice. Consult an Ayurvedic practitioner or healthcare provider for comprehensive guidance.
+
+  utter_cure_sore_throat:
+  - text: |
+      **Ayurvedic Advice for Sore Throat:**
+      Sore throat is a common ailment, and Ayurveda offers natural remedies to alleviate discomfort. Please note that these are general guidelines and not a substitute for professional medical advice.
+
+      **Foods to Eat:**
+      - Warm water with a pinch of turmeric and honey can help soothe your throat.
+      - Herbal teas with ingredients like ginger, cinnamon, or licorice are beneficial.
+      - Consume warm soups, particularly vegetable soups, for nourishment.
+      - Fresh fruits rich in vitamin C, like oranges and lemons, can boost your immunity.
+
+      **Foods to Avoid:**
+      - Avoid cold or iced beverages as they may irritate your throat.
+      - Steer clear of spicy and oily foods, which can worsen inflammation.
+      - Dairy products, especially milk, can increase mucus production, so limit their intake.
+
+      **Additional Tips:**
+      - Gargle with warm salt water to reduce discomfort.
+      - Rest and stay hydrated to support your body's healing process.
+      - Avoid smoking and exposure to allergens, which can exacerbate the condition.
+
+      Please consult with an Ayurvedic practitioner for personalized guidance and treatment options.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only. Consult with a qualified healthcare provider or Ayurvedic expert for a thorough evaluation and tailored recommendations.
+
+  utter_cure_headache:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Ayurvedic Advice for Managing Headaches:**
+      In Ayurveda, headaches can be caused by various imbalances in the body. Here are some Ayurvedic recommendations to manage and prevent headaches:
+
+      *What to Eat:*
+      - Consume fresh fruits and vegetables, especially those with a cooling effect like cucumbers and watermelons.
+      - Incorporate spices like ginger and turmeric into your diet, known for their anti-inflammatory properties.
+      - Stay hydrated with room temperature water or herbal teas like peppermint and chamomile.
+      - Include foods rich in magnesium, such as leafy greens, nuts, and seeds.
+
+      *What to Avoid:*
+      - Limit or avoid hot and spicy foods, as they can aggravate headaches.
+      - Reduce your intake of caffeine and alcohol, as they can dehydrate the body.
+      - Minimize processed and fried foods, which can trigger headaches.
+      - Avoid excessive exposure to direct sunlight, which can lead to heat-induced headaches.
+
+      **Additional Tips:**
+      - Practice stress reduction techniques like yoga and meditation.
+      - Get regular, restful sleep to balance your body's energies.
+      - Consider consulting an Ayurvedic practitioner for personalized recommendations.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_stomachache:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Ayurvedic Remedies for Stomachache:**
+      Ayurveda recommends natural remedies to alleviate stomachache. Here are some dietary guidelines to follow:
+
+      *Foods to Eat:*
+      - Easily digestible foods such as rice, oatmeal, and cooked vegetables.
+      - Fresh ginger, fennel, and cumin seeds can help with digestion.
+      - Herbal teas like peppermint or ginger tea may provide relief.
+
+      *Foods to Avoid:*
+      - Avoid heavy, fried, or spicy foods.
+      - Stay away from dairy products if you are lactose intolerant.
+      - Limit or avoid caffeine and carbonated drinks.
+      - Reduce sugar and processed foods in your diet.
+
+      **Additional Ayurvedic Tips:**
+      - Sip warm water throughout the day to aid digestion.
+      - Consider Ayurvedic herbs like triphala or ajwain seeds, but consult with an Ayurvedic practitioner for guidance.
+      - Follow your healthcare provider's recommendations, especially if you have a specific stomach condition.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_back_pain:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Ayurvedic Tips for Back Pain:**
+      Ayurveda recommends a balanced diet and lifestyle to maintain a healthy back. Here are some dietary guidelines:
+
+      *Foods to Include:*
+      - Incorporate anti-inflammatory foods like turmeric, ginger, and garlic into your diet.
+      - Consume warm, cooked foods and avoid excessive cold or raw foods.
+      - Stay hydrated with warm water and herbal teas.
+
+      *Foods to Avoid:*
+      - Limit or avoid spicy and overly hot foods.
+      - Minimize the intake of processed and fried foods.
+      - Reduce or eliminate the consumption of caffeine and alcohol.
+
+      **Additional Ayurvedic Tips:**
+      - Practice gentle yoga and stretching exercises to improve flexibility.
+      - Maintain good posture and ergonomics in daily activities.
+      - Get sufficient rest and sleep to support healing.
+
+      **Remember:** Consult an Ayurvedic practitioner for personalized advice and treatment.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_tell_more:
+  - text: "Are you feeling any other symptoms?"
+
+  utter_tell_more_2:
+  - text: "Please include one more symptom for a diagnosis (you may include a mild one too !)"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
