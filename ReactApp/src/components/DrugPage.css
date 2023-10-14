@@ -1,0 +1,99 @@
+.drug-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* h2{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  h2{
+    font-size: 36px;
+    font-weight: 800;
+  } */
+
+.drug-page-info{
+    border: 1px solid lightgray;
+    background-color: #2c3e50;
+    background-image: url(http://www.transparenttextures.com/patterns/basketball.png);
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    border-radius: 5px;
+    width: 52%;
+    margin-bottom: 20px;
+    padding: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  .drug-page-info p{
+    color: #fff;
+  }
+  
+  .drug-description{
+    display: flex;
+   justify-content: center;
+   
+    width: 85%;
+  }
+  .drug-description a {
+    border: 1px solid black;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #d2d9ff;
+    font-size: 22px;
+    text-decoration: none;
+    color: #1b1b1b;
+    transition: all 0.5s;
+  }
+  .drug-description a:hover{
+    color: #fff;
+    background-color: royalblue;
+  }
+  .round-1{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  .round-2{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+/* --------------------- Drugs  Uses----------------- */
+
+.uses-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.uses-heading h2{
+    background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(60%, #f8f8f8),
+    color-stop(40%, #d2d9ff)
+  );
+  background: linear-gradient(180deg, #f8f8f8 60%, #d2d9ff 0);
+  color: #1c2833;
+}
+.uses-description{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    min-width: 500px;
+}
+.drug-page-info p {
+    color: #fff;
+}
+.drug-description p {
+    color: #1b1b1b;
+}
+.uses-container p {
+    color: #1b1b1b;
+}
