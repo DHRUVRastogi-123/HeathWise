@@ -150,14 +150,14 @@ entities:
   - MorningStiffness
 
 responses:
-  namaste:
+  utter_namaste:
   - text: "Namaste! 🙏 Welcome to our virtual space. How can I assist you today?"
   - text: "Namaste! 🌞 It's wonderful to have you here. How may I be of service to you today?"
   - text: "Warm greetings! 🌼 I'm here to help. How can I assist you today?" 
   - text: "Sat Sri Akal! 🙏 Welcome to our platform. How can I assist you today?"
   - text: "Wishing you a wonderful day! 🌼 How can I be of assistance to you today?"
 
-  i_am_bot:
+  utter_i_am_bot:
   - text: |
       **Greetings, I am HealthWise, your guardian of well-being.** 🏥💡 
       I analyze your input using advanced AI technology to provide you with informed insights and personalized recommendations.
