@@ -1,0 +1,994 @@
+version: "3.1"
+
+intents:
+  - bot_fallback
+  - greet
+  - who_are_you
+  - tell_me_symptom_Breath:
+      use_entities:
+        - Breath
+  - tell_me_symptom_Taste:
+      use_entities:
+        - Taste
+  - tell_me_symptom_Fever:
+      use_entities:
+        - Fever
+  - tell_me_symptom_ChestPain:
+      use_entities:
+        - ChestPain
+  - tell_me_symptom_JointPainSwelling:
+      use_entities:
+        - JointPainSwelling
+  - tell_me_symptom_VisionProblem:
+      use_entities:
+        - VisionProblem
+  - tell_me_symptom_Nosebleeds:
+      use_entities:
+        - Nosebleeds
+  - tell_me_symptom_MemoryLoss:
+      use_entities:
+        - MemoryLoss
+  - tell_me_symptom_DifficultyProblemSolving:
+      use_entities:
+        - ProblemSolving
+  - tell_me_symptom_Disorientation:
+      use_entities:
+        - Disorientation
+  - tell_me_symptom_MorningStiffness:
+      use_entities:
+        - MorningStiffness
+  - tell_me_symptom_LossInHeight:
+      use_entities:
+        - LossInHeight
+  - tell_me_symptom_FragileBones:
+      use_entities:
+        - FragileBones
+  - tell_me_symptom_SkinColorLoss:
+      use_entities:
+        - SkinColorLoss
+  - tell_me_symptom_GrayingHair:
+      use_entities:
+        - GrayingHair
+  - tell_me_symptom_Sunburn:
+      use_entities:
+        - Sunburn
+  - tell_me_symptom_sore_throat:
+      use_entities:
+        - sore throat
+  - tell_me_symptom_WateryStools:
+      use_entities:
+        - WateryStools
+  - tell_me_symptom_BodyAche:
+      use_entities:
+        - BodyAche
+  - tell_me_symptom_Cough:
+      use_entities:
+        - Cough
+  - tell_me_symptom_Frequent_Urination:
+      use_entities:
+        - Frequent_Urination
+  - tell_me_symptom_Excessive_Thirst:
+      use_entities:
+        - Excessive_Thirst
+  - tell_me_symptom_Sensitivity_to_Light:
+      use_entities:
+        - Sensitivity_to_Light
+  - tell_me_symptom_Headache:
+      use_entities:
+        - Headache
+  - tell_me_symptom_Stomachache:
+      use_entities:
+        - Stomachache
+  - tell_me_symptom_BackPain:
+      use_entities:
+        - BackPain
+  - tell_me_symptom_Weakness:
+      use_entities:
+        - Weakness
+  - tell_me_symptom_Wheezing:
+      use_entities:
+        - Wheezing
+  - only_one_symptom:
+      ignore_entities:
+          - Breath
+          - Taste
+          - Fever
+          - ChestPain
+          - JointPainSwelling
+          - VisionProblem
+          - Nosebleeds
+          - MemoryLoss
+          - ProblemSolving
+          - Disorientation
+          - LossInHeight
+          - FragileBones
+          - SkinColorLoss
+          - GrayingHair
+          - Sunburn
+          - sore throat
+          - WateryStools
+          - BodyAche
+          - Cough
+          - Frequent_Urination
+          - Excessive_Thirst
+          - Sensitivity_to_Light
+          - Headache
+          - Stomachache
+          - BackPain
+          - Weakness
+          - Wheezing
+          - MorningStiffness
+
+entities:
+  - Breath
+  - Taste
+  - Fever
+  - ChestPain
+  - JointPainSwelling
+  - VisionProblem
+  - Nosebleeds
+  - MemoryLoss
+  - ProblemSolving
+  - Disorientation
+  - LossInHeight
+  - FragileBones
+  - SkinColorLoss
+  - GrayingHair
+  - Sunburn
+  - sore throat
+  - WateryStools
+  - BodyAche
+  - Cough
+  - Frequent_Urination
+  - Excessive_Thirst
+  - Sensitivity_to_Light
+  - Headache
+  - Stomachache
+  - BackPain
+  - Weakness
+  - Wheezing
+  - MorningStiffness
+
+responses:
+  utter_namaste:
+  - text: "Namaste! 🙏 Welcome to our virtual space. How can I assist you today?"
+  - text: "Namaste! 🌞 It's wonderful to have you here. How may I be of service to you today?"
+  - text: "Warm greetings! 🌼 I'm here to help. How can I assist you today?" 
+  - text: "Sat Sri Akal! 🙏 Welcome to our platform. How can I assist you today?"
+  - text: "Wishing you a wonderful day! 🌼 How can I be of assistance to you today?"
+
+  utter_i_am_bot:
+  - text: |
+      **Greetings, I am HealthWise, your guardian of well-being.** 🏥💡 
+      I analyze your input using advanced AI technology to provide you with informed insights and personalized recommendations.
+  - text: |
+      **Welcome! I'm HealthWise, your companion in the realm of health.** 🌟🏥 
+      I'm powered by cutting-edge AI, and I'm here to share expert perspectives based on your information, helping you make informed decisions about your health and well-being.
+  - text: |
+      **Hello from HealthWise, your guide in the world of wellness.** 🏥🚀 
+      Your welfare is my foremost concern. I utilize state-of-the-art AI to assist you in navigating the complexities of health, offering data-driven advice tailored to your unique needs.
+  - text: |
+      **You're engaging with HealthWise, your counsel for health decisions.** 🏥🤖 
+      I'm dedicated to helping you navigate your health journey using the power of artificial intelligence. Whether you seek information or support, I'm here to provide you with reliable, AI-driven insights.
+  - text: |
+      **Salutations! I'm HealthWise, your partner in healthful living.** 🏥🌼 
+      Trust that your health is my top priority. With AI at my core, I offer personalized guidance and recommendations to empower you on your path to a healthier and happier life.
+
+  utter_fallback:
+  - text: "Not yet trained for this. Sorry for missing knowledge."
+
+  utter_cure_morning_stiffness:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Morning Stiffness:**
+      Yoga can be an effective practice for alleviating morning stiffness. Consider the following yoga exercises:
+      - Cat-Cow Stretch: Promotes flexibility and eases stiffness in the spine.
+      - Child's Pose: Relieves tension and relaxes the body.
+      - Seated Forward Bend: Stretches the back and hamstrings, reducing morning stiffness.
+      - Sun Salutation (Surya Namaskar): A dynamic sequence that enhances overall flexibility.
+      - Cobra Pose: Strengthens the back and helps with spinal flexibility.
+
+      **Additional Tips:**
+      - Practice gentle yoga exercises in the morning to gradually reduce stiffness.
+      - Consult with a certified yoga instructor for guidance on suitable poses and techniques.
+      - If morning stiffness persists or worsens, seek medical evaluation and professional advice.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_wheezing:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Wheezing Relief:**
+      Yoga can be a helpful practice for managing wheezing and improving lung function. Consider the following yoga exercises:
+      - Pranayama: Breathing techniques that promote deep and controlled breaths.
+      - Bhujangasana (Cobra Pose): Expands the chest and may improve lung capacity.
+      - Sukhasana (Easy Pose): Encourages relaxed and controlled breathing.
+      - Ardha Matsyendrasana (Half Spinal Twist): Enhances lung function and oxygen intake.
+      - Savasana (Corpse Pose): A relaxation pose that promotes calm breathing.
+
+      **Additional Tips:**
+      - Practice yoga regularly to improve breath control and reduce wheezing.
+      - Consult with a certified yoga instructor for guidance on suitable poses and techniques.
+      - If wheezing persists or worsens, seek medical evaluation and professional advice.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_weakness:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Managing Weakness:**
+      Yoga can be a beneficial practice for improving strength and vitality. Consider the following yoga exercises:
+      - Tadasana (Mountain Pose): Enhances overall body strength and balance.
+      - Virabhadrasana I (Warrior Pose I): Strengthens the legs, back, and arms.
+      - Bhujangasana (Cobra Pose): Tones the back and relieves fatigue.
+      - Uttanasana (Standing Forward Bend): Increases blood circulation and energy flow.
+      - Savasana (Corpse Pose): A relaxation pose that revitalizes the body.
+
+      **Additional Tips:**
+      - Start with gentle yoga sessions and gradually increase intensity.
+      - Consult with a certified yoga instructor for guidance on suitable poses and techniques.
+      - If weakness persists or worsens, seek medical evaluation and professional advice.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_asthma:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Asthma Management:**
+      Yoga can be a helpful practice for individuals with asthma. Consider the following yoga exercises and breathing techniques:
+      - Pranayama: Breathing exercises that improve lung function and promote deep, controlled breathing.
+      - Bhujangasana (Cobra Pose): Expands the chest and enhances lung capacity.
+      - Ardha Matsyendrasana (Half Spinal Twist): Promotes lung health and overall well-being.
+      - Sukasana (Easy Pose): A seated posture that encourages relaxed breathing.
+      - Anulom Vilom (Alternate Nostril Breathing): Balances breath and calms the respiratory system.
+
+      **Additional Tips:**
+      - Consult with a certified yoga instructor experienced in working with individuals with asthma.
+      - Practice yoga in a clean and well-ventilated environment.
+      - Always carry your prescribed asthma inhaler as a precaution.
+      - If you experience severe asthma symptoms, seek immediate medical attention.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_migraine:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Migraine Relief:**
+      Yoga can be a helpful practice for managing migraines. Consider the following yoga exercises:
+      - Child's Pose: A resting pose that promotes relaxation and eases tension.
+      - Alternate Nostril Breathing (Anulom Vilom): Balances breath and reduces stress.
+      - Forward Bend (Uttanasana): Relieves head pressure and calms the mind.
+      - Cat-Cow Stretch: Improves flexibility in the spine and may alleviate headache symptoms.
+      - Corpse Pose (Shavasana): A relaxation pose to reduce stress and promote a headache-free state.
+
+      **Additional Tips:**
+      - Practice yoga in a quiet, dimly lit room to reduce sensory stimuli.
+      - Consult with a certified yoga instructor for guidance on suitable poses and techniques.
+      - If migraines persist or worsen, seek medical evaluation and professional advice.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_rheumatoidarthritis:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Rheumatoid Arthritis Management:**
+      Yoga can be a gentle and effective practice for managing Rheumatoid Arthritis. Consider the following yoga exercises:
+      - Tadasana (Mountain Pose): Improves posture and balance.
+      - Vrikshasana (Tree Pose): Enhances stability and strength in the legs and spine.
+      - Ardha Dhanurasana (Half Bow Pose): Increases flexibility and mobility in the back.
+      - Savasana (Corpse Pose): Promotes relaxation and eases stress, which can alleviate symptoms.
+
+      **Additional Tips:**
+      - Consult with a certified yoga instructor experienced in working with individuals with Rheumatoid Arthritis.
+      - Start with gentle, modified poses that minimize strain on affected joints.
+      - Focus on slow, controlled movements to avoid overexertion.
+      - If you experience increased pain or discomfort, discontinue the pose and consult a healthcare provider.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_alzheimerdisease:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Alzheimer's Disease:**
+      Yoga can offer benefits for individuals with Alzheimer's Disease, such as improving mental clarity and overall well-being. Consider the following yoga exercises:
+      - Chair Yoga: Gentle seated poses that enhance mobility and reduce stress.
+      - Deep Breathing Exercises: Promote relaxation and can help alleviate anxiety.
+      - Meditation and Mindfulness: Enhance mental focus and emotional balance.
+      - Yoga Nidra: A guided meditation for relaxation and improved sleep.
+
+      **Additional Tips:**
+      - Practice yoga under the guidance of a certified yoga instructor or therapist experienced in working with individuals with Alzheimer's.
+      - Adapt yoga sessions to the individual's abilities and needs.
+      - Yoga should be part of a holistic approach to care, including medical supervision and other therapies.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_osteoporosis:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Osteoporosis Management:**
+      Yoga can be a helpful practice for maintaining bone health and strength. Consider the following yoga exercises:
+      - Tree Pose (Vrikshasana): Enhances balance and strengthens leg bones.
+      - Warrior II (Virabhadrasana II): Promotes leg strength and stability.
+      - Bridge Pose (Setu Bandhasana): Strengthens the spine, hips, and legs.
+      - Cobra Pose (Bhujangasana): Improves spine flexibility and posture.
+      - Triangle Pose (Trikonasana): Strengthens the legs and spine.
+
+      **Additional Tips:**
+      - Consult with a certified yoga instructor experienced in working with individuals with osteoporosis.
+      - Emphasize gentle, low-impact yoga poses to avoid straining bones.
+      - If you have osteoporosis or osteopenia, consult with your healthcare provider before starting any new exercise regimen.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_vitiligo:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis and treatment of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Managing Vitiligo:**
+      Yoga can be a valuable practice for overall well-being and stress reduction. While it may not directly affect the pigmentation of vitiligo, it can help individuals cope with the condition. Consider the following yoga exercises:
+      - Pranayama: Breathing techniques that promote relaxation and mindfulness.
+      - Meditation: Reduces stress and anxiety, which can positively impact one's mental and emotional well-being.
+      - Savasana (Corpse Pose): A relaxation pose that calms the mind and body.
+
+      **Additional Tips:**
+      - Yoga can contribute to better overall mental and emotional health, which may help individuals manage the emotional challenges associated with vitiligo.
+      - Consult with a certified yoga instructor for guidance on suitable poses and techniques.
+      - While yoga may not directly influence pigmentation, it can be a valuable part of a holistic approach to well-being.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis and treatment of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_pneumonia:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Pneumonia Management:**
+      Yoga is generally not recommended as a treatment for pneumonia, which is a serious respiratory infection. However, yoga can promote overall health and well-being, potentially aiding in recovery. Consider the following gentle yoga exercises:
+      - Deep Breathing: Promotes lung expansion and can help improve respiratory function.
+      - Gentle Stretching: Aids in maintaining flexibility and preventing muscle stiffness.
+      - Savasana (Corpse Pose): A relaxation pose that can reduce stress and aid in healing.
+
+      **Additional Tips:**
+      - Prioritize medical treatment and follow your healthcare provider's recommendations for pneumonia.
+      - If practicing yoga during recovery, ensure it is gentle and does not strain your body.
+      - Consult with a certified yoga instructor and your healthcare provider for guidance on suitable poses and techniques.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_diabetes:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. Diabetes management should be done under the guidance of a qualified healthcare provider. If you have concerns about your diabetes, please consult a healthcare professional.
+
+      **Yoga Practices for Diabetes Management:**
+      Yoga can be a valuable addition to diabetes management. Consider the following yoga exercises:
+      - Pranayama: Breathing techniques that promote relaxation and stress reduction.
+      - Ardha Matsyendrasana (Half Spinal Twist): May help stimulate the pancreas and improve insulin sensitivity.
+      - Dhanurasana (Bow Pose): Strengthens abdominal muscles and can aid digestion.
+      - Vrikshasana (Tree Pose): Enhances balance and focus, which can benefit blood sugar control.
+      - Savasana (Corpse Pose): A relaxation pose that helps reduce stress.
+
+      **Additional Tips:**
+      - Consult with a certified yoga instructor experienced in yoga for diabetes management.
+      - Monitor your blood sugar levels regularly and adjust your yoga practice as needed.
+      - Diabetes management should involve a well-balanced diet, medication (if prescribed), and lifestyle changes.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. Diabetes management should be done under the guidance of a qualified healthcare provider. If you have concerns about your diabetes, please consult a healthcare professional.
+
+  utter_cure_hypertension:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Managing Hypertension:**
+      Yoga can be a beneficial practice for managing hypertension. Consider the following yoga exercises and techniques:
+      - Savasana (Corpse Pose): A relaxation pose that helps reduce stress and lower blood pressure.
+      - Anulom Vilom (Alternate Nostril Breathing): Balances the nervous system and promotes relaxation.
+      - Padahastasana (Standing Forward Bend): Enhances blood circulation and relieves stress.
+      - Surya Namaskar (Sun Salutation): A series of poses that improve overall fitness and reduce stress.
+      - Pranayama: Breathing exercises that calm the mind and lower blood pressure.
+
+      **Additional Tips:**
+      - Practice yoga regularly to help manage hypertension and improve overall well-being.
+      - Consult with a certified yoga instructor for guidance on suitable poses and techniques.
+      - Monitor your blood pressure regularly and consult with a healthcare provider for personalized advice.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_covid:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis and treatment of COVID-19 should be conducted by healthcare professionals and in accordance with public health guidelines.
+
+      **Yoga Practices for Overall Well-Being:**
+      Yoga can promote overall well-being, including reducing stress and anxiety, which may indirectly support your health. Consider incorporating the following yoga exercises, including Vajrasana (Thunderbolt Pose):
+      - Pranayama: Breathing techniques that promote relaxation and mindfulness.
+      - Meditation: Reduces stress and enhances mental well-being.
+      - Savasana (Corpse Pose): A relaxation pose that calms the mind and body.
+      - Vajrasana (Thunderbolt Pose): A seated pose that aids digestion and can be practiced after meals.
+
+      **Additional Tips:**
+      - Yoga can be a valuable part of a healthy lifestyle, promoting mental and physical well-being.
+      - Follow the guidance of healthcare experts and public health authorities for COVID-19 prevention and treatment.
+      - If you have concerns about COVID-19 or are experiencing symptoms, consult with healthcare professionals for guidance and evaluation.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis and treatment of COVID-19 should be conducted by healthcare professionals and in accordance with public health guidelines.
+
+  utter_cure_influenza:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Influenza Management:**
+      Yoga can be a supportive practice for managing influenza symptoms. Consider the following yoga exercises:
+      - Restorative Yoga: Gentle poses and deep relaxation to aid recovery.
+      - Pranayama (Breathing Techniques): Promotes deep breathing and relaxation.
+      - Meditation: Reduces stress and supports the immune system.
+      - Savasana (Corpse Pose): A relaxation pose to help ease flu-related discomfort.
+      - Gentle Stretching: Improves flexibility and reduces muscle tension.
+
+      **Additional Tips:**
+      - Practice yoga mindfully and gently, adapting to your energy levels.
+      - Prioritize rest and hydration, and avoid strenuous poses during illness.
+      - If influenza symptoms worsen or persist, consult a healthcare provider for appropriate medical care.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_breathing_issue:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Improving Breathing:**
+      Yoga can be beneficial for enhancing respiratory function and improving breathing. Consider the following yoga exercises:
+      - Pranayama: A set of breathing techniques that focus on conscious and controlled breath.
+      - Anulom Vilom (Alternate Nostril Breathing): Helps balance and regulate breathing.
+      - Bhujangasana (Cobra Pose): Expands the chest and improves lung capacity.
+      - Ardha Matsyendrasana (Half Spinal Twist): Enhances lung function and oxygen intake.
+      - Savasana (Corpse Pose): A relaxation pose that encourages deep and calm breathing.
+
+      **Additional Tips:**
+      - Practice yoga regularly to enhance breath control and lung health.
+      - Consult with a certified yoga instructor for guidance on suitable poses and techniques.
+      - If breathing issues persist or worsen, seek medical evaluation and professional advice.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_taste_issue:
+  - text: |
+      - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Taste Improvement:**
+      Yoga may help improve overall well-being, which can indirectly affect taste. Consider the following yoga exercises:
+      - Pranayama: Breathing techniques that promote relaxation and mindfulness.
+      - Meditation: Reduces stress and enhances awareness, which can positively impact taste perception.
+      - Savasana (Corpse Pose): A relaxation pose that calms the mind and body.
+
+      **Additional Tips:**
+      - Yoga can contribute to better overall health, potentially improving taste over time.
+      - Consult with a certified yoga instructor for guidance on suitable poses and techniques.
+      - If taste-related concerns persist, consult with a healthcare provider for a comprehensive evaluation.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_fever:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Fever Relief:**
+      Yoga can be a helpful practice for promoting relaxation and recovery during a fever. Consider the following yoga exercises:
+      - Savasana (Corpse Pose): A relaxation pose that helps calm the body and reduce fever-related discomfort.
+      - Viparita Karani (Legs Up the Wall Pose): Promotes relaxation and can alleviate fever symptoms.
+      - Pranayama: Breathing exercises that encourage deep and mindful breathing to reduce stress and discomfort.
+      - Meditation: Reduces stress, enhances mental clarity, and aids in fever recovery.
+
+      **Additional Tips:**
+      - Practice gentle yoga poses and exercises while recovering from a fever.
+      - Stay well-hydrated and get plenty of rest to support the healing process.
+      - Consult with a certified yoga instructor for guidance on suitable poses and techniques.
+      - If the fever persists or worsens, seek medical evaluation and professional advice.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_chest_pain:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Chest Pain Relief:**
+      Yoga can be a helpful practice for managing chest pain. Consider the following yoga exercises:
+      - Pranayama: Breathing techniques that promote relaxation and calm the mind.
+      - Bhujangasana (Cobra Pose): Stretches the chest and may alleviate tension.
+      - Sukhasana (Easy Pose): Promotes relaxation and eases chest discomfort.
+      - Viparita Karani (Legs Up the Wall Pose): A restorative pose that can reduce chest pressure.
+      - Savasana (Corpse Pose): A relaxation pose to calm the body and mind.
+
+      **Additional Tips:**
+      - Consult with a certified yoga instructor for guidance on suitable poses and techniques.
+      - Start with gentle yoga sessions and avoid positions that exacerbate chest pain.
+      - If chest pain persists, worsens, or is severe, seek immediate medical attention.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_joint_pain_swelling:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Joint Pain and Swelling:**
+      Yoga can be beneficial for managing joint pain and swelling. Consider the following yoga exercises:
+      - Tadasana (Mountain Pose): Promotes balance and strengthens leg muscles.
+      - Vrikshasana (Tree Pose): Enhances balance and strengthens the lower body.
+      - Bhujangasana (Cobra Pose): Helps alleviate back and joint pain.
+      - Marjariasana (Cat-Cow Stretch): Improves spine flexibility and eases joint discomfort.
+      - Trikonasana (Triangle Pose): Strengthens and stretches the legs, reducing pain and swelling.
+
+      **Additional Tips:**
+      - Consult with a certified yoga instructor or physical therapist for guidance on suitable poses and techniques.
+      - Start with gentle yoga sessions and avoid positions that exacerbate pain.
+      - If joint pain and swelling persist or worsen, seek medical evaluation and professional advice.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_vision_problem:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Vision Improvement:**
+      Yoga can help relax eye muscles and promote better eye health. Consider the following yoga exercises:
+      - Palming: Rub your hands together to create heat and gently cup your palms over your closed eyes for a few minutes.
+      - Eye Exercises: Practice eye movements such as rolling your eyes, focusing on near and far objects, and rotating your gaze.
+      - Trataka (Candle Gazing): Focus on a candle flame to improve concentration and eye muscle control.
+      - Bhramari Pranayama (Humming Bee Breath): A breathing technique that can soothe the eyes and reduce eye strain.
+
+      **Additional Tips:**
+      - Practice eye yoga exercises regularly to relieve eye strain and enhance vision.
+      - Ensure proper lighting and reduce screen time to prevent eye fatigue.
+      - Consult with a certified yoga instructor for guidance on suitable eye exercises and techniques.
+      - If vision problems persist or worsen, seek medical evaluation from an eye specialist.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_nosebleeds:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Managing Nosebleeds:**
+      While yoga is not a direct remedy for nosebleeds, it can help improve overall well-being and reduce stress, which may contribute to nosebleeds. Consider the following yoga exercises:
+      - Pranayama: Breathing techniques that promote relaxation and calmness.
+      - Meditation: Reduces stress and anxiety, potentially minimizing triggers for nosebleeds.
+      - Savasana (Corpse Pose): A relaxation pose that can alleviate tension and promote a sense of calm.
+
+      **Additional Tips:**
+      - Practice yoga regularly to reduce stress and promote overall health.
+      - Consult with a certified yoga instructor for guidance on suitable poses and techniques.
+      - If nosebleeds persist or are frequent, seek medical evaluation and professional advice.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_memory_loss:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Memory Improvement:**
+      Yoga can be a valuable practice for enhancing memory and cognitive function. Consider the following yoga exercises:
+      - Bhramari Pranayama (Bee Breath): A breathing technique that calms the mind and improves concentration.
+      - Padmasana (Lotus Pose): Promotes mental clarity and focus.
+      - Nadi Shodhan Pranayama (Alternate Nostril Breathing): Balances brain function and enhances memory.
+      - Sarvangasana (Shoulder Stand): Increases blood flow to the brain and may improve cognitive function.
+      - Meditation: Reduces stress, enhances mindfulness, and supports memory retention.
+
+      **Additional Tips:**
+      - Practice yoga regularly to support memory and cognitive health.
+      - Consult with a certified yoga instructor for guidance on suitable poses and techniques.
+      - Maintain a healthy diet, exercise, and sleep routine to complement yoga for memory improvement.
+      - If memory-related concerns persist, consult with a healthcare provider for a comprehensive evaluation.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_problem_solving:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health or cognitive function, please consult a healthcare professional.
+
+      **Yoga and Meditation for Cognitive Health:**
+      While yoga is not a direct remedy for problem-solving, it can contribute to overall cognitive well-being. Consider the following practices:
+      - Meditation: Mindfulness meditation can reduce stress and improve mental clarity.
+      - Pranayama: Breathing techniques to calm the mind and enhance focus.
+      - Savasana (Corpse Pose): A relaxation pose that promotes mental relaxation.
+
+      **Additional Tips:**
+      - Regular yoga and meditation practices can support cognitive function indirectly.
+      - Consult with a certified yoga instructor for guidance on suitable practices.
+      - If you have concerns about problem-solving or cognitive function, consult with a healthcare provider or a mental health professional.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions or cognitive issues should be done by a qualified healthcare provider or mental health specialist. If you have concerns about your cognitive health, please consult a healthcare professional.
+
+  utter_cure_disorientation:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Managing Disorientation:**
+      Yoga can promote relaxation, mindfulness, and mental clarity, which may help in managing disorientation. Consider the following yoga exercises:
+      - Bhramari Pranayama (Bee Breath): Calms the mind and reduces stress.
+      - Vrikshasana (Tree Pose): Enhances balance and focus.
+      - Sukhasana (Easy Pose) with Pranayama: Promotes mental calmness and presence.
+      - Savasana (Corpse Pose): A relaxation pose that can bring mental clarity.
+
+      **Additional Tips:**
+      - Practice yoga regularly to enhance mental well-being and reduce disorientation.
+      - Consult with a certified yoga instructor for guidance on suitable poses and techniques.
+      - If disorientation persists or worsens, consult with a healthcare provider for a comprehensive evaluation.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_watery_stools:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Managing Watery Stools:**
+      Yoga can promote gastrointestinal health and alleviate digestive discomfort. Consider the following yoga exercises:
+      - Pawanmuktasana (Wind-Relieving Pose): Aids in relieving gas and bloating.
+      - Ardha Matsyendrasana (Half Spinal Twist): Enhances digestion and may reduce stomach discomfort.
+      - Vajrasana (Thunderbolt Pose): Promotes healthy digestion and can ease stomach issues.
+      - Dhanurasana (Bow Pose): Strengthens abdominal muscles and may support digestive health.
+      - Shavasana (Corpse Pose): A relaxation pose that calms the mind and body.
+
+      **Additional Tips:**
+      - Consult with a certified yoga instructor for guidance on suitable poses and techniques.
+      - Practice yoga regularly to support digestive well-being.
+      - If watery stools persist or worsen, seek medical evaluation and professional advice.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_body_ache:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Body Ache Relief:**
+      Yoga can be beneficial for managing body aches and promoting overall well-being. Consider the following yoga exercises:
+      - Child's Pose: Relieves tension in the back and neck muscles.
+      - Cat-Cow Stretch: Improves flexibility in the spine and eases body discomfort.
+      - Downward-Facing Dog: Strengthens the entire body and reduces stiffness.
+      - Bridge Pose: Alleviates lower back pain and strengthens the back muscles.
+      - Savasana (Corpse Pose): Promotes relaxation and reduces muscle tension.
+
+      **Additional Tips:**
+      - Consult with a certified yoga instructor for guidance on suitable poses and techniques.
+      - Start with gentle yoga sessions and avoid positions that exacerbate body aches.
+      - If body aches persist or worsen, seek medical evaluation and professional advice.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_cough:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Cough Relief:**
+      Yoga can help soothe a persistent cough and promote respiratory health. Consider the following yoga exercises:
+      - Pranayama: Breathing techniques that can clear the respiratory passages.
+      - Bhastrika Pranayama (Bellows Breath): A breathing exercise to boost lung capacity and clear congestion.
+      - Ujjayi Pranayama (Victorious Breath): Helps relieve throat irritation and soothes coughs.
+      - Ardha Matsyendrasana (Half Spinal Twist): Enhances lung function and promotes overall well-being.
+      - Sukhasana (Easy Pose): Encourages relaxation and mindfulness, which can alleviate stress-related coughs.
+
+      **Additional Tips:**
+      - Practice yoga regularly to maintain respiratory health.
+      - Consult with a certified yoga instructor for guidance on suitable poses and techniques.
+      - If cough persists or worsens, consult with a healthcare provider for a comprehensive evaluation.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_frequent_urination:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Managing Frequent Urination:**
+      Yoga can be a beneficial practice for promoting bladder health and reducing the frequency of urination. Consider the following yoga exercises:
+      - Mula Bandha (Root Lock): Strengthens pelvic muscles and supports bladder control.
+      - Kegel Exercises: Enhance pelvic floor strength, which can help with urinary control.
+      - Bhujangasana (Cobra Pose): Strengthens the lower back and may improve bladder function.
+      - Malasana (Garland Pose): Promotes hip flexibility and pelvic health.
+      - Savasana (Corpse Pose): A relaxation pose that reduces stress, which can impact urination frequency.
+
+      **Additional Tips:**
+      - Consult with a certified yoga instructor for guidance on suitable poses and techniques.
+      - Practice yoga regularly to strengthen pelvic muscles and support bladder health.
+      - If frequent urination persists or worsens, seek medical evaluation and professional advice.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_excessive_thirst:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Managing Excessive Thirst:**
+      Yoga can promote overall well-being, which may indirectly help manage excessive thirst. Consider the following yoga exercises:
+      - Pranayama: Breathing techniques that encourage relaxation and mindfulness.
+      - Meditation: Reduces stress and promotes self-awareness, potentially alleviating excessive thirst related to anxiety.
+      - Savasana (Corpse Pose): A relaxation pose that can help calm the mind and body.
+
+      **Additional Tips:**
+      - Yoga practices may contribute to improved overall health, potentially reducing symptoms of excessive thirst.
+      - Consult with a certified yoga instructor for guidance on suitable poses and techniques.
+      - If excessive thirst persists or worsens, consult with a healthcare provider for a comprehensive evaluation.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_sensitivity_to_light:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Sensitivity to Light:**
+      While yoga may not directly address sensitivity to light, it can help in reducing stress and promoting overall well-being. Consider the following yoga exercises:
+      - Anulom Vilom (Alternate Nostril Breathing): Calms the mind and reduces stress.
+      - Bhramari Pranayama (Bee Breath): Relieves tension and enhances relaxation.
+      - Savasana (Corpse Pose): Promotes a state of deep relaxation and stress relief.
+
+      **Additional Tips:**
+      - Practice yoga regularly to reduce stress and improve overall health.
+      - Sensitivity to light may be associated with underlying eye conditions, so consult with an eye specialist for a comprehensive evaluation.
+      - Use protective eyewear, such as sunglasses, when exposed to bright light.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_loss_in_height:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Maintaining Good Posture:**
+      While yoga may not significantly increase height, it can help with posture and overall well-being. Consider the following yoga exercises:
+      - Tadasana (Mountain Pose): Improves posture and alignment.
+      - Bhujangasana (Cobra Pose): Strengthens the back and promotes a straight spine.
+      - Ardha Matsyendrasana (Half Spinal Twist): Enhances spinal flexibility.
+      - Virabhadrasana (Warrior Pose): Builds strength and balance.
+      - Savasana (Corpse Pose): Promotes relaxation and mindfulness.
+
+      **Additional Tips:**
+      - Practice yoga regularly to improve posture and overall health.
+      - Consult with a certified yoga instructor for guidance on suitable poses and techniques.
+      - If you have specific concerns about height or bone health, consult with a healthcare provider for personalized advice.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_fragile_bones:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Fragile Bones:**
+      Yoga can be a gentle and beneficial practice for individuals with fragile bones. Consider the following yoga exercises that focus on balance, flexibility, and strength:
+      - Tadasana (Mountain Pose): Enhances posture and balance.
+      - Vrksasana (Tree Pose): Improves balance and strengthens leg bones.
+      - Trikonasana (Triangle Pose): Enhances spine flexibility and leg strength.
+      - Baddha Konasana (Butterfly Pose): Increases hip flexibility and leg strength.
+      - Bhujangasana (Cobra Pose): Strengthens the back and may improve bone density.
+
+      **Additional Tips:**
+      - Consult with a certified yoga instructor experienced in working with individuals with fragile bones for guidance on suitable poses and techniques.
+      - Use props and support as needed to ensure safety and prevent fractures.
+      - Prioritize balance and stability exercises to reduce the risk of falls and fractures.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_skin_color_loss:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Skin Health:**
+      Yoga can promote overall well-being, which may indirectly benefit skin health. Consider the following yoga exercises and practices:
+      - Pranayama: Deep breathing techniques that enhance oxygen supply to the skin.
+      - Sarvangasana (Shoulder Stand): Improves blood circulation and may benefit skin tone.
+      - Halasana (Plow Pose): Enhances blood flow to the face and may promote a healthy complexion.
+      - Matsyasana (Fish Pose): Promotes relaxation and can contribute to skin health.
+      - Meditation and relaxation techniques: Reduce stress, which can positively impact skin appearance.
+
+      **Additional Tips:**
+      - Maintain good skin hygiene and use sunscreen to protect against UV damage.
+      - Consume a balanced diet rich in fruits and vegetables for skin-nourishing nutrients.
+      - Consult with a certified yoga instructor for guidance on suitable poses and techniques.
+      - If skin issues persist or worsen, consult with a dermatologist or healthcare provider for a comprehensive evaluation.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_graying_hair:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Managing Graying Hair:**
+      Yoga can promote overall well-being, which can indirectly impact hair health. Consider the following yoga exercises:
+      - Sarvangasana (Shoulder Stand): Improves blood circulation to the scalp and hair follicles.
+      - Adho Mukha Svanasana (Downward-Facing Dog): Enhances blood flow to the head and scalp.
+      - Balayam Yoga: A technique that involves rubbing the fingernails to stimulate hair growth.
+      - Kapalbhati Pranayama: Cleanses the system and may benefit hair health.
+      - Meditation and Stress Reduction: High stress levels can contribute to premature graying, so relaxation techniques can help.
+
+      **Additional Tips:**
+      - Yoga can contribute to better overall health, potentially impacting hair health and graying.
+      - Consult with a certified yoga instructor for guidance on suitable poses and techniques.
+      - For personalized advice on hair care, consider consulting with a dermatologist or trichologist.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_sunburn:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Sunburn Relief:**
+      While yoga is not a direct remedy for sunburn, it can help with overall well-being and relaxation. Consider the following yoga exercises:
+      - Savasana (Corpse Pose): A relaxation pose to reduce stress and promote healing.
+      - Sitali Pranayama (Cooling Breath): Helps cool the body and soothe skin.
+      - Meditation: Reduces stress, which can aid in the healing process.
+      - Breathing techniques like Bhramari Pranayama: Calms the mind and body.
+
+      **Additional Tips:**
+      - For sunburn relief, focus on keeping the skin cool and moisturized.
+      - Avoid direct sun exposure until the sunburn has healed.
+      - Stay well-hydrated and consume foods that promote skin healing.
+      - Consult with a healthcare provider if the sunburn is severe or leads to complications.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_sore_throat:
+  - text: |
+      - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Sore Throat Relief:**
+      Yoga can promote relaxation and ease discomfort associated with a sore throat. Consider the following yoga exercises:
+      - Pranayama: Breathing exercises to promote calmness and reduce throat irritation.
+      - Lion's Breath (Simhasana Pranayama): A breathing technique that may help clear the throat.
+      - Neck Stretches: Gentle neck movements to alleviate tension in the throat area.
+      - Savasana (Corpse Pose): A relaxation pose to reduce stress and promote throat comfort.
+
+      **Additional Tips:**
+      - Practice yoga gently and mindfully to avoid exacerbating throat discomfort.
+      - Stay well-hydrated and consider warm herbal teas to soothe the throat.
+      - If the sore throat persists or worsens, consult with a healthcare provider for appropriate medical treatment.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_headache:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Headache Relief:**
+      Yoga can be a helpful practice for managing headaches. Consider the following yoga exercises:
+      - Child's Pose: A resting pose that can alleviate tension and stress.
+      - Seated Forward Bend: Promotes relaxation and can relieve head pressure.
+      - Cat-Cow Stretch: Enhances spinal flexibility and may reduce headache symptoms.
+      - Bridge Pose: Strengthens the neck and back, potentially reducing headache triggers.
+      - Corpse Pose (Shavasana): A relaxation pose to ease stress and promote a headache-free state.
+
+      **Additional Tips:**
+      - Consult with a certified yoga instructor for guidance on suitable poses and techniques.
+      - Practice yoga in a quiet, dimly lit room to reduce sensory stimuli.
+      - If headaches persist or worsen, seek medical evaluation and professional advice.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_stomachache:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Back Pain:**
+      Yoga can be a beneficial practice for managing back pain. Consider the following yoga exercises:
+      - Cat-Cow Stretch: This gentle flow can improve flexibility in the spine.
+      - Child's Pose: A resting pose that can relieve tension in the back.
+      - Downward-Facing Dog: Strengthens the back and stretches the spine.
+      - Cobra Pose: Helps to alleviate lower back pain.
+      - Bridge Pose: Strengthens the back and improves posture.
+
+      **Additional Tips:**
+      - Consult with a yoga instructor or physical therapist for guidance on suitable poses.
+      - Start with gentle yoga sessions and avoid positions that exacerbate pain.
+      - If back pain persists or worsens, seek medical evaluation and professional advice.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_cure_back_pain:
+  - text: |
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+      **Yoga Practices for Back Pain:**
+      Yoga can be a beneficial practice for managing back pain. Consider the following yoga exercises:
+      - Cat-Cow Stretch: This gentle flow can improve flexibility in the spine.
+      - Child's Pose: A resting pose that can relieve tension in the back.
+      - Downward-Facing Dog: Strengthens the back and stretches the spine.
+      - Cobra Pose: Helps to alleviate lower back pain.
+      - Bridge Pose: Strengthens the back and improves posture.
+
+      **Additional Tips:**
+      - Consult with a yoga instructor or physical therapist for guidance on suitable poses.
+      - Start with gentle yoga sessions and avoid positions that exacerbate pain.
+      - If back pain persists or worsens, seek medical evaluation and professional advice.
+
+      **Disclaimer:**
+      The information provided here is for informational purposes only and is not a substitute for professional medical advice. The diagnosis of medical conditions should be done by a qualified healthcare provider. If you have concerns about your health, please consult a healthcare professional.
+
+  utter_tell_more:
+  - text: "Are you feeling any other symptoms?"
+
+  utter_tell_more_2:
+  - text: "Please include one more symptom for a diagnosis (you may include a mild one too !)"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

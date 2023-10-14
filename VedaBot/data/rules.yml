@@ -1,0 +1,8 @@
+version: "3.1"
+
+rules:
+
+- rule: Say 'Not yet trained for this' anytime the user fallback
+  steps:
+  - intent: bot_fallback
+  - action: utter_fallback
