@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Axios from "axios";
 
@@ -6,28 +6,56 @@ function Landing() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [userInput, setUserInput] = useState([]);
-  let currentBot;
-  const DietBot = 5001;
-  const YogaBot = 5003;
-  const DiseaseBot = 5000;
-  let clickedBot;
-  if(clickedBot == "DietBot") {
-    currentBot = 5001;
-  }
-  else if()
+  const [botsContainerVisible, setBotsContainerVisible] = useState(true);
+  const [botsContainerVisible2, setBotsContainerVisible2] = useState(false);
+
+  const chatWindowRef = useRef(null);
+
+  const [currentBot, setCurrentBot] = useState(5000);
+  let url = `http://localhost:${currentBot}/webhook`;
+  const handleBotClick = (bot) => {
+    // clickedBot = bot;
+    if (bot == "DietBot") {
+      setCurrentBot(5001);
+      setBotsContainerVisible(false);
+      setBotsContainerVisible2(true);
+    } else if (bot == "YogaBot") {
+      setCurrentBot(5003);
+      setBotsContainerVisible(false);
+      setBotsContainerVisible2(true);
+    } else if (bot == "DiseaseBot") {
+      setCurrentBot(5000);
+      setBotsContainerVisible(false);
+      setBotsContainerVisible2(true);
+    }
+    url = `http://localhost:${currentBot}/webhook`;
+    console.log(url);
+    console.log(bot, currentBot);
+  };
+
+  useEffect(() => {
+    // Scroll to the bottom of the chat window when new messages are added
+    if (chatWindowRef.current) {
+      chatWindowRef.current.scrollTop = chatWindowRef.current.scrollHeight;
+    }
+  }, [messages]);
 
   const sendMessage = async () => {
     setMessages([...messages, { message: input, user: true }]);
     setUserInput((prev) => [...prev, input]);
     try {
-      const response = await Axios.post("http://localhost:5000/webhook", {
+      const response = await Axios.post(url, {
         message: input,
       });
-      // setMessages([...messages, { message: response.data.message, user: false }]);
+      const list = response.data.message.split(/[&*]/);
+
       setMessages((prevValue) => {
-        return [...prevValue, { message: response.data.message, user: false }];
+        const newMessages = [...prevValue];
+        list.forEach((item) => {
+          newMessages.push({ message: item, user: false });
+        });
+        return newMessages;
       });
-      console.log(response);
     } catch (error) {
       console.error("Error sending message:", error);
     }
@@ -62,16 +90,16 @@ function Landing() {
               <span>Symptoms to Solutions</span>
             </h1>
             <p>
-              "Experience the future of healthcare with our AI chatbot, your
+              Experience the future of healthcare with our AI chatbot, your
               personal symptom interpreter. Simply describe your symptoms, and
               it'll provide you with instant, accurate health insights to guide
-              your wellness journey."
+              your wellness journey.
             </p>
             <a href="#chatbox">
               <button>Start Chat</button>
             </a>
           </div>
-          <img src="https://img.freepik.com/free-vector/artificial-intelligence-isometric-ai-robot-mobile-phone-screen-chatbot-app_39422-767.jpg?w=900&t=st=1697222708~exp=1697223308~hmac=de7950596d3dbe1b02d1e84942cac2b2125790646eb0ddb0d5fb163fc884b910"></img>
+          <img className="top-bot-img" src="https://img.freepik.com/free-vector/artificial-intelligence-isometric-ai-robot-mobile-phone-screen-chatbot-app_39422-767.jpg?size=626&ext=jpg&ga=GA1.1.454830158.1697270875&semt=ais"></img>
         </div>
       </div>
       <div className="cards-container">
@@ -147,61 +175,128 @@ function Landing() {
         </div>
       </div>
       <div id="chatbox">
-        {/* <div className="chat-top">
-          <h1>Chat with Our Health Assistant</h1>
-          <hr className="line"></hr>
-        </div> */}
-          <div className="chat-container">
-            <div className="bot-img">
+        <div className="chat-container">
+          <div className="bot-img">
             <img src="https://img.icons8.com/3d-fluency/94/chatbot.png"></img>
-            </div>
-            <div className="brief-info">
-              <p className="welc-txt">Welcome to our Health bot</p>
-              <p>Your symptom diagnosis assistant! Describe your symptoms, and we'll suggest potential conditions and remedies. Remember, our suggestions aren't a replacement for professional medical advice. If it's serious, consult a healthcare provider</p>
-            </div>
+          </div>
+          <div className="brief-info">
+            <p className="welc-txt">Welcome to our Health bot</p>
+            <p>
+              Your symptom diagnosis assistant! Describe your symptoms, and
+              we'll suggest potential conditions and remedies. Remember, our
+              suggestions aren't a replacement for professional medical advice.
+              If it's serious, consult a healthcare provider
+            </p>
+          </div>
+          {botsContainerVisible && (
             <div className="bots">
-            <div className="bots-txt">
+              <div className="bots-txt">
                 <h2>Chat With Different Bots</h2>
               </div>
-            <div className="diff-bots-container">
-              <div className="diet-bt">
-                <h3>Diet Bot</h3>
-                <p>Get personalized diet recommendations and nutritional guidance</p>
-              </div>
-              <div className="disease-bot">
-                <h3>Disease Bot</h3>
-                <p>Identify health issues based on symptoms, receive likely condition suggestions</p>
-              </div>
-              <div className="yoga-bot">
-                <h3>Yoga Bot</h3>
-                <p>Access personalized yoga routines and relaxation techniques</p>
+
+              <div className="diff-bots-container">
+                <div
+                  className="diet-bot"
+                  onClick={() => handleBotClick("DietBot")}
+                >
+                  <h3>Diet Bot</h3>
+                  <p>
+                    Get personalized diet recommendations and nutritional
+                    guidance
+                  </p>
+                </div>
+                <div
+                  className="disease-bot"
+                  onClick={() => handleBotClick("DiseaseBot")}
+                >
+                  <h3>Disease Bot</h3>
+                  <p>
+                    Identify health issues based on symptoms, receive likely
+                    condition suggestions
+                  </p>
+                </div>
+                <div
+                  className="yoga-bot"
+                  onClick={() => handleBotClick("YogaBot")}
+                >
+                  <h3>Yoga Bot</h3>
+                  <p>
+                    Access personalized yoga routines and relaxation techniques
+                  </p>
+                </div>
               </div>
             </div>
-            </div>
-            
-            <div className="chat-window">
-              {messages.map((msg, index) => (
-                <ul>
-                  <li
+          )}
+
+          <div className="chat-window" ref={chatWindowRef}>
+            {messages.map((msg, index) => (
+              <ul>
+                <li
                   key={index}
                   className={`message ${msg.user ? "user" : "bot"}`}
-                  >
-                {msg.message}
-                  </li>
-                </ul>
-              ))}
+                >
+                  {msg.user ? (
+                    <img className="userImg" src="https://th.bing.com/th?q=Default+User+Avatar&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.5&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" alt="User Avatar" />
+                  ) : (
+                    <h3></h3>
+                  )}
+                  {msg.message}
+                </li>
+              </ul>
+            ))}
+          </div>
+          <div className="input-container">
+            <input
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") sendMessage();
+              }}
+            />
+            <button onClick={sendMessage}>Send</button>
+          </div>
+
+          {botsContainerVisible2 && (
+            <div className="bots-2">
+              <div className="bots-txt-2">
+                <h2>Chat With Different Bots</h2>
+              </div>
+
+              <div className="diff-bots-container-2">
+                <div
+                  className="diet-bot-2"
+                  onClick={() => handleBotClick("DietBot")}
+                >
+                  <h3>Diet Bot</h3>
+                  <p>
+                    Get personalized diet recommendations and nutritional
+                    guidance
+                  </p>
+                </div>
+                <div
+                  className="disease-bot-2"
+                  onClick={() => handleBotClick("DiseaseBot")}
+                >
+                  <h3>Disease Bot</h3>
+                  <p>
+                    Identify health issues based on symptoms, receive likely
+                    condition suggestions
+                  </p>
+                </div>
+                <div
+                  className="yoga-bot-2"
+                  onClick={() => handleBotClick("YogaBot")}
+                >
+                  <h3>Yoga Bot</h3>
+                  <p>
+                    Access personalized yoga routines and relaxation techniques
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="input-container">
-              <input
-                type="text"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") sendMessage();
-                }}
-              />
-              <button onClick={sendMessage}>Send</button>
-            </div>
+          )}
+
         </div>
       </div>
     </div>
